@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: black;
+  z-index: 100;
 }
 
 .logo {
@@ -45,6 +46,10 @@
     font-size: 12px;
     padding: 0 5px;
   }
+}
+
+.pc-menu li:hover {
+  color: #ffc900;
 }
 
 .active-menu-item {

@@ -1,0 +1,52 @@
+
+
+
+
+
+
+
+
+
+.choose-block {
+    width: 550px;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 15px;
+}
+
+.choose-block .description {
+    width: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding: 10px;
+}
+
+.choose-block .description h2{
+    margin: 5px;
+}
+
+.choose-block .description p{
+    margin: 5px;
+    line-height: 1.4;
+    color: grey;
+}
+
+.choose-block .img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #ffc900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose-block .img img {
+    width: 80%;
+    object-fit: cover;
+}

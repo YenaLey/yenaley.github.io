@@ -13,6 +13,7 @@ function PROJECTS() {
   return (
     <Element name="projects">
       <div className="container" style={{ backgroundColor: "#ffc900" }}>
+        <div className="blank-container"></div>
         <h1>PROJECTS</h1>
         <div className="underline"></div>
         <div className="content-container">
@@ -40,6 +41,7 @@ function PROJECTS() {
             description="블라블라"
             img="./icon/추진력.png" />
         </div>
+        <div className="blank-container"></div>
       </div>
       <div className="blank-container"></div>
       <div className="container">

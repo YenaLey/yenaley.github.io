@@ -140,7 +140,7 @@
     box-shadow: 2px 2px 3px grey;
 
     @media (max-width: 900px) {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -153,6 +153,7 @@
     align-items: center;
     border-radius: 100%;
     background-color: #ffc900;
+    object-fit: cover;
 
     @media (max-width: 900px) {
         margin: 10px;

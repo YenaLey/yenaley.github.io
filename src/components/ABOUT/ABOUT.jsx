@@ -43,7 +43,8 @@ function ABOUT() {
       </div>
       <div className="blank-container"></div>
       {/* MY SKILLS */}
-      <div className="container">
+      <div id="whitesmoke" className="container">
+        <div className="blank-container"></div>
         <h1>MY SKILLS</h1>
         <div className="underline"></div>
         <div className="content-container">
@@ -55,30 +56,28 @@ function ABOUT() {
           <SkillBar title="C" percent={70} />
         </div>
       </div>
-      <div className="blank-container"></div>
+      <div id="whitesmoke" className="blank-container"></div>
       {/* count */}
-      <div className="container">
-        <div className="content-container" style={{ backgroundColor: "black" }}>
-          <div className="count-box">
-            <h1>166 +</h1>
-            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-            <p>coding days</p>
-          </div>
-          <div className="count-box">
-            <h1>5 +</h1>
-            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-            <p>projects completed</p>
-          </div>
-          <div className="count-box">
-            <h1>5 +</h1>
-            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-            <p>side projects</p>
-          </div>
-          <div className="count-box">
-            <h1>171 +</h1>
-            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-            <p>github contributions</p>
-          </div>
+      <div className="content-container" style={{ backgroundColor: "black" }}>
+        <div className="count-box">
+          <h1>166 +</h1>
+          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+          <p>coding days</p>
+        </div>
+        <div className="count-box">
+          <h1>5 +</h1>
+          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+          <p>projects completed</p>
+        </div>
+        <div className="count-box">
+          <h1>5 +</h1>
+          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+          <p>side projects</p>
+        </div>
+        <div className="count-box">
+          <h1>171 +</h1>
+          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+          <p>github contributions</p>
         </div>
       </div>
       <div className="blank-container"></div>

@@ -1,38 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { Element } from 'react-scroll';
 import { Canvas } from '@react-three/fiber';
-import { Text, Plane, OrbitControls } from '@react-three/drei';
+import { Text, Plane } from '@react-three/drei'; 
 
-function R3Fm() {
+function R3Fmobile() {
   const [dynamicText, setDynamicText] = useState("");
-  const phrases = ["Web Developer", "Front-End", "Hard Coder"]; // 순차적으로 표시할 단어들
-  const [phraseIndex, setPhraseIndex] = useState(0); // 현재 표시 중인 단어의 인덱스
-  const [isDeleting, setIsDeleting] = useState(false); // 현재 텍스트를 지우고 있는지 여부
+  const phrases = ["Front-End", "Devoloper", "Hard Coder"];
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
     const updateText = () => {
       if (!isDeleting) {
-        // 글자를 추가하는 경우
         setDynamicText(currentPhrase.substring(0, dynamicText.length + 1));
       } else {
-        // 글자를 지우는 경우
         setDynamicText(currentPhrase.substring(0, dynamicText.length - 1));
       }
     };
 
     let timeoutId;
     if (!isDeleting && dynamicText === currentPhrase) {
-      // 단어를 모두 썼으면 일정 시간 후에 지우기 시작
       timeoutId = setTimeout(() => {
         setIsDeleting(true);
       }, 1000);
     } else if (isDeleting && dynamicText === '') {
-      // 단어를 모두 지웠으면 다음 단어로 넘어감
       setIsDeleting(false);
       setPhraseIndex((phraseIndex + 1) % phrases.length);
     } else {
-      // 글자를 추가하거나 지우는 중
       timeoutId = setTimeout(updateText, isDeleting ? 100 : 100);
     }
 
@@ -40,13 +34,8 @@ function R3Fm() {
   }, [dynamicText, isDeleting, phraseIndex]);
 
   return (
-    <Canvas
-      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1, 2] }}
-      shadows
-      shadowMap
-      pixelRatio={window.devicePixelRatio}
-      gl={{ antialias: true }}
-    >
+    <Canvas shadows shadowMap
+      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1.5, 2] }}>
       <ambientLight intensity={0.3} />
       <spotLight
         position={[0.5, 1, 1]}
@@ -60,44 +49,44 @@ function R3Fm() {
       />
       <Text
         color="black"
-        fontSize={0.5}
+        fontSize={0.6}
         maxWidth={200}
         lineHeight={1}
         letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[0, 0, 0]}
-        position={[0, -0.3, -3]}
+        rotation={[-Math.PI / 6, 0, 0]}
+        position={[0, -0.3, -3.5]}
         castShadow
       >
         Hi, there!
       </Text>
       <Text
         color="black"
-        fontSize={0.5}
+        fontSize={0.6}
         maxWidth={200}
         lineHeight={1}
         letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[0, 0, 0]}
-        position={[0, -0.3, -1.6]}
+        rotation={[-Math.PI / 6, 0, 0]}
+        position={[0, -0.3, -1.9]}
         castShadow
       >
         I'm
       </Text>
       <Text
         color="#E63946"
-        fontSize={0.5}
+        fontSize={0.6}
         maxWidth={200}
         lineHeight={1}
         letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[0, 0, 0]}
+        rotation={[-Math.PI / 6, 0, 0]}
         position={[0, -0.2, -0.5]}
         castShadow
       >
@@ -105,15 +94,15 @@ function R3Fm() {
       </Text>
       <Text
         color="black"
-        fontSize={0.2}
+        fontSize={0.3}
         maxWidth={200}
         lineHeight={1}
         letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[-Math.PI / 2, 0, -Math.PI / 4]}
-        position={[-0.1, -0.4, 0.3]}
+        rotation={[-Math.PI / 2, 0, -Math.PI / 6]}
+        position={[-0.1, -0.3, 0.4]}
         castShadow
       >
         {dynamicText}
@@ -130,4 +119,4 @@ function R3Fm() {
   );
 }
 
-export default R3Fm;
+export default R3Fmobile;

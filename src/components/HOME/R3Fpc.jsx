@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
-import { Text, Plane, OrbitControls } from '@react-three/drei'; 
+import { Canvas } from '@react-three/fiber';
+import { Text, Plane } from '@react-three/drei'; 
 
 function R3Fpc() {
   const [dynamicText, setDynamicText] = useState("");

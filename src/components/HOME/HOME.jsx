@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Element } from 'react-scroll';
-import R3Fm from './R3Fm';
+import R3Fmobile from './R3Fmobile';
 import R3Fpc from './R3Fpc';
 
 function HOME() {
@@ -17,8 +17,8 @@ function HOME() {
   }, []);
   return (
     <Element name="home">
-      <div className="container" style={{ height: "100vh", padding: '0' }}>
-        {isSmallScreen ? (<R3Fm />) : (<R3Fpc />)}
+      <div className="container" style={{ height: "calc(100vh - 60px)", padding: "0px"}}>
+        {isSmallScreen ? (<R3Fmobile />) : (<R3Fpc />)}
       </div>
     </Element>
   );

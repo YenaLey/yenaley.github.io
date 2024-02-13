@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Text, Plane } from '@react-three/drei'; 
 
@@ -99,4 +99,4 @@ function R3Fpc() {
   );
 }
 
-export default R3Fpc;
+export default memo(R3Fpc);

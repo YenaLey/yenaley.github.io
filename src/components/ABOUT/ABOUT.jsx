@@ -10,7 +10,7 @@ function ABOUT() {
     <Element name="about">
       {/* ABOUT ME */}
       <div className="container">
-        <h1>ABOUT ME</h1>
+             <h1>ABOUT ME</h1>
         <div className="underline"></div>
         <div className="content-container">
           <div className="profile-img">

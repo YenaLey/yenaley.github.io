@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Text, Plane } from '@react-three/drei'; 
 
@@ -130,4 +130,4 @@ function R3Fmobile() {
   );
 }
 
-export default R3Fmobile;
+export default memo(R3Fmobile);

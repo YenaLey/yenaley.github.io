@@ -13,7 +13,7 @@ function ABOUT() {
   return (
     <Element name="about">
       {/* ABOUT ME */}
-      <div id="whitesmoke" className="container">
+      <div className="container">
         <h1>ABOUT ME</h1>
         <div className="underline"></div>
         <div className="content-container">
@@ -24,7 +24,7 @@ function ABOUT() {
             transition={{ duration: 0.5 }}>
             <img src="./icon/작업.png"></img>
           </motion.div>
-          <motion.div className="about-content"
+          <motion.div id="whitesmoke" className="about-content"
             ref={ref}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}

@@ -4,7 +4,7 @@ import { Text, Plane } from '@react-three/drei';
 
 function R3Fpc() {
   const [dynamicText, setDynamicText] = useState("");
-  const phrases = ["Web Developer", "Front-End", "Hard Coder"]; // 순차적으로 표시할 단어들
+  const phrases = ["Yena", "Front End", "Developer", "Hard Coder"]; // 순차적으로 표시할 단어들
   const [phraseIndex, setPhraseIndex] = useState(0); // 현재 표시 중인 단어의 인덱스
   const [isDeleting, setIsDeleting] = useState(false); // 현재 텍스트를 지우고 있는지 여부
 
@@ -40,13 +40,25 @@ function R3Fpc() {
 
   return (
     <Canvas shadows shadowMap
-      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1.5, 2] }}>
-      <ambientLight intensity={0.3} />
+      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 0, 1.5] }}>
+      <ambientLight intensity={0} />
       <spotLight
-        position={[0.5, 1.5, 1.5]}
+        color="#ffc900"
+        position={[0.2, -0.05, 0.8]}
         angle={0.5}
         penumbra={1}
-        intensity={400}
+        intensity={100}
+        castShadow
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+        shadow-bias={-0.0001}
+      />
+      <spotLight
+        color="gray"
+        position={[-0.2, 0.05, 0.8]}
+        angle={0.5}
+        penumbra={1}
+        intensity={100}
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
@@ -54,69 +66,32 @@ function R3Fpc() {
       />
       <Text
         color="black"
-        fontSize={0.5}
-        maxWidth={200}
-        lineHeight={1}
-        letterSpacing={0.02}
+        fontSize={0.2}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[-Math.PI / 6, 0, 0]}
-        position={[0, -0.3, -3.5]}
-        castShadow
+        rotation={[0, 0, 0]}
+        position={[0, 0.3, 0]}
       >
-        Hi, there!
-      </Text>
-      <Text
-        color="black"
-        fontSize={0.6}
-        maxWidth={200}
-        lineHeight={1}
-        letterSpacing={0.02}
-        textAlign={'center'}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[-Math.PI / 6, 0, 0]}
-        position={[0, -0.3, -1.8]}
-        castShadow
-      >
-        I'm
+        Hi, there! I'm
       </Text>
       <Text
         color="#E63946"
-        fontSize={0.7}
-        maxWidth={200}
-        lineHeight={1}
-        letterSpacing={0.02}
-        textAlign={'center'}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[-Math.PI / 6, 0, 0]}
-        position={[0, -0.2, -0.3]}
-        castShadow
-      >
-        YENA
-      </Text>
-      <Text
-        color="black"
         fontSize={0.3}
-        maxWidth={200}
-        lineHeight={1}
-        letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[-Math.PI / 2, 0, 0]}
-        position={[0, -0.3, 0.4]}
+        rotation={[0, 0, 0]}
+        position={[0, -0.1, 0]}
         castShadow
       >
-        {dynamicText}
+          {dynamicText}
       </Text>
       <Plane
         receiveShadow
-        rotation={[-Math.PI / 2, 0, 0]}
+        rotation={[0, 0, 0]}
         position={[0, -0.5, -1]}
-        args={[100, 100]}
+        args={[7, 7]}
       >
         <meshStandardMaterial attach="material" color="white" />
       </Plane>

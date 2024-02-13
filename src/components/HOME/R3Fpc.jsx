@@ -41,9 +41,9 @@ function R3Fpc() {
   return (
     <Canvas shadows shadowMap
       camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1.5, 2] }}>
-      <ambientLight intensity={0.4} />
+      <ambientLight intensity={0.3} />
       <spotLight
-        position={[0, 5, 5]}
+        position={[0.5, 1.5, 1.5]}
         angle={0.5}
         penumbra={1}
         intensity={400}

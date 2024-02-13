@@ -41,15 +41,15 @@ function R3Fm() {
 
   return (
     <Canvas
-      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1.5, 2] }}
+      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1, 2] }}
       shadows
       shadowMap
       pixelRatio={window.devicePixelRatio}
       gl={{ antialias: true }}
     >
-      <ambientLight intensity={0.4} />
+      <ambientLight intensity={0.3} />
       <spotLight
-        position={[0, 2, 2]}
+        position={[0.5, 1, 1]}
         angle={0.5}
         penumbra={1}
         intensity={400}
@@ -113,7 +113,7 @@ function R3Fm() {
         anchorX="center"
         anchorY="middle"
         rotation={[-Math.PI / 2, 0, -Math.PI / 4]}
-        position={[-0.1, -0.3, 0.3]}
+        position={[-0.1, -0.4, 0.3]}
         castShadow
       >
         {dynamicText}

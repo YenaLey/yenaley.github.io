@@ -116,7 +116,7 @@ function R3Fmobile() {
         position={[0, -0.1, 0]}
         castShadow
       >
-        {dynamicText}
+        web developer
       </Text>
       <Plane
         receiveShadow

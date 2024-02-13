@@ -40,8 +40,13 @@ function R3Fm() {
   }, [dynamicText, isDeleting, phraseIndex]);
 
   return (
-    <Canvas shadows shadowMap
-      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1.5, 2] }}>
+    <Canvas
+      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1.5, 2] }}
+      shadows
+      shadowMap
+      pixelRatio={window.devicePixelRatio}
+      gl={{ antialias: true }}
+    >
       <ambientLight intensity={0.4} />
       <spotLight
         position={[0, 2, 2]}

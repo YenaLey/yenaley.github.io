@@ -1,0 +1,79 @@
+#home {
+    background-color: black;
+    height: calc(100vh - 60px);
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#home p {
+    color: white;
+}
+
+#home h1 {
+    color: white;
+}
+
+@keyframes moveYellowLight {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    50% {
+        transform: translate(40%, 40%);
+    }
+    100% {
+        transform: translate(-30%, 100%);
+    }
+}
+
+@keyframes moveBlueLight {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    50% {
+        transform: translate(-40%, -40%);
+    }
+    100% {
+        transform: translate(30%, -100%);
+    }
+}
+
+@keyframes moveGreenLight {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    50% {
+        transform: translate(60%, 80%);
+    }
+    100% {
+        transform: translate(40%, -60%);
+    }
+}
+
+.light {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(255, 255, 0, 1) 0%, transparent 70%);
+    height: 300px; /* 조정된 스포트라이트 크기 */
+    width: 300px;
+    pointer-events: none;
+}
+
+.yellow-light {
+    top: 0%;
+    left: 0%;
+    animation: moveYellowLight 5s infinite alternate;
+}
+
+.blue-light {
+    bottom: 0%;
+    right: 0%;
+    background: radial-gradient(circle at center, rgba(0, 0, 255, 1) 0%, transparent 70%);
+    animation: moveBlueLight 5s infinite alternate;
+}
+
+.green-light {
+    bottom: 50%;
+    right: 50%;
+    background: radial-gradient(circle at center, rgba(6, 255, 77, 1) 0%, transparent 70%);
+    animation: moveGreenLight 5s infinite alternate;
+}

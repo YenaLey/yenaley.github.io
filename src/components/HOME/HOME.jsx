@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Element } from 'react-scroll';
-import R3Fmobile from './R3Fmobile';
 import R3Fpc from './R3Fpc';
+import "./HOME.css"
+
+function HomeMobile() {
+  return (
+    <div id="home" className="container">
+      <div className="light yellow-light"></div>
+      <div className="light blue-light"></div>
+      <div className="light green-light"></div>
+      <p>Hi, there!</p>
+      <h1>I'm YENA</h1>
+      <p></p>
+    </div>
+  );
+}
 
 function HOME() {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 700);
@@ -17,11 +30,14 @@ function HOME() {
   }, []);
   return (
     <Element name="home">
-      <div className="container" style={{ height: "calc(100vh - 60px)", padding: "0px"}}>
-        {/* {isSmallScreen ? (<R3Fmobile />) : (<R3Fpc />)} */}
-      </div>
+      {isSmallScreen ? (<HomeMobile />) : (
+        <div className="container" style={{ height: "calc(100vh - 60px)"}}>
+          <R3Fpc />
+        </div>
+      )}
     </Element>
   );
 }
 
 export default HOME;
+

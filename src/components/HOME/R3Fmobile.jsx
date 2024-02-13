@@ -65,28 +65,6 @@ function R3Fmobile() {
         shadowMapSize={{ width: 2048, height: 2048 }}
         shadowBias={-0.0001}
       />
-      <CustomText
-        color="#E63946"
-        fontSize={0.25}
-        letterSpacing={0}
-        textAlign={'center'}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, 0, 0]}
-        position={[0, 0.1, 0]}
-        content="Yena"
-      />
-      <CustomText
-        color="black"
-        fontSize={0.1}
-        letterSpacing={0}
-        textAlign={'center'}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, 0, 0]}
-        position={[0, -0.1, 0]}
-        content="web developer"
-      />
       <GroundPlane />
     </Canvas>
   );

@@ -47,18 +47,18 @@ function R3Fmobile() {
         position={[0.1, 0, 0.5]}
         angle={0.5}
         penumbra={1}
-        intensity={100}
+        intensity={50}
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
         shadow-bias={-0.0001}
       />
       <spotLight
-        color="gray"
+        color="blue"
         position={[-0.1, -0.1, 0.5]}
         angle={0.5}
         penumbra={1}
-        intensity={100}
+        intensity={50}
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}

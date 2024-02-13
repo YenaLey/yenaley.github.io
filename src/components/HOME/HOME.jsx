@@ -18,7 +18,7 @@ function HOME() {
   return (
     <Element name="home">
       <div className="container" style={{ height: "calc(100vh - 60px)", padding: "0px"}}>
-        {isSmallScreen ? (<R3Fmobile />) : (<R3Fpc />)}
+        {/* {isSmallScreen ? (<R3Fmobile />) : (<R3Fpc />)} */}
       </div>
     </Element>
   );

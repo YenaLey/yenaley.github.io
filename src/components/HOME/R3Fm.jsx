@@ -44,7 +44,7 @@ function R3Fm() {
       camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 1.5, 2] }}>
       <ambientLight intensity={0.4} />
       <spotLight
-        position={[0, 5, 5]}
+        position={[0, 2, 2]}
         angle={0.5}
         penumbra={1}
         intensity={400}
@@ -55,45 +55,45 @@ function R3Fm() {
       />
       <Text
         color="black"
-        fontSize={0.4}
+        fontSize={0.5}
         maxWidth={200}
         lineHeight={1}
         letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[-Math.PI / 6, 0, 0]}
-        position={[0, -0.3, -3.3]}
+        rotation={[0, 0, 0]}
+        position={[0, -0.3, -3]}
         castShadow
       >
         Hi, there!
       </Text>
       <Text
         color="black"
-        fontSize={0.4}
+        fontSize={0.5}
         maxWidth={200}
         lineHeight={1}
         letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[-Math.PI / 6, 0, 0]}
-        position={[0, -0.3, -2]}
+        rotation={[0, 0, 0]}
+        position={[0, -0.3, -1.6]}
         castShadow
       >
         I'm
       </Text>
       <Text
         color="#E63946"
-        fontSize={0.47}
+        fontSize={0.5}
         maxWidth={200}
         lineHeight={1}
         letterSpacing={0.02}
         textAlign={'center'}
         anchorX="center"
         anchorY="middle"
-        rotation={[-Math.PI / 6, 0, 0]}
-        position={[0, -0.2, -0.8]}
+        rotation={[0, 0, 0]}
+        position={[0, -0.2, -0.5]}
         castShadow
       >
         YENA
@@ -108,7 +108,7 @@ function R3Fm() {
         anchorX="center"
         anchorY="middle"
         rotation={[-Math.PI / 2, 0, -Math.PI / 4]}
-        position={[-0.1, -0.3, 0.1]}
+        position={[-0.1, -0.3, 0.3]}
         castShadow
       >
         {dynamicText}

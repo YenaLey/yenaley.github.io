@@ -12,6 +12,7 @@ function ABOUT() {
 
   return (
     <Element name="about">
+      {/* ABOUT ME */}
       <div id="whitesmoke" className="container">
         <h1>ABOUT ME</h1>
         <div className="underline"></div>
@@ -21,7 +22,7 @@ function ABOUT() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
             transition={{ duration: 0.5 }}>
-            <img src="./free-icon-shoes-742704.png"></img>
+            <img src="./icon/작업.png"></img>
           </motion.div>
           <motion.div className="about-content"
             ref={ref}
@@ -41,6 +42,7 @@ function ABOUT() {
         </div>
       </div>
       <div className="blank-container"></div>
+      {/* MY SKILLS */}
       <div className="container">
         <h1>MY SKILLS</h1>
         <div className="underline"></div>
@@ -54,9 +56,60 @@ function ABOUT() {
         </div>
       </div>
       <div className="blank-container"></div>
+      {/* RESUME */}
       <div className="container">
         <h1>RESUME</h1>
         <div className="underline"></div>
+        <div className="content-container">
+
+          <Resume
+            period="2020.03 - 재학 중"
+            title="UOS ECE"
+            description1="Electrical and Computer Engineering major at the University of Seoul"
+            description2="서울시립대 전자전기컴퓨터공학부 전공"
+            activitys={[]} />
+
+          <Resume
+            period="2023.10 - 2024.02"
+            title="QUIPU DEV 1기"
+            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발소모임"
+            description2="QUIPU의 메인 웹 개발"
+            activitys={["디자인, 프론트엔드, 백엔드 팀에 적극적으로 의견을 내며 총괄 관리하였습니다.", "전체적인 웹 방향성 및 구성 등을 기획하였습니다.", "React.js와 Three.js를 사용하여 프론트엔드를 개발하였습니다."]} />
+
+          <Resume
+            period="2024.03 - 진행 중"
+            title="QUIPU DEV 2기"
+            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발소모임"
+            description2="QUIPU의 포럼 웹 개발"
+            activitys={[]} />
+
+        </div>
+      </div>
+      <div className="blank-container"></div>
+      <div className="container">
+        <div className="content-container" style={{ backgroundColor: "black" }}>
+          <div className="count-box">
+            <h1>166 +</h1>
+            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+            <p>coding days</p>
+          </div>
+          <div className="count-box">
+            <h1>5 +</h1>
+            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+            <p>projects completed</p>
+          </div>
+          <div className="count-box">
+            <h1>5 +</h1>
+            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+            <p>side projects</p>
+          </div>
+          <div className="count-box">
+            <h1>171 +</h1>
+            <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+            <p>github contributions</p>
+          </div>
+        </div>
+
       </div>
     </Element>
   );
@@ -84,6 +137,39 @@ function SkillBar(props) {
         <div className="percentBar" style={{ width: `${props.percent}%` }}>
         </div>
         <p>{props.percent}%</p>
+      </div>
+    </motion.div>
+  )
+}
+
+function Resume(props) {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
+
+  return (
+    <motion.div className="resume-block"
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+      transition={{ duration: 0.5 }}>
+      <div className="resume-img">
+        <img src="./icon/경력.png"></img>
+      </div>
+      <div className="resume-content">
+        <h4>{props.period}</h4>
+        <h2>{props.title}</h2>
+        <p>{props.description1}</p>
+        <p style={{ fontWeight: '700' }}>{props.description2}</p>
+        <h4>주요 활동</h4>
+        {
+          props.activitys.map(function (activity, index) {
+            return (
+              <p>- {activity}</p>
+            )
+          })
+        }
       </div>
     </motion.div>
   )

@@ -83,6 +83,10 @@
     background-color: rgb(234, 232, 232);
     display: flex;
     border-radius: 2px;
+
+    @media (max-width: 600px) {
+        width: 300px;
+    }
 }
 
 .skillBar .head {
@@ -98,6 +102,10 @@
 .skillBar .head p {
     color: white;
     font-size: 14px;
+
+    @media (max-width: 600px) {
+        font-size: 11px;
+    }
 }
 
 .skillBar .body {
@@ -115,4 +123,89 @@
     top: 0;
     right: 5px;
     font-size: 14px;
+
+    @media (max-width: 600px) {
+        font-size: 11px;
+    }
+}
+
+.resume-block {
+    width: 800px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px grey;
+
+    @media (max-width: 900px) {
+        width: 80%;
+    }
+}
+
+.resume-img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #ffc900;
+
+    @media (max-width: 900px) {
+        margin: 10px;
+    }
+}
+
+.resume-img img {
+    width: 60%;
+    height: 60%;
+}
+
+.resume-content {
+    width: 700px;
+    height: auto;
+
+    @media (max-width: 900px) {
+        width: 90%;
+    }
+}
+
+.resume-content p {
+    color: grey;
+}
+
+.resume-content h4 {
+    color: #ffc900;
+}
+
+.count-box {
+    width: 250px;
+    height: 150px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 20px;
+
+    @media (max-width: 1200px) {
+        margin: 20px 50px;
+    }
+
+    @media (max-width: 700px ) {
+        width: 80%;
+        margin: 20px;
+    }
+}
+
+.count-box h1 {
+    color: white;
+}
+
+.count-box p {
+    font-size: 20px;
+    color: white;
 }

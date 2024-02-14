@@ -1,7 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import { Element } from 'react-scroll';
 import R3Fpc from './R3Fpc';
-import "./HOME.css"
+import "./HOME.css";
+
+function TypingEffect() {
+  const sentences = [
+    "Thanks for visiting.",
+    "It's a bit shy,",
+    "But let me introduce myself."
+  ];
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [reverse, setReverse] = useState(false);
+  const [blink, setBlink] = useState(true);
+
+  useEffect(() => {
+    if (index === sentences.length) {
+      setIndex(0);
+    }
+
+    let timeout;
+    if (!reverse && subIndex === sentences[index].length) {
+      setBlink(true);
+      timeout = setTimeout(() => {
+        setBlink(false);
+        setReverse(true);
+      }, 1000);
+    } else if (reverse && subIndex === 0) {
+      setReverse(false);
+      setIndex((prevIndex) => (prevIndex + 1) % sentences.length);
+    } else {
+      timeout = setTimeout(() => {
+        setSubIndex((prevSubIndex) => prevSubIndex + (reverse ? -1 : 1));
+      }, 80);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, reverse]);
+
+  const cursorClasses = blink ? "cursor blink" : "cursor";
+
+  return (
+    <h2>
+      {sentences[index].substring(0, subIndex)}
+      <span className={cursorClasses}>|</span>
+    </h2>
+  );
+}
 
 function HomeMobile() {
   return (
@@ -9,8 +54,10 @@ function HomeMobile() {
       <div className="light yellow-light"></div>
       <div className="light blue-light"></div>
       <div className="light green-light"></div>
+      <div className="light pink-light"></div>
       <p>Hi, there!</p>
-      <h1>I'm YENA</h1>
+      <h1>I'm <span style={{color: "#ffc900"}}>YENA</span>.</h1>
+      <TypingEffect />
       <p></p>
     </div>
   );
@@ -31,7 +78,7 @@ function HOME() {
   return (
     <Element name="home">
       {isSmallScreen ? (<HomeMobile />) : (
-        <div className="container" style={{ height: "calc(100vh - 60px)"}}>
+        <div className="container" style={{ height: "calc(100vh - 60px)" }}>
           <R3Fpc />
         </div>
       )}

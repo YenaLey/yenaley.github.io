@@ -10,13 +10,14 @@ function ABOUT() {
     <Element name="about">
       {/* ABOUT ME */}
       <div className="container">
-             <h1>ABOUT ME</h1>
+        <h1>ABOUT ME</h1>
         <div className="underline"></div>
         <div className="content-container">
           <div className="profile-img">
             <img src="./icon/작업.png"></img>
           </div>
           <div id="whitesmoke" className="about-content">
+            <div className="pencil"></div>
             <h1>Hello, I am <span className="name">이예나</span></h1>
             <h2>Front-End 개발자</h2>
             <p>저는 말보다 행동으로 먼저 나아가며, 꿈을 현실로 만들어내는 추진력이 강한 개발자입니다. 인터랙티브 디자인에 큰 관심을 가지고 있으며, 사용자에게 매력적이면서도 실용적인 인터랙션 경험을 제공하기 위해 끊임없이 노력하고 있습니다. 프론트엔드 개발에 주력하고 있으며, 팀 내 원활한 협업과 직접적인 의견 반영을 위해 기획, 디자인, 백엔드 분야에도 지속적으로 관심을 가지고 학습하고 있습니다.</p>
@@ -47,26 +48,12 @@ function ABOUT() {
       <div id="whitesmoke" className="blank-container"></div>
       {/* count */}
       <div className="content-container" style={{ backgroundColor: "black" }}>
-        <div className="count-box">
-          <h1>166 +</h1>
-          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-          <p>coding days</p>
-        </div>
-        <div className="count-box">
-          <h1>5 +</h1>
-          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-          <p>projects completed</p>
-        </div>
-        <div className="count-box">
-          <h1>5 +</h1>
-          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-          <p>side projects</p>
-        </div>
-        <div className="count-box">
-          <h1>171 +</h1>
-          <div className="underline" style={{ width: "80px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-          <p>github contributions</p>
-        </div>
+        <div className="blank-container"></div>
+        <Count countNum={166} title="coding days" />
+        <Count countNum={5} title="projects completed" />
+        <Count countNum={5} title="side projects" />
+        <Count countNum={171} title="github contributions" />
+        <div className="blank-container"></div>
       </div>
       <div className="blank-container"></div>
       {/* RESUME */}
@@ -106,19 +93,29 @@ function ABOUT() {
 
 export default ABOUT;
 
-
-function SkillBar(props) {
-
+function SkillBar({ title, percent }) {
   return (
-    <div className="skillBar">
-      <div className="head">
-        <p>{props.title}</p>
-      </div>
-      <div className="body">
-        <div className="percentBar" style={{ width: `${props.percent}%` }}>
+    <div className="skillContainer">
+      <div className="skillTitle">{title}</div>
+      <div className="flask">
+        <div className="flaskBody">
+          <div className="lava" style={{ height: `${percent}%` }}></div>
+          {Array.from({ length: 10 }, (_, index) => (
+            <div className="tick" style={{ bottom: `${index * 10}%` }} key={index}></div>
+          ))}
         </div>
-        <p>{props.percent}%</p>
       </div>
+    </div>
+  );
+}
+
+function Count(props) {
+  return (
+    <div class="count-box">
+
+      <h1>{props.countNum} +</h1>
+      <div className="underline" style={{ width: "100px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
+      <p>{props.title}</p>
     </div>
   )
 }
@@ -126,24 +123,22 @@ function SkillBar(props) {
 function Resume(props) {
 
   return (
-    <div className="resume-block">
-      <div className="resume-img">
-        <img src="./icon/경력.png"></img>
-      </div>
-      <div className="resume-content">
-        <h4>{props.period}</h4>
-        <h2>{props.title}</h2>
-        <p>{props.description1}</p>
-        <p style={{ fontWeight: '700' }}>{props.description2}</p>
-        <h4>주요 활동</h4>
-        {
-          props.activitys.map(function (activity, index) {
-            return (
-              <p>- {activity}</p>
-            )
-          })
-        }
-      </div>
+    <div className="resume-content">
+      <div class="resume-header">진행 중</div>
+      <div class="resume-header-tip-left"></div>
+      <div class="resume-header-tip-right"></div>
+      <h4>{props.period}</h4>
+      <h2>{props.title}</h2>
+      <p>{props.description1}</p>
+      <p style={{ fontWeight: '700' }}>{props.description2}</p>
+      <h4>주요 활동</h4>
+      {
+        props.activitys.map(function (activity, index) {
+          return (
+            <p>- {activity}</p>
+          )
+        })
+      }
     </div>
   )
 }

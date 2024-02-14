@@ -23,73 +23,38 @@
 
 @keyframes moveYellowLight {
     0% {
-        transform: translate(0%, 0%);
+        transform: translate(0%, 0%) scale(1);
     }
     25% {
-        transform: translate(-10%, 100%);
+        transform: translate(50%, 50%) scale(1.5);
     }
     50% {
-        transform: translate(0%, 0%);
+        transform: translate(-30%, 100%) scale(0.5);
     }
     75% {
-        transform: translate(100%, -80%);
+        transform: translate(50%, 130%) scale(1.2);
     }
     100% {
-        transform: translate(110%, -160%);
+        transform: translate(0%, 180%) scale(2);
     }
 }
+
 
 @keyframes moveBlueLight {
     0% {
-        transform: translate(0%, 0%);
+        transform: translate(0%, 0%) scale(1.5);
     }
     25% {
-        transform: translate(10%, -100%);
+        transform: translate(-50%, 50%) scale(1);
     }
     50% {
-        transform: translate(0%, 0%);
+        transform: translate(-30%, -100%) scale(0.5);
     }
     75% {
-        transform: translate(-100%, 80%);
+        transform: translate(-50%, 130%) scale(0.8);
     }
     100% {
-        transform: translate(-110%, 160%);
-    }
-}
-
-@keyframes moveGreenLight {
-    0% {
-        transform: translate(0%, 0%);
-    }
-    25% {
-        transform: translate(-10%, -100%);
-    }
-    50% {
-        transform: translate(0%, 0%);
-    }
-    75% {
-        transform: translate(100%, 80%);
-    }
-    100% {
-        transform: translate(110%, 160%);
-    }
-}
-
-@keyframes movePinkLight {
-    0% {
-        transform: translate(0%, 0%);
-    }
-    25% {
-        transform: translate(10%, 100%);
-    }
-    50% {
-        transform: translate(0%, 0%);
-    }
-    75% {
-        transform: translate(-100%, -80%);
-    }
-    100% {
-        transform: translate(-110%, -160%);
+        transform: translate(0%, 180%) scale(1.5);
     }
 }
 
@@ -101,11 +66,10 @@
 
 .yellow-light {
     position: absolute;
-    bottom: 25%;
+    top: 0%;
     left: 0%;
     background: radial-gradient(circle at center, rgb(252, 252, 129), transparent 70%);
     animation: moveYellowLight 10s infinite alternate ease-in-out;
-    z-index: 1;
 }
 
 .blue-light {
@@ -114,25 +78,6 @@
     right: 0%;
     background: radial-gradient(circle at center, rgb(136, 136, 254), transparent 70%);
     animation: moveBlueLight 10s infinite alternate ease-in-out;
-    z-index: 2;
-}
-
-.green-light {
-    position: absolute;
-    top: 25%;
-    left: 0%;
-    background: radial-gradient(circle at center, rgb(144, 252, 144), transparent 70%);
-    animation: moveGreenLight 10s infinite alternate ease-in-out;
-    z-index: 3;
-}
-
-.pink-light {
-    position: absolute;
-    bottom: 25%;
-    right: 0%;
-    background: radial-gradient(circle at center, rgb(252, 144, 203), transparent 70%);
-    animation: movePinkLight 10s infinite alternate ease-in-out;
-    z-index: 3;
 }
 
 .cursor {

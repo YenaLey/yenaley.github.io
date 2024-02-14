@@ -53,8 +53,6 @@ function HomeMobile() {
     <div id="home" className="container">
       <div className="light yellow-light"></div>
       <div className="light blue-light"></div>
-      <div className="light green-light"></div>
-      <div className="light pink-light"></div>
       <p>Hi, there!</p>
       <h1>I'm <span style={{color: "#ffc900"}}>YENA</span>.</h1>
       <TypingEffect />

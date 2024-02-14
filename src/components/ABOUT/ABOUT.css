@@ -26,28 +26,104 @@
     justify-content: start;
     align-items: start;
     margin: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 20px;
+    position: relative;
+    overflow: visible;
+    box-shadow:
+        5px 5px 15px rgba(0, 0, 0, 0.1),
+        inset 0 0 10px rgba(0, 0, 0, 0.1);
 
     @media (max-width: 600px) {
-        width: 90%;
+        width: 350px;
         height: auto;
     }
 }
 
-.about-content {
-    animation-delay: 0.6s;
+.pencil {
+    position: absolute;
+    bottom: -30px;
+    right: 45px;
+    /* 오른쪽 종이 끝에서 조금 떨어진 위치 */
+    width: 10px;
+    /* 연필의 너비 */
+    height: 200px;
+    /* 연필의 길이 */
+    background: linear-gradient(to bottom,
+            #f5f5f5 0%,
+            #f5f5f5 70%,
+            /* 연필 나무 부분 */
+            #c0c0c0 70%,
+            #c0c0c0 85%,
+            /* 연필 금속 밴드 */
+            #000 85%,
+            #000 100%
+            /* 연필 펜촉 부분 */
+        );
+    transform: rotate(10deg);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* 연필에 그림자 효과 추가 */
 }
 
+/* 연필 펜촉 디자인 */
+.pencil::before {
+    content: '';
+    position: absolute;
+    bottom: 200px;
+    /* 위치 조정 */
+    right: 0px;
+    /* 위치 조정 */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 20px solid #f5e6ca;
+    /* 살구색 펜촉 */
+}
+
+/* 연필 펜촉 끝부분 디자인 (검은색) */
+.pencil::after {
+    content: '';
+    position: absolute;
+    bottom: 211px;
+    /* 살구색 펜촉 바로 아래에 위치하도록 조정 */
+    right: 2.9px;
+    /* 펜촉과 동일한 위치 */
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 8px solid black;
+    /* 펜촉의 끝을 검은색으로 */
+}
+
+
+/* Adjust the rest of the content styles as needed */
 .about-content p {
     line-height: 1.6;
     font-size: 16px;
+    color: #333;
+    /* Darker font color for better readability */
 }
 
 .about-content h2 {
     font-weight: 400;
-    color: grey;
+    color: #333;
+    /* Darker color for headers */
 }
 
 .about-content .name {
+    color: #ffc900;
+}
+
+.about-content--bottom p,
+.about-content--bottom span {
+    font-size: 16px;
+    color: #333;
+    /* Darker color for better readability */
+}
+
+.about-content--bottom a {
+    text-decoration: none;
     color: #ffc900;
 }
 
@@ -71,103 +147,104 @@
     color: grey;
 }
 
-.about-content--bottom a {
-    text-decoration: none;
-    color: #ffc900;
-}
-
-.skillBar {
-    width: 450px;
-    height: 35px;
-    margin: 15px;
-    background-color: rgb(234, 232, 232);
+.skillContainer {
+    width: 60px;
     display: flex;
-    border-radius: 2px;
-
-    @media (max-width: 600px) {
-        width: 300px;
-    }
-}
-
-.skillBar .head {
-    width: 20%;
-    height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 2px 0 0 2px;
+    margin: 25px;
 }
 
-.skillBar .head p {
-    color: white;
-    font-size: 14px;
-
-    @media (max-width: 600px) {
-        font-size: 11px;
-    }
+.skillTitle {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.skillBar .body {
-    width: 80%;
+.flask {
+    width: 40px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flaskBody {
+    width: 40px;
+    /* 플라스크 본체의 너비 */
+    height: 180px;
+    /* 플라스크 본체의 높이 */
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
     position: relative;
+    padding-top: 10px;
+    /* 눈금이 입구 아래에 시작하도록 조정 */
 }
 
-.skillBar .percentBar {
-    height: 100%;
-    background-color: #ffc900;
-}
-
-.skillBar .body p {
+.lava {
+    width: 100%;
+    background: linear-gradient(orange, red);
+    /* 용암 액체의 그라데이션 */
     position: absolute;
-    top: 0;
-    right: 5px;
-    font-size: 14px;
-
-    @media (max-width: 600px) {
-        font-size: 11px;
-    }
+    bottom: 0;
+    border-radius: 0 0 25px 25px;
+    /* 액체 하단의 모서리를 둥글게 */
+    transition: height 2s;
 }
 
-.resume-block {
-    width: 800px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 2px 2px 3px grey;
-
-    @media (max-width: 900px) {
-        width: 90%;
-    }
+.tick {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 1px;
+    background-color: #000;
+    z-index: 5;
 }
 
-.resume-img {
-    width: 50px;
-    height: 50px;
-    margin: 20px;
+.count-box {
+    position: relative;
+    /* 상대 위치 설정으로 띠를 배치하기 위함 */
+    width: 250px;
+    height: 150px;
+    border: 1px solid white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
-    background-color: #ffc900;
-    object-fit: cover;
+    margin: 80px 20px;
+    background-color: black;
+    /* 박스 배경색 설정 */
 
-    @media (max-width: 900px) {
-        margin: 10px;
+    @media (max-width: 600px) {
+        margin: 30px 20px;
     }
 }
 
-.resume-img img {
-    width: 60%;
-    height: 60%;
+
+.count-box h1 {
+    font-size: 3em;
+    /* 숫자 크기를 크게 설정 */
+    color: white;
+    /* 숫자의 글자색 */
+    margin: 0;
+    /* 숫자 주변의 여백 설정 */
+}
+
+.count-box p {
+    font-size: 1.2em;
+    /* 설명 텍스트의 크기 설정 */
+    color: white;
+    /* 설명 텍스트의 글자색 */
 }
 
 .resume-content {
-    width: 700px;
+    width: 800px;
+    position: relative;
     height: auto;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px grey;
 
     @media (max-width: 900px) {
         width: 90%;
@@ -182,31 +259,49 @@
     color: #ffc900;
 }
 
-.count-box {
-    width: 250px;
-    height: 150px;
-    border: 1px solid white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 80px 20px;
-
-    @media (max-width: 1200px) {
-        margin: 20px 50px;
-    }
-
-    @media (max-width: 700px ) {
-        width: 80%;
-        margin: 20px;
-    }
-}
-
-.count-box h1 {
+.resume-header {
+    position: absolute;
+    top: 35px;
+    left: -10px;
+    background-color: #FF6F61;
     color: white;
+    font-weight: 500;
+    padding: 5px 30px;
+    clip-path: polygon(27% 0, 73% 0, 100% 100%, 0% 100%);
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+    z-index: 2;
+    /* 띠의 z-index를 상위로 설정 */
 }
 
-.count-box p {
-    font-size: 20px;
-    color: white;
+.resume-header-tip-left {
+    position: absolute;
+    top: 70.8px;
+    left: 15.5px;
+    border-left: 13.5px solid transparent;
+    /* 왼쪽 테두리 투명 처리 */
+    border-bottom: 13.5px solid gray;
+    transform: translateX(-50%) translateY(-50%) rotate(-225deg);
+    /* 위치와 각도 조정 */
+    transform-origin: 0 0;
+    /* 변환의 기준점 */
+    z-index: 2;
 }
+
+.resume-header-tip-right {
+    content: '';
+    position: absolute;
+    top: 15.9px;
+    /* 띠의 하단에서 시작 */
+    left: 43.8px;
+    border-right: 13.7px solid transparent;
+    /* 오른쪽 테두리 투명 처리 */
+    border-bottom: 13.7px solid gray;
+    /* 하단 테두리 회색으로 세모 생성 */
+    transform: translateX(50%) translateY(-50%) rotate(135deg);
+    /* 위치와 각도 조정 */
+    transform-origin: 100% 0;
+    /* 변환의 기준점 */
+    z-index: 2;
+}
+

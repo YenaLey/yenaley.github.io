@@ -14,7 +14,7 @@ function ABOUT() {
         <div className="underline"></div>
         <div className="content-container">
           <div className="profile-img">
-            <img src="./icon/작업.png"></img>
+            <img src="./icon/프로필.jpg"></img>
           </div>
           <div id="whitesmoke" className="about-content">
             <div className="pencil"></div>
@@ -63,6 +63,7 @@ function ABOUT() {
         <div className="content-container">
 
           <Resume
+            header="Education"
             period="2020.03 - 재학 중"
             title="UOS ECE"
             description1="Electrical and Computer Engineering major at the University of Seoul"
@@ -70,17 +71,19 @@ function ABOUT() {
             activitys={[]} />
 
           <Resume
+            header="Career"
             period="2023.10 - 2024.02"
             title="QUIPU DEV 1기"
-            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발소모임"
-            description2="QUIPU의 메인 웹 개발"
-            activitys={["디자인, 프론트엔드, 백엔드 팀에 적극적으로 의견을 내며 총괄 관리하였습니다.", "전체적인 웹 방향성 및 구성 등을 기획하였습니다.", "React.js와 Three.js를 사용하여 프론트엔드를 개발하였습니다."]} />
+            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발팀"
+            description2="QUIPU의 메인 웹 제작"
+            activitys={["전체적인 기획 및 React.js와 Three.js 기반 프론트엔드 개발"]} />
 
           <Resume
+            header="Career"
             period="2024.03 - 진행 중"
             title="QUIPU DEV 2기"
-            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발소모임"
-            description2="QUIPU의 포럼 웹 개발"
+            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발팀"
+            description2="QUIPU의 포럼 웹 제작"
             activitys={[]} />
 
         </div>
@@ -124,14 +127,17 @@ function Resume(props) {
 
   return (
     <div className="resume-content">
-      <div class="resume-header">진행 중</div>
+      <div class="resume-header">
+        <div className="resume-header-text">
+          <p>{props.header}</p>
+        </div>
+      </div>
       <div class="resume-header-tip-left"></div>
       <div class="resume-header-tip-right"></div>
       <h4>{props.period}</h4>
       <h2>{props.title}</h2>
       <p>{props.description1}</p>
       <p style={{ fontWeight: '700' }}>{props.description2}</p>
-      <h4>주요 활동</h4>
       {
         props.activitys.map(function (activity, index) {
           return (

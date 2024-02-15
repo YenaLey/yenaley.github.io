@@ -39,6 +39,8 @@ p {
 
 h1 {
   font-weight: 600;
+
+
 }
 
 .section {
@@ -63,12 +65,6 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: start;
-
-  /* @media (max-width: 700px) {
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  } */
 }
 
 .blank-container {

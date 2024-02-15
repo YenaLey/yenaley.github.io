@@ -2,7 +2,7 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import "../LINKS/LINKS.css"
+import "../CONTACT/CONTACT.css"
 
 function CONTACT() {
 
@@ -12,29 +12,57 @@ function CONTACT() {
         <h1>CONTACT</h1>
         <div className="underline"></div>
         <div className="content-container">
-          <div className="linkCard">
-            <div className="linkImg" style={{ width: "80px" }}>
-              <img src="./icon/주소.png"></img>
+          <a id="contactHref" href="https://github.com/YenaLey">
+            <div className="contactCard">
+              <div className="contactImg" style={{ width: "80px" }}>
+                <img src="./icon/깃허브.png"></img>
+              </div>
+              <h2>Github</h2>
+              <p>YenaLey</p>
             </div>
-            <h2>Address</h2>
-            <p>서울특별시 동대문구 휘경동</p>
-          </div>
-          <div className="linkCard">
-            <div className="linkImg" style={{ width: "80px" }}>
-              <img src="./icon/인스타그램.png"></img>
+          </a>
+          <a id="contactHref" href="https://www.instagram.com/2ye._na/">
+            <div className="contactCard">
+              <div className="contactImg" style={{ width: "80px" }}>
+                <img src="./icon/인스타그램.png"></img>
+              </div>
+              <h2>Instagram</h2>
+              <p>2ye._na</p>
             </div>
-            <h2>Instagram</h2>
-            <p>2ye._na</p>
-          </div>
-          <div className="linkCard">
-            <div className="linkImg" style={{ width: "80px" }}>
-              <img src="./icon/메일.png"></img>
+          </a>
+          <a id="contactHref" href="mailto: yena.e121@gmail.com">
+            <div className="contactCard">
+              <div className="contactImg" style={{ width: "80px" }}>
+                <img src="./icon/메일.png"></img>
+              </div>
+              <h2>Mail</h2>
+              <p>yena.e121@gmail.com</p>
             </div>
-            <h2>Mail</h2>
-            <p>yena.e121@gmail.com</p>
-          </div>
+          </a>
         </div>
         <div className="blank-container"></div>
+        <div id="footer" className="container">
+          <h1>YENA.</h1>
+          <div className="footer-img-container">
+            <a href="https://github.com/YenaLey">
+              <div className="footer-img">
+                <img src="./icon/깃허브_푸터.png"></img>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/2ye._na/">
+              <div className="footer-img">
+                <img src="./icon/인스타그램_푸터.png"></img>
+              </div>
+            </a>
+            <a href="mailto: yena.e121@gmail.com">
+              <div className="footer-img">
+                <img src="./icon/메일_푸터.png"></img>
+              </div>
+            </a>
+          </div>
+            <p>Copyright 2024. 이예나. All rights reserved.</p>
+            <p>icon designed by Flaticon(Freepik)</p>
+        </div>
       </div>
     </Element>
   );

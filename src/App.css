@@ -7,16 +7,21 @@
   align-items: center;
   background-color: black;
   z-index: 100;
+
 }
 
 .logo {
   padding: 0 20px;
 }
 
-.logo p {
+.logo a {
   font-size: 40px;
   font-weight: 700;
   color: white;
+  cursor: pointer;
+  @media (max-width: 800px) {
+    font-size: 30px;
+  }
 }
 
 .pc-menu ul {
@@ -37,6 +42,7 @@
   font-size: 15px;
   font-weight: 400;
   color: white;
+  cursor: pointer;
 }
 
 .pc-menu li:hover {

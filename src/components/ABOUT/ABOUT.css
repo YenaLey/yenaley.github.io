@@ -1,21 +1,25 @@
 .profile-img {
-    width: 500px;
+    width: auto;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
+    object-fit: cover;
+    border: 25px solid whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
 
     @media (max-width: 600px) {
-        width: 90%;
-        height: auto;
+        width: auto;
+        height: 420px;
     }
 }
 
 .profile-img img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    border-radius: 5px;
+    width: auto;
+    height: 100%;
 }
 
 .about-content {
@@ -44,7 +48,7 @@
 
 .pencil {
     position: absolute;
-    bottom: -30px;
+    bottom: -20px;
     right: 45px;
     /* 오른쪽 종이 끝에서 조금 떨어진 위치 */
     width: 10px;
@@ -130,6 +134,8 @@
 .about-content--bottom {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
 }
 
@@ -174,7 +180,7 @@
     height: 180px;
     /* 플라스크 본체의 높이 */
     background-color: #fff;
-    border: 3px solid #000;
+    border: 2px solid #000;
     border-radius: 0 0 25px 25px;
     overflow: hidden;
     position: relative;
@@ -184,7 +190,7 @@
 
 .lava {
     width: 100%;
-    background: linear-gradient(orange, red);
+    background: linear-gradient(#ffc900, white);
     /* 용암 액체의 그라데이션 */
     position: absolute;
     bottom: 0;
@@ -266,12 +272,26 @@
     background-color: #FF6F61;
     color: white;
     font-weight: 500;
-    padding: 5px 30px;
     clip-path: polygon(27% 0, 73% 0, 100% 100%, 0% 100%);
     transform: rotate(-45deg);
     transform-origin: left bottom;
     z-index: 2;
-    /* 띠의 z-index를 상위로 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-header-text {
+    width: 106px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-header-text p {
+    color: white;
+    font-size: 13px;
 }
 
 .resume-header-tip-left {

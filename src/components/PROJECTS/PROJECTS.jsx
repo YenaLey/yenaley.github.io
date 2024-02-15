@@ -8,7 +8,7 @@ function PROJECTS() {
 
   return (
     <Element name="projects">
-      <div className="container" style={{ backgroundColor: "#ffc900" }}>
+      <div id="whitesmoke" className="container">
         <div className="blank-container"></div>
         <h1>PROJECTS</h1>
         <div className="underline"></div>
@@ -17,36 +17,36 @@ function PROJECTS() {
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
-            img="./icon/추진력.png" />
+            img="./icon/퀴푸메인웹.png" />
 
           <Project
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
-            img="./icon/추진력.png" />
+            img="./icon/퀴푸메인웹.png" />
 
           <Project
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
-            img="./icon/추진력.png" />
+            img="./icon/퀴푸메인웹.png" />
 
           <Project
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
-            img="./icon/추진력.png" />
+            img="./icon/퀴푸메인웹.png" />
         </div>
         <div className="blank-container"></div>
       </div>
-      <div className="blank-container"></div>
-      <div className="container">
+      <div className="blank-container" style={{ backgroundColor: "#ffc900" }}></div>
+      <div className="container" style={{ backgroundColor: "#ffc900" }}>
         <h1>WHY CHOOSE ME</h1>
         <div className="underline"></div>
         <div className="content-container">
           <div className="choose-block" id="reverse">
             <div className="description">
-              <h2>빠른 추진력</h2>
+              <h2>강한 추진력</h2>
               <p>재빠른 실행력으로 아이디어를 신속히 현실에 반영합니다. 우선순위 설정을 통해, 목표를 정확하고 빠르게 달성합니다.</p>
             </div>
             <div className="img">
@@ -77,7 +77,7 @@ function PROJECTS() {
             </div>
             <div className="description">
               <h2>높은 신뢰성</h2>
-              <p>맡겨진 일에 대한 높은 책임감을 바탕으로, 약속된 기한과 품질 기준을 철저히 준수합니다.</p>
+              <p>맡겨진 일에 대한 높은 책임감을 바탕으로, 약속된 기한과 품질을 엄격히 지키며 일합니다.</p>
             </div>
           </div>
         </div>

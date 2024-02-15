@@ -32,18 +32,14 @@
     align-items: center;
     object-fit: cover;
     background-color: whitesmoke;
-
     @media (max-width: 600px) {
         height: 50%;
     }
 }
 
 .project-img img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
 }
-
-
 
 
 .choose-block {
@@ -93,13 +89,14 @@
 }
 
 .choose-block .description h2{
+    color: #FF6F61;
     margin: 5px;
 }
 
 .choose-block .description p{
     margin: 5px;
     line-height: 1.4;
-    color: grey;
+    color: white;
 
     @media (max-width: 1000px) {
         text-align: center;
@@ -109,15 +106,10 @@
 .choose-block .img {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
     background: radial-gradient(circle, white 45%, #ffc900 55%);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.choose-block .img:hover {
-    background: radial-gradient(circle, #ffc900 45%, white 55%);
 }
 
 .choose-block .img img {

@@ -211,7 +211,7 @@
 .choose-block .description p{
     margin: 5px;
     line-height: 1.4;
-    color: white;
+    color: black;
 
     @media (max-width: 1000px) {
         text-align: center;
@@ -221,7 +221,6 @@
 .choose-block .img {
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle, white 45%, #ffc900 55%);
     display: flex;
     justify-content: center;
     align-items: center;

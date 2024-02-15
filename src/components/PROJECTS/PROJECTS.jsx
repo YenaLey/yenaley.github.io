@@ -17,7 +17,7 @@ function PROJECTS() {
             role="웹 기획, 웹 디자인, 프론트엔드 개발"
             title="QUIPU main web"
             period="2023.10 - 2024.02"
-            description="서울시립대학교 중앙동아리 퀴푸의 메인 웹사이트 기획을 맡았으며, 'home'과 'about' 페이지의 디자인을 Figma 도구를 사용하여 구성했습니다. React.js와 Three.js를 기반으로 하여 전체적인 레이아웃 및 라우팅 구성, 네비게이션 바, 'home', 'about', 'activity' 섹션의 프론트엔드 개발을 주도했습니다."
+            description="서울시립대학교 중앙동아리 퀴푸의 메인 웹사이트 기획을 맡았으며, 'home'과 'about' 페이지의 디자인을 Figma 도구를 사용하여 구성했습니다. React.js와 Three.js를 기반으로 하여 전체적인 레이아웃 및 라우팅 구성, 네비게이션 바, 'home', 'about', 'activity' 섹션의 프론트엔드 개발을 하였습니다."
             img="./icon/퀴푸메인웹.png"
             link="https://front-end-zeta-five.vercel.app/"
             github="https://github.com/YenaLey"
@@ -33,11 +33,22 @@ function PROJECTS() {
             github="https://github.com/YenaLey"
             notion="https://github.com/YenaLey" />
 
+          <Project1
+            role="웹 기획, 웹 디자인, 프론트엔드 개발"
+            title="QUIPU main web"
+            period="2023.10 - 2024.02"
+            description="서울시립대학교 중앙동아리 퀴푸의 메인 웹사이트 기획을 맡았으며, 'home'과 'about' 페이지의 디자인을 Figma 도구를 사용하여 구성했습니다. React.js와 Three.js를 기반으로 하여 전체적인 레이아웃 및 라우팅 구성, 네비게이션 바, 'home', 'about', 'activity' 섹션의 프론트엔드 개발을 주도했습니다."
+            img="./icon/퀴푸메인웹.png"
+            link="https://front-end-zeta-five.vercel.app/"
+            github="https://github.com/YenaLey"
+            notion="https://github.com/YenaLey" />
+
         </div>
-        <div className="blank-container"></div>
+        <div id="whitesmoke" className="blank-container"></div>
       </div>
-      <div className="blank-container" style={{ backgroundColor: "#ffc900" }}></div>
-      <div className="container" style={{ backgroundColor: "#ffc900" }}>
+      <div id="whitesmoke" className="container">
+        <div className="blank-container"></div>
+        <div className="blank-container"></div>
         <h1>WHY CHOOSE ME</h1>
         <div className="underline"></div>
         <div className="content-container">
@@ -79,6 +90,7 @@ function PROJECTS() {
           </div>
         </div>
         <div className="blank-container"></div>
+        <div className="blank-container"></div>
       </div>
     </Element>
   );
@@ -98,7 +110,7 @@ function Project1(props) {
       </div>
       <div className="project-content">
         <p>{props.period}</p>
-        <h3 style={{fontWeight: '500'}}>{props.role}</h3>
+        <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
         <p>{props.description}</p>
         <div className="icon-container">
@@ -128,7 +140,7 @@ function Project2(props) {
     <div id="reverse" className="project-block">
       <div className="project-content">
         <p>{props.period}</p>
-        <h3>{props.role}</h3>
+        <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
         <p>{props.description}</p>
         <div className="icon-container">

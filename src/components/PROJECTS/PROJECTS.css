@@ -83,14 +83,14 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 550px;
     height: 20px;
+    clip-path: polygon(9% 0, 91% 0, 100% 100%, 0% 100%);
     background-color: rgb(73, 73, 73);
     border-radius: 3px;
-    /* background-image: linear-gradient(rgb(109, 109, 109) 1px, transparent 1px),
+    background-image: linear-gradient(rgb(109, 109, 109) 1px, transparent 1px),
                       linear-gradient(100deg, rgb(109, 109, 109) 1px, transparent 1px);
     background-size: 8px 8px, 8px 8px;
-    background-position: -1px -1px, -1px -1px; */
+    background-position: -1px -1px, -1px -1px;
 
     @media (max-width: 600px) {
         width: 96vw;
@@ -98,13 +98,16 @@
     @media (max-width: 400px) {
         width: 94vw;
         height: 15px;
+        clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
     }
     @media (max-width: 350px) {
         width: 93vw;
         height: 10px;
+        clip-path: polygon(7% 0, 93% 0, 100% 100%, 0% 100%);
     }
     @media (max-width: 250px) {
         width: 91vw;
+        clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
     }
 }
 

@@ -75,10 +75,7 @@
     height: 30px;
 
     @media (max-width: 600px) {
-        width: 97vw;
-    }
-    @media (max-width: 400px) {
-        width: 93vw;
+        width: 125%;
     }
 }
 
@@ -97,17 +94,20 @@
     background-position: -1px -1px, -1px -1px;
 
     @media (max-width: 600px) {
-        width: 100%;
+        width: 96vw;
     }
     @media (max-width: 400px) {
+        width: 94vw;
         height: 15px;
         clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
     }
     @media (max-width: 350px) {
+        width: 93vw;
         height: 10px;
         clip-path: polygon(7% 0, 93% 0, 100% 100%, 0% 100%);
     }
     @media (max-width: 250px) {
+        width: 91vw;
         clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
     }
 }

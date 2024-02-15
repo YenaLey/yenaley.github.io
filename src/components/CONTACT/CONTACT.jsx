@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from 'react-scroll';
+import { Link, Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import "../CONTACT/CONTACT.css"
@@ -42,7 +42,7 @@ function CONTACT() {
         </div>
         <div className="blank-container"></div>
         <div id="footer" className="container">
-          <h1>YENA.</h1>
+          <Link activeClass="active-menu-item" to="home" spy={true} smooth={true} duration={500}>YENA.</Link>
           <div className="footer-img-container">
             <a href="https://github.com/YenaLey">
               <div className="footer-img">
@@ -60,8 +60,8 @@ function CONTACT() {
               </div>
             </a>
           </div>
-            <p>Copyright 2024. 이예나. All rights reserved.</p>
-            <p>icon designed by Flaticon(Freepik)</p>
+          <p>Copyright 2024. 이예나. All rights reserved.</p>
+          <p>icon designed by Flaticon(Freepik)</p>
         </div>
       </div>
     </Element>

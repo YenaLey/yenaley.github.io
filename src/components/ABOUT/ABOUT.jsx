@@ -102,7 +102,9 @@ function SkillBar({ title, percent }) {
       <div className="skillTitle">{title}</div>
       <div className="flask">
         <div className="flaskBody">
-          <div className="lava" style={{ height: `${percent}%` }}></div>
+          <div className="lava" style={{ height: `${percent}%` }}>
+            <p>{parseFloat((0.01 * percent).toFixed(1))}</p>
+          </div>
           {Array.from({ length: 10 }, (_, index) => (
             <div className="tick" style={{ bottom: `${index * 10}%` }} key={index}></div>
           ))}

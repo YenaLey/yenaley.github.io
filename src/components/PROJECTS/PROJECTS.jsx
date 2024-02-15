@@ -13,25 +13,25 @@ function PROJECTS() {
         <h1>PROJECTS</h1>
         <div className="underline"></div>
         <div className="content-container">
-          <Project
+          <Project1
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
             img="./icon/퀴푸메인웹.png" />
 
-          <Project
+          <Project2
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
             img="./icon/퀴푸메인웹.png" />
 
-          <Project
+          <Project1
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
             img="./icon/퀴푸메인웹.png" />
 
-          <Project
+          <Project2
             title="QUIPU main web"
             period="2023.10 - 2024.02"
             description="블라블라"
@@ -89,7 +89,22 @@ function PROJECTS() {
 
 export default PROJECTS;
 
-function Project(props) {
+function Project1(props) {
+  return (
+    <div className="project-block">
+      <div className="project-img">
+        <img src={props.img}></img>
+      </div>
+      <div className="project-content">
+        <h2>{props.title}</h2>
+        <p>{props.period}</p>
+        <p>{props.description}</p>
+      </div>
+    </div>
+  )
+}
+
+function Project2(props) {
   return (
     <div className="project-block">
       <div className="project-content">

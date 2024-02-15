@@ -199,6 +199,12 @@
     transition: height 2s;
 }
 
+.lava p {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 3px;
+}
+
 .tick {
     position: absolute;
     right: 0;

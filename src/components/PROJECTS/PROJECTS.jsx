@@ -106,7 +106,7 @@ function Project1(props) {
 
 function Project2(props) {
   return (
-    <div className="project-block">
+    <div id="reverse" className="project-block">
       <div className="project-content">
         <h2>{props.title}</h2>
         <p>{props.period}</p>

@@ -14,28 +14,25 @@ function PROJECTS() {
         <div className="underline"></div>
         <div className="content-container">
           <Project1
+            role="웹 기획, 웹 디자인, 프론트엔드 개발"
             title="QUIPU main web"
             period="2023.10 - 2024.02"
-            description="블라블라"
-            img="./icon/퀴푸메인웹.png" />
+            description="서울시립대학교 중앙동아리 퀴푸의 메인 웹사이트 기획을 맡았으며, 'home'과 'about' 페이지의 디자인을 Figma 도구를 사용하여 구성했습니다. React.js와 Three.js를 기반으로 하여 전체적인 레이아웃 및 라우팅 구성, 네비게이션 바, 'home', 'about', 'activity' 섹션의 프론트엔드 개발을 주도했습니다."
+            img="./icon/퀴푸메인웹.png"
+            link="https://front-end-zeta-five.vercel.app/"
+            github="https://github.com/YenaLey"
+            notion="https://github.com/YenaLey" />
 
           <Project2
+            role="웹 기획, 웹 디자인, 프런트엔드 개발"
             title="QUIPU main web"
             period="2023.10 - 2024.02"
-            description="블라블라"
-            img="./icon/퀴푸메인웹.png" />
+            description="서울시립대학교 중앙동아리 퀴푸의 메인 웹사이트 기획을 맡았으며, 'home'과 'about' 페이지의 디자인을 Figma 도구를 사용하여 구성했습니다. React.js와 Three.js를 기반으로 하여 전체적인 레이아웃 및 라우팅 구성, 네비게이션 바, 'home', 'about', 'activity' 섹션의 프론트엔드 개발을 주도했습니다."
+            img="./icon/퀴푸메인웹.png"
+            link="https://front-end-zeta-five.vercel.app/"
+            github="https://github.com/YenaLey"
+            notion="https://github.com/YenaLey" />
 
-          <Project1
-            title="QUIPU main web"
-            period="2023.10 - 2024.02"
-            description="블라블라"
-            img="./icon/퀴푸메인웹.png" />
-
-          <Project2
-            title="QUIPU main web"
-            period="2023.10 - 2024.02"
-            description="블라블라"
-            img="./icon/퀴푸메인웹.png" />
         </div>
         <div className="blank-container"></div>
       </div>
@@ -92,13 +89,35 @@ export default PROJECTS;
 function Project1(props) {
   return (
     <div className="project-block">
-      <div className="project-img">
+      <div className="laptop">
+        <div className="keyboard">
+          <div className="keyboard-top"></div>
+          <div className="keyboard-bottom"></div>
+        </div>
         <img src={props.img}></img>
       </div>
       <div className="project-content">
-        <h2>{props.title}</h2>
         <p>{props.period}</p>
+        <h3 style={{fontWeight: '500'}}>{props.role}</h3>
+        <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
         <p>{props.description}</p>
+        <div className="icon-container">
+          <a href={props.link}>
+            <div className="icon">
+              <img src="./icon/링크아이콘.png"></img>
+            </div>
+          </a>
+          <a href={props.github}>
+            <div className="icon">
+              <img src="./icon/깃허브아이콘.png"></img>
+            </div>
+          </a>
+          <a href={props.notion}>
+            <div className="icon">
+              <img src="./icon/기록아이콘.png"></img>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   )
@@ -108,11 +127,33 @@ function Project2(props) {
   return (
     <div id="reverse" className="project-block">
       <div className="project-content">
-        <h2>{props.title}</h2>
         <p>{props.period}</p>
+        <h3>{props.role}</h3>
+        <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
         <p>{props.description}</p>
+        <div className="icon-container">
+          <a href={props.link}>
+            <div className="icon">
+              <img src="./icon/링크아이콘.png"></img>
+            </div>
+          </a>
+          <a href={props.github}>
+            <div className="icon">
+              <img src="./icon/깃허브아이콘.png"></img>
+            </div>
+          </a>
+          <a href={props.notion}>
+            <div className="icon">
+              <img src="./icon/기록아이콘.png"></img>
+            </div>
+          </a>
+        </div>
       </div>
-      <div className="project-img">
+      <div className="laptop">
+        <div className="keyboard">
+          <div className="keyboard-top"></div>
+          <div className="keyboard-bottom"></div>
+        </div>
         <img src={props.img}></img>
       </div>
     </div>

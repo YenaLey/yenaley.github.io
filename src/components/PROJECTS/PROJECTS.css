@@ -4,46 +4,154 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 30px 0;
 
     @media (max-width: 1000px) {
-        height: auto;
         flex-direction: column;
-        margin: 30px 0;
     }
 }
 
-.project-content{
-    width: 500px;
+.project-content {
+    width: 550px;
     height: 300px;
+    padding: 20px;
+    padding-left: 60px;
+
+    @media (max-width: 1000px) {
+        padding-top: 60px;
+        padding-left: 20px;
+    }
+    @media (max-width: 600px) {
+        width: 90%;
+        height: auto;
+        padding: 60px 0 0 0;
+    }
+}
+
+#reverse .project-content {
+    padding-left: 20px;
+    padding-right: 60px;
+
+    @media (max-width: 1000px) {
+        padding-right: 20px;
+    }
+    @media (max-width: 600px) {
+        width: 90%;
+        height: auto;
+        padding: 60px 0 0 0;
+    }
+}
+
+.project-content p {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.laptop {
+    width: 450px; /* 노트북 모니터의 너비를 설정합니다 */
+    aspect-ratio: 16 / 9;
+    border: 8px solid black; /* 노트북 모니터의 테두리를 설정합니다 */
+    border-top: 12px solid black;
+    border-bottom: 12px solid black;
+    border-radius: 10px 10px 0 0; /* 노트북 모니터의 모서리를 둥글게 만듭니다 */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* 모니터에 그림자를 추가합니다 */
+    position: relative; /* 키보드를 위한 상대 위치 설정합니다 */
+    background: #ecf0f1; /* 모니터의 배경색을 설정합니다 */
+    display: flex; /* 중앙 정렬을 위해 flexbox를 사용합니다 */
+    justify-content: center; /* 가로 방향 중앙 정렬을 설정합니다 */
+    align-items: center; /* 세로 방향 중앙 정렬을 설정합니다 */
 
     @media (max-width: 600px) {
-        width: 300px;
-        height: auto;
+        width: 80%;
     }
 }
 
-.project-img {
-    width: 500px;
-    height: 300px;
+.keyboard {
+    position: absolute; /* 가상 요소의 위치를 절대 위치로 설정합니다 */
+    bottom: -40px; /* 키보드가 모니터 아래로 위치하도록 설정합니다 */
+    left: 50%; /* 키보드를 가로 방향 중앙에 배치합니다 */
+    transform: translateX(-50%);
+    width: 550px;
+    height: 30px;
+
+    @media (max-width: 600px) {
+        width: 125%;
+    }
+}
+
+.keyboard-top {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    clip-path: polygon(9% 0, 91% 0, 100% 100%, 0% 100%);
+    height: 20px;
+    background-color: rgb(73, 73, 73);
+    border-radius: 3px;
+    background-image: linear-gradient(rgb(109, 109, 109) 1px, transparent 1px),
+                      linear-gradient(100deg, rgb(109, 109, 109) 1px, transparent 1px);
+    background-size: 8px 8px, 8px 8px;
+    background-position: -1px -1px, -1px -1px;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+    @media (max-width: 400px) {
+        height: 15px;
+        clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
+    }
+    @media (max-width: 350px) {
+        height: 10px;
+        clip-path: polygon(7% 0, 93% 0, 100% 100%, 0% 100%);
+    }
+    @media (max-width: 250px) {
+        clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.keyboard-bottom {
+    position: relative;
+    left: 50%; /* 키보드를 가로 방향 중앙에 배치합니다 */
+    transform: translateX(-50%);
+    width: 550px; /* 키보드의 너비를 설정합니다 */
+    height: 10px; /* 키보드의 높이를 설정합니다 */
+    background: black; /* 키보드의 색상을 설정합니다 */
+    border-radius: 3px; /* 키보드의 모서리를 약간 둥글게 만듭니다 */
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2); /* 키보드에 그림자를 
+    추가합니다 */
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+
+.laptop img {
+    max-width: 100%; /* 이미지의 최대 너비를 설정합니다 */
+    max-height: 100%; /* 이미지의 최대 높이를 설정합니다 */
+    object-fit: over; /* 이미지가 비율을 유지하며 박스 안에 들어가도록 설정합니다 */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    object-fit: cover;
-    margin: 20px;
-    border: 25px solid black;
-    border-radius: 10px;
-    box-shadow: 0 0 10px grey;
-
-
-    @media (max-width: 600px) {
-        border: 15px solid black;
-        width: 90%;
-        height: auto;
-    }
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
 }
 
-.project-img img {
+.icon img {
     width: 100%;
+    height: 100%;
 }
 
 

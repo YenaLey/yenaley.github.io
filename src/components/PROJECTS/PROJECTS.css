@@ -75,7 +75,10 @@
     height: 30px;
 
     @media (max-width: 600px) {
-        width: 125%;
+        width: 97vw;
+    }
+    @media (max-width: 400px) {
+        width: 93vw;
     }
 }
 

@@ -95,7 +95,6 @@ function ABOUT() {
 
         </div>
         <div className="blank-container"></div>
-
       </div>
     </Element>
   );
@@ -105,7 +104,7 @@ export default ABOUT;
 
 function SkillBar({ title, percent }) {
   return (
-    <div className="skillContainer">
+    <div className="skillBar">
       <div className="skillTitle">{title}</div>
       <div className="flask">
         <div className="flaskBody">

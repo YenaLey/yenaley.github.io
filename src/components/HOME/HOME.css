@@ -11,6 +11,7 @@
 #home h2,
 #home span {
     color: white;
+    position: relative;
 }
 
 #home p {

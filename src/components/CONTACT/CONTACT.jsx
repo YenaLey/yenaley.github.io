@@ -41,6 +41,7 @@ function CONTACT() {
           </a>
         </div>
         <div className="blank-container"></div>
+        <div className="blank-container"></div>
         <div id="footer" className="container">
           <Link activeClass="active-menu-item" to="home" spy={true} smooth={true} duration={500}>YENA.</Link>
           <div className="footer-img-container">

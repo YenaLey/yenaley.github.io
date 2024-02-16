@@ -274,8 +274,8 @@
 
 .resume-header {
     position: absolute;
-    top: 42px;
-    left: -10.5px;
+    top: 38px;
+    left: -8px;
     background-color: #FF6F61;
     color: white;
     font-weight: 500;
@@ -289,7 +289,7 @@
 }
 
 .resume-header-text {
-    width: 106px;
+    width: 98px;
     height: 23px;
     display: flex;
     justify-content: center;
@@ -303,11 +303,11 @@
 
 .resume-header-tip-left {
     position: absolute;
-    top: 70.8px;
-    left: 15.5px;
-    border-left: 13.5px solid transparent;
+    top: 67px;
+    left: 12.5px;
+    border-left: 11px solid transparent;
     /* 왼쪽 테두리 투명 처리 */
-    border-bottom: 13.5px solid gray;
+    border-bottom: 11px solid grey;
     transform: translateX(-50%) translateY(-50%) rotate(-225deg);
     /* 위치와 각도 조정 */
     transform-origin: 0 0;
@@ -318,12 +318,12 @@
 .resume-header-tip-right {
     content: '';
     position: absolute;
-    top: 15.9px;
+    top: 13.5px;
     /* 띠의 하단에서 시작 */
-    left: 43.8px;
-    border-right: 13.7px solid transparent;
+    left: 44.5px;
+    border-right: 11.5px solid transparent;
     /* 오른쪽 테두리 투명 처리 */
-    border-bottom: 13.7px solid gray;
+    border-bottom: 11.5px solid grey;
     /* 하단 테두리 회색으로 세모 생성 */
     transform: translateX(50%) translateY(-50%) rotate(135deg);
     /* 위치와 각도 조정 */

@@ -257,6 +257,7 @@
     margin: 20px;
     padding: 20px;
     box-shadow: 0 0 10px grey;
+    background-color: white;;
 
     @media (max-width: 900px) {
         width: 90%;

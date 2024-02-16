@@ -8,7 +8,7 @@ function PROJECTS() {
 
   return (
     <Element name="projects">
-      <div id="whitesmoke" className="container">
+      <div className="container">
         <div className="blank-container"></div>
         <h1>PROJECTS</h1>
         <div className="underline"></div>
@@ -44,10 +44,9 @@ function PROJECTS() {
             notion="https://github.com/YenaLey" />
 
         </div>
-        <div id="whitesmoke" className="blank-container"></div>
-      </div>
-      <div id="whitesmoke" className="container">
         <div className="blank-container"></div>
+      </div>
+      <div className="container">
         <div className="blank-container"></div>
         <h1>WHY CHOOSE ME</h1>
         <div className="underline"></div>

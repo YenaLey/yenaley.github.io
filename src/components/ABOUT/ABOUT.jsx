@@ -54,9 +54,9 @@ function ABOUT() {
         <Count countNum={171} title="github contributions" />
         <div className="blank-container"></div>
       </div>
-      <div className="blank-container"></div>
       {/* RESUME */}
-      <div className="container">
+      <div id="whitesmoke" className="container">
+        <div className="blank-container"></div>
         <h1>RESUME</h1>
         <div className="underline"></div>
         <div className="content-container">

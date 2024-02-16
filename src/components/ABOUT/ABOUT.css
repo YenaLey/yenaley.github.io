@@ -274,12 +274,12 @@
 
 .resume-header {
     position: absolute;
-    top: 38px;
-    left: -8px;
+    top: 40px;
+    left: -6px;
     background-color: #FF6F61;
     color: white;
     font-weight: 500;
-    clip-path: polygon(22% 0, 78% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(27% 0, 73% 0, 100% 100%, 0% 100%);
     transform: rotate(-45deg);
     transform-origin: left bottom;
     z-index: 2;
@@ -289,8 +289,8 @@
 }
 
 .resume-header-text {
-    width: 98px;
-    height: 23px;
+    width: 106px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,11 +303,11 @@
 
 .resume-header-tip-left {
     position: absolute;
-    top: 67px;
-    left: 12.5px;
-    border-left: 11px solid transparent;
+    top: 74px;
+    left: 9px;
+    border-left: 8.5px solid transparent;
     /* 왼쪽 테두리 투명 처리 */
-    border-bottom: 11px solid grey;
+    border-bottom: 8.5px solid gray;
     transform: translateX(-50%) translateY(-50%) rotate(-225deg);
     /* 위치와 각도 조정 */
     transform-origin: 0 0;
@@ -318,12 +318,12 @@
 .resume-header-tip-right {
     content: '';
     position: absolute;
-    top: 13.5px;
+    top: 8px;
     /* 띠의 하단에서 시작 */
-    left: 44.5px;
-    border-right: 11.5px solid transparent;
+    left: 58.5px;
+    border-right: 7px solid transparent;
     /* 오른쪽 테두리 투명 처리 */
-    border-bottom: 11.5px solid grey;
+    border-bottom: 7px solid gray;
     /* 하단 테두리 회색으로 세모 생성 */
     transform: translateX(50%) translateY(-50%) rotate(135deg);
     /* 위치와 각도 조정 */
@@ -331,4 +331,3 @@
     /* 변환의 기준점 */
     z-index: 2;
 }
-

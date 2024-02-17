@@ -43,6 +43,16 @@ function PROJECTS() {
             github="https://github.com/YenaLey"
             notion="https://github.com/YenaLey" />
 
+          <Project2
+            role="웹 기획, 웹 디자인, 프론트엔드 개발"
+            title="Verilog HDL을 사용한 계산기 설계"
+            period="2022.11 - 2022.12"
+            description="콤보박스?에 논리 설계, 7-Segment Array, PIEZO를 사용하여 Verilog HDL기반의 계산기를 설계하였습니다. 덧셈, 뺄셈, 곱셈, 나눗셈, 거듭제곱, 팩토리얼 기능을 구현하였습니다. button switch로 숫자를 입력하고 dip switch로 input, 연산자, 음수표현을 조정했습니다. 계산 결과는 clock를 조정한 TEXT LCD에 나타나도록 설정하였습니다."
+            img="./icon/퀴푸메인웹.png"
+            link="https://front-end-zeta-five.vercel.app/"
+            github="https://github.com/YenaLey"
+            notion="https://github.com/YenaLey" />
+
         </div>
         <div className="blank-container"></div>
       </div>

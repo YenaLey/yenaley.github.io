@@ -265,7 +265,7 @@
 }
 
 .resume-content p {
-    color: grey;
+    color: gray;
 }
 
 .resume-content h4 {
@@ -303,7 +303,7 @@
 
 .resume-header-tip-left {
     position: absolute;
-    top: 76.5px;
+    top: 75.5px;
     left: 16.5px;
     border-left: 14px solid transparent;
     /* 왼쪽 테두리 투명 처리 */

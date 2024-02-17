@@ -45,6 +45,7 @@
 .project-content p {
     line-height: 1.5;
     font-size: 15px;
+    color: grey;
 }
 
 .laptop {
@@ -63,6 +64,9 @@
 
     @media (max-width: 600px) {
         width: 80%;
+        border: 5px solid black; /* 노트북 모니터의 테두리를 설정합니다 */
+        border-top: 9px solid black;
+        border-bottom: 9px solid black;
     }
 }
 
@@ -76,6 +80,7 @@
 
     @media (max-width: 600px) {
         width: 125%;
+        bottom: -38px; /* 키보드가 모니터 아래로 위치하도록 설정합니다 */
     }
 }
 
@@ -93,21 +98,22 @@
     background-position: -1px -1px, -1px -1px;
 
     @media (max-width: 600px) {
+        width: 97vw;
+    }
+    @media (max-width: 500px) {
         width: 96vw;
     }
     @media (max-width: 400px) {
-        width: 94vw;
-        height: 15px;
+        width: 95.5vw;
+        height: 10px;
         clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
     }
-    @media (max-width: 350px) {
-        width: 93vw;
-        height: 10px;
+    @media (max-width: 300px) {
+        width: 94vw;
         clip-path: polygon(7% 0, 93% 0, 100% 100%, 0% 100%);
     }
     @media (max-width: 250px) {
-        width: 91vw;
-        clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+        width: 93vw;
     }
 }
 
@@ -123,7 +129,7 @@
     추가합니다 */
 
     @media (max-width: 600px) {
-        width: 100%;
+        width: 99%;
         height: 7px; /* 키보드의 높이를 설정합니다 */
     }
 }

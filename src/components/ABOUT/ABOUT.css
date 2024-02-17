@@ -95,11 +95,25 @@
     line-height: 1.6;
     font-size: 16px;
     color: #333;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+}
+
+.about-content h1 {
+    @media (max-width: 600px) {
+        font-size: 25px;
+    }
 }
 
 .about-content h2 {
     font-weight: 400;
     color: #333;
+
+    @media (max-width: 600px) {
+        font-size: 20px;
+    }
 }
 
 .about-content .name {
@@ -108,7 +122,6 @@
 
 .about-content--bottom p,
 .about-content--bottom span {
-    font-size: 16px;
     color: #333;
 }
 
@@ -130,6 +143,10 @@
     margin: 10px 0;
     font-size: 16px;
     font-weight: 500;
+
+    @media (max-width: 600px) {
+        font-size: 13px;
+    }
 }
 
 .about-content--bottom span {
@@ -137,6 +154,10 @@
     margin: 10px 0;
     font-size: 16px;
     color: grey;
+
+    @media (max-width: 600px) {
+        font-size: 13px;
+    }
 }
 
 .skillBar {

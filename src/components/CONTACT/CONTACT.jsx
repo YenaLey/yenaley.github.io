@@ -30,7 +30,7 @@ function CONTACT() {
 
           <Contact
             link="mailto: yena.e121@gmail.com"
-            img="./img/icon/깃허브.png"
+            img="./img/icon/메일.png"
             title="Mail"
             description="yena.e121@gmail.com"
           ></Contact>

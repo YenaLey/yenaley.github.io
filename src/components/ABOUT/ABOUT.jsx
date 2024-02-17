@@ -83,8 +83,8 @@ function ABOUT() {
             period="2023.10 - 2024.02"
             title="QUIPU DEV 1기"
             description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발팀"
-            description2="QUIPU의 메인 웹 제작"
-            activitys={["전체적인 기획 및 React.js와 Three.js 기반 프론트엔드 개발"]} />
+            description2="React.js와 Three.js 기반의 QUIPU 메인 웹 제작"
+            activitys={[]} />
 
           <Resume
             header="Career"

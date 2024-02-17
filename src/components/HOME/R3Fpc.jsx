@@ -4,34 +4,29 @@ import { Text, Plane } from '@react-three/drei';
 
 function R3Fpc() {
   const [dynamicText, setDynamicText] = useState("");
-  const phrases = ["Yena", "Front End", "Developer", "Hard Coder"]; // 순차적으로 표시할 단어들
-  const [phraseIndex, setPhraseIndex] = useState(0); // 현재 표시 중인 단어의 인덱스
-  const [isDeleting, setIsDeleting] = useState(false); // 현재 텍스트를 지우고 있는지 여부
+  const phrases = ["Yena", "Front-End", "Developer", "Hard Coder"];
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
     const updateText = () => {
       if (!isDeleting) {
-        // 글자를 추가하는 경우
         setDynamicText(currentPhrase.substring(0, dynamicText.length + 1));
       } else {
-        // 글자를 지우는 경우
         setDynamicText(currentPhrase.substring(0, dynamicText.length - 1));
       }
     };
 
     let timeoutId;
     if (!isDeleting && dynamicText === currentPhrase) {
-      // 단어를 모두 썼으면 일정 시간 후에 지우기 시작
       timeoutId = setTimeout(() => {
         setIsDeleting(true);
       }, 1000);
     } else if (isDeleting && dynamicText === '') {
-      // 단어를 모두 지웠으면 다음 단어로 넘어감
       setIsDeleting(false);
       setPhraseIndex((phraseIndex + 1) % phrases.length);
     } else {
-      // 글자를 추가하거나 지우는 중
       timeoutId = setTimeout(updateText, isDeleting ? 100 : 100);
     }
 

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Element } from 'react-scroll';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import "./ABOUT.css";
 
@@ -10,11 +10,12 @@ function ABOUT() {
     <Element name="about">
       {/* ABOUT ME */}
       <div className="container">
+        <div className="blank-container"></div>
         <h1>ABOUT ME</h1>
         <div className="underline"></div>
         <div className="content-container">
           <div className="profile-img">
-            <img src="./icon/프로필.jpg"></img>
+            <img src="./img/프로필.jpg"></img>
           </div>
           <div id="whitesmoke" className="about-content">
             <div className="pencil"></div>
@@ -24,8 +25,8 @@ function ABOUT() {
             <div className="about-content--bottom">
               <p>Address: </p><span>서울특별시 동대문구 휘경동</span>
               <p>Email: </p><span>yena.e121@gmail.com</span>
-              <p>Instagram: </p><span><a href="https://www.instagram.com/2ye._na/">2ye._na</a></span>
-              <p>Github: </p><span><a href="https://github.com/YenaLey">YenaLey</a></span>
+              <p>Instagram: </p><span><a href="https://www.instagram.com/2ye._na/" target="_blank">2ye._na</a></span>
+              <p>Github: </p><span><a href="https://github.com/YenaLey" target="_blank">YenaLey</a></span>
             </div>
           </div>
         </div>
@@ -49,9 +50,9 @@ function ABOUT() {
       {/* count */}
       <div className="content-container" style={{ backgroundColor: "black" }}>
         <div className="blank-container"></div>
-        <Count countNum={166} title="coding days" />
-        <Count countNum={5} title="projects completed" />
-        <Count countNum={171} title="github contributions" />
+        <Count countNum={171} title="coding days" />
+        <Count countNum={4} title="projects completed" />
+        <Count countNum={254} title="github contributions" />
         <div className="blank-container"></div>
       </div>
       {/* RESUME */}
@@ -95,6 +96,7 @@ function ABOUT() {
 
         </div>
         <div className="blank-container"></div>
+        <div className="blank-container"></div>
       </div>
     </Element>
   );
@@ -103,8 +105,24 @@ function ABOUT() {
 export default ABOUT;
 
 function SkillBar({ title, percent }) {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const variants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 50 },
+  };
+
   return (
-    <div className="skillBar">
+    <motion.div className="skillBar"
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        whileHover={{ y: -5 }}
+        variants={variants}>
       <div className="skillTitle">{title}</div>
       <div className="flask">
         <div className="flaskBody">
@@ -116,25 +134,72 @@ function SkillBar({ title, percent }) {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
-function Count(props) {
-  return (
-    <div class="count-box">
+function Count({ countNum, title }) { 
 
-      <h1>{props.countNum} +</h1>
+  const [count, setCount] = useState(0);
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start(i => ({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5 },
+      }));
+      let start = 0;
+      const end = countNum;
+      if (start === end) return;
+
+      let totalMilSecDur = 3000;
+      let delay = totalMilSecDur / end;
+
+      let interval = setInterval(() => {
+        start += 1;
+        setCount(start);
+        if (start === end) clearInterval(interval);
+      }, delay);
+    }
+  }, [inView, countNum, controls]);
+
+  return (
+    <motion.div className="count-box"
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}>
+      <h1>{count} +</h1>
       <div className="underline" style={{ width: "100px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
-      <p>{props.title}</p>
-    </div>
+      <p>{title}</p>
+    </motion.div>
   )
 }
 
 function Resume(props) {
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const variants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 50 },
+  };
+
   return (
-    <div className="resume-content">
+    <motion.div className="resume-content"
+        ref={ref} 
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        whileHover={{ x: -5 }}
+        variants={variants}>
       <div class="resume-header">
         <div className="resume-header-text">
           <p>{props.header}</p>
@@ -153,6 +218,6 @@ function Resume(props) {
           )
         })
       }
-    </div>
+    </motion.div>
   )
 }

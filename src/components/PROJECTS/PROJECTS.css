@@ -12,8 +12,8 @@
 }
 
 .project-content {
-    width: 550px;
-    height: 300px;
+    width: 600px;
+    height: auto;
     padding: 20px;
     padding-left: 60px;
 
@@ -23,22 +23,22 @@
     }
     @media (max-width: 600px) {
         width: 90%;
-        height: auto;
-        padding: 60px 0 0 0;
+        padding: 40px 0 0 0;
     }
 }
 
 #reverse .project-content {
-    padding-left: 20px;
-    padding-right: 60px;
+    padding-left: 0px;
+    padding-right: 90px;
 
     @media (max-width: 1000px) {
+        padding-left: 20px;
         padding-right: 20px;
     }
     @media (max-width: 600px) {
         width: 90%;
         height: auto;
-        padding: 60px 0 0 0;
+        padding: 40px 0 0 0;
     }
 }
 
@@ -49,38 +49,46 @@
 }
 
 .laptop {
-    width: 450px; /* 노트북 모니터의 너비를 설정합니다 */
-    aspect-ratio: 16 / 9;
-    border: 8px solid black; /* 노트북 모니터의 테두리를 설정합니다 */
+    width: 450px;
+    height: 253px;
+    border: 8px solid black;
     border-top: 12px solid black;
     border-bottom: 12px solid black;
-    border-radius: 10px 10px 0 0; /* 노트북 모니터의 모서리를 둥글게 만듭니다 */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* 모니터에 그림자를 추가합니다 */
-    position: relative; /* 키보드를 위한 상대 위치 설정합니다 */
-    background: #ecf0f1; /* 모니터의 배경색을 설정합니다 */
-    display: flex; /* 중앙 정렬을 위해 flexbox를 사용합니다 */
-    justify-content: center; /* 가로 방향 중앙 정렬을 설정합니다 */
-    align-items: center; /* 세로 방향 중앙 정렬을 설정합니다 */
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    position: relative;
+    background: #ecf0f1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 600px) {
         width: 80%;
-        border: 5px solid black; /* 노트북 모니터의 테두리를 설정합니다 */
+        height: 250px;
+        border: 5px solid black;
         border-top: 9px solid black;
         border-bottom: 9px solid black;
+    }
+    @media (max-width: 500px) {
+        height: 220px;
+    }
+    @media (max-width: 400px) {
+        height: 170px;
     }
 }
 
 .keyboard {
-    position: absolute; /* 가상 요소의 위치를 절대 위치로 설정합니다 */
-    bottom: -40px; /* 키보드가 모니터 아래로 위치하도록 설정합니다 */
-    left: 50%; /* 키보드를 가로 방향 중앙에 배치합니다 */
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
     transform: translateX(-50%);
     width: 550px;
     height: 30px;
+    z-index: 2;
 
     @media (max-width: 600px) {
         width: 125%;
-        bottom: -38px; /* 키보드가 모니터 아래로 위치하도록 설정합니다 */
+        bottom: -38px;
     }
 }
 
@@ -119,26 +127,34 @@
 
 .keyboard-bottom {
     position: relative;
-    left: 50%; /* 키보드를 가로 방향 중앙에 배치합니다 */
+    left: 50%;
     transform: translateX(-50%);
-    width: 550px; /* 키보드의 너비를 설정합니다 */
-    height: 10px; /* 키보드의 높이를 설정합니다 */
-    background: black; /* 키보드의 색상을 설정합니다 */
-    border-radius: 3px; /* 키보드의 모서리를 약간 둥글게 만듭니다 */
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2); /* 키보드에 그림자를 
-    추가합니다 */
+    width: 550px;
+    height: 10px;
+    background: black;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
 
     @media (max-width: 600px) {
         width: 99%;
-        height: 7px; /* 키보드의 높이를 설정합니다 */
+        height: 7px;
     }
 }
 
+.laptop-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
 
-.laptop img {
-    max-width: 100%; /* 이미지의 최대 너비를 설정합니다 */
-    max-height: 100%; /* 이미지의 최대 높이를 설정합니다 */
-    object-fit: over; /* 이미지가 비율을 유지하며 박스 안에 들어가도록 설정합니다 */
+.laptop-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .icon-container {
@@ -161,6 +177,13 @@
 .icon img {
     width: 100%;
     height: 100%;
+    transition: all 0.2s ease;
+}
+
+.icon:hover img{
+    width: 35px;
+    height: 35px;
+    transition: all 0.2s ease;
 }
 
 
@@ -177,6 +200,7 @@
         justify-content: start;
         width: 80%;
         height: auto;
+        margin: 20px 0;
     }
 }
 
@@ -226,14 +250,25 @@
 }
 
 .choose-block .img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .choose-block .img img {
-    width: 80%;
-    object-fit: cover;
+    width: 100%;
+}
+
+.choose-block .after {
+    display: none;
+}
+
+.choose-block:hover .after {
+    display: block;
+}
+
+.choose-block:hover .before {
+    display: none;
 }

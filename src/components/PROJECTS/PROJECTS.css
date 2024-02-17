@@ -44,9 +44,7 @@
 
 .project-content h3 {
     word-break: keep-all;
-    @media (max-width: 600px) {
-        font-size: 15px;
-    }
+    font-size: 15px;
 }
 
 .project-content h2 {

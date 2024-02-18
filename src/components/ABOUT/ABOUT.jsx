@@ -38,11 +38,11 @@ function ABOUT() {
         <h1>MY SKILLS</h1>
         <div className="underline"></div>
         <div className="content-container">
-          <SkillBar title="CSS3" percent={70} />
-          <SkillBar title="Python" percent={80} />
-          <SkillBar title="JS" percent={50} />
-          <SkillBar title="React.js" percent={50} />
-          <SkillBar title="Three.js" percent={60} />
+          <SkillBar title="CSS3" percent={80} />
+          <SkillBar title="HTML5" percent={80} />
+          <SkillBar title="React.js" percent={60} />
+          <SkillBar title="Three.js" percent={50} />
+          <SkillBar title="Python" percent={70} />
           <SkillBar title="C" percent={70} />
         </div>
       </div>
@@ -50,9 +50,9 @@ function ABOUT() {
       {/* count */}
       <div className="content-container" style={{ backgroundColor: "black" }}>
         <div className="blank-container"></div>
-        <Count countNum={171} title="coding days" />
+        <Count countNum={172} title="coding days" />
         <Count countNum={4} title="projects completed" />
-        <Count countNum={254} title="github contributions" />
+        <Count countNum={281} title="github contributions" />
         <div className="blank-container"></div>
       </div>
       {/* RESUME */}

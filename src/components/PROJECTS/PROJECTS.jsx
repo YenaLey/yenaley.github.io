@@ -69,28 +69,28 @@ function PROJECTS() {
         <div className="content-container">
 
           <Choose1
-          title="강한 추진력"
-          description="재빠른 실행력으로 아이디어를 신속히 현실에 반영합니다. 우선순위 설정을 통해, 목표를 정확하고 빠르게 달성합니다."
-          img1="./img/icon/추진력.png"
-          img2="./img/icon/추진력2.png"></Choose1>
+            title="강한 추진력"
+            description="재빠른 실행력으로 아이디어를 신속히 현실에 반영합니다. 우선순위 설정을 통해, 목표를 정확하고 빠르게 달성합니다."
+            img1="./img/icon/추진력.png"
+            img2="./img/icon/추진력2.png"></Choose1>
 
           <Choose2
-          title="적극적인 커뮤니케이션"
-          description="투명하고 적극적인 소통으로 팀워크를 강화하고, 프로젝트의 비전을 모두와 공유합니다."
-          img1="./img/icon/커뮤니케이션.png"
-          img2="./img/icon/커뮤니케이션2.png"></Choose2>
+            title="적극적인 커뮤니케이션"
+            description="투명하고 적극적인 소통으로 팀워크를 강화하고, 프로젝트의 비전을 모두와 공유합니다."
+            img1="./img/icon/커뮤니케이션.png"
+            img2="./img/icon/커뮤니케이션2.png"></Choose2>
 
           <Choose1
-          title="빠른 작업"
-          description="새로운 기술 습득이 빠르며, 배운 내용을 실제 작업에 즉각적으로 적용함으로써 프로젝트를 신속하게 전진시킵니다."
-          img1="./img/icon/작업.png"
-          img2="./img/icon/작업2.png"></Choose1>
+            title="빠른 작업"
+            description="새로운 기술 습득이 빠르며, 배운 내용을 실제 작업에 즉각적으로 적용함으로써 프로젝트를 신속하게 전진시킵니다."
+            img1="./img/icon/작업.png"
+            img2="./img/icon/작업2.png"></Choose1>
 
           <Choose2
-          title="높은 신뢰성"
-          description="맡겨진 일에 대한 높은 책임감을 바탕으로, 약속된 기한과 품질을 엄격히 지키며 일합니다."
-          img1="./img/icon/신뢰성.png"
-          img2="./img/icon/신뢰성2.png"></Choose2>
+            title="높은 신뢰성"
+            description="맡겨진 일에 대한 높은 책임감을 바탕으로, 약속된 기한과 품질을 엄격히 지키며 일합니다."
+            img1="./img/icon/신뢰성.png"
+            img2="./img/icon/신뢰성2.png"></Choose2>
 
         </div>
         <div className="blank-container"></div>
@@ -102,9 +102,24 @@ function PROJECTS() {
 export default PROJECTS;
 
 function Project1(props) {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const variants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 50 },
+  };
+
   return (
     <div className="project-block">
-      <div className="laptop">
+      <motion.div className="laptop"
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}>
         <div className="laptop-img">
           <img src={props.img}></img>
         </div>
@@ -112,8 +127,12 @@ function Project1(props) {
           <div className="keyboard-top"></div>
           <div className="keyboard-bottom"></div>
         </div>
-      </div>
-      <div className="project-content">
+      </motion.div>
+      <motion.div className="project-content"
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}>
         <p>{props.period}</p>
         <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
@@ -141,15 +160,30 @@ function Project1(props) {
             </a>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
 
 function Project2(props) {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const variants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 50 },
+  };
+
   return (
     <div id="reverse" className="project-block">
-      <div className="project-content">
+      <motion.div className="project-content"
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}>
         <p>{props.period}</p>
         <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
@@ -177,8 +211,12 @@ function Project2(props) {
             </a>
           )}
         </div>
-      </div>
-      <div className="laptop">
+      </motion.div>
+      <motion.div className="laptop"
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}>
         <div className="laptop-img">
           <img src={props.img}></img>
         </div>
@@ -186,7 +224,7 @@ function Project2(props) {
           <div className="keyboard-top"></div>
           <div className="keyboard-bottom"></div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
@@ -205,10 +243,10 @@ function Choose1(props) {
 
   return (
     <motion.div className="choose-block" id="reverse"
-        ref={ref}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}>
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}>
       <div className="description">
         <h2>{props.title}</h2>
         <p>{props.description}</p>
@@ -235,10 +273,10 @@ function Choose2(props) {
 
   return (
     <motion.div className="choose-block"
-        ref={ref}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}>
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}>
       <div className="img">
         <img className="before" src={props.img1}></img>
         <img className="after" src={props.img2}></img>

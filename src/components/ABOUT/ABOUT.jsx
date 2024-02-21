@@ -43,16 +43,16 @@ function ABOUT() {
           <SkillBar title="React.js" percent={60} />
           <SkillBar title="Three.js" percent={50} />
           <SkillBar title="Python" percent={70} />
-          <SkillBar title="C" percent={70} />
+          <SkillBar title="C" percent={60} />
         </div>
       </div>
       <div id="whitesmoke" className="blank-container"></div>
       {/* count */}
       <div className="content-container" style={{ backgroundColor: "black" }}>
         <div className="blank-container"></div>
-        <Count countNum={172} title="coding days" />
+        <Count countNum={174} title="coding days" />
         <Count countNum={4} title="projects completed" />
-        <Count countNum={281} title="github contributions" />
+        <Count countNum={314} title="github contributions" />
         <div className="blank-container"></div>
       </div>
       {/* RESUME */}

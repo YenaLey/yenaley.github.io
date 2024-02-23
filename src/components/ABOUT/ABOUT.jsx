@@ -80,19 +80,11 @@ function ABOUT() {
 
           <Resume
             header="Career"
-            period="2023.10 - 2024.02"
-            title="QUIPU DEV 1기"
-            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발팀"
-            description2="React.js와 Three.js 기반의 QUIPU 메인 웹 제작"
-            activitys={[]} />
-
-          <Resume
-            header="Career"
-            period="2024.03 - 진행 중"
-            title="QUIPU DEV 2기"
-            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 QUIPU의 개발팀"
-            description2="QUIPU의 포럼 웹 제작"
-            activitys={[]} />
+            period="2023.10 - 진행 중"
+            title="QUIPU-DEV"
+            description1="서울시립대학교 중앙 컴퓨터 학술 동아리, 퀴푸의 웹 개발팀의 총괄 포지션"
+            description2="주요 활동"
+            activitys={["React.js와 Three.js 기반의 QUIPU 메인 웹사이트 개발"]} />
 
         </div>
         <div className="blank-container"></div>

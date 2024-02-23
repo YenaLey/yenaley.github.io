@@ -14,7 +14,7 @@ function PROJECTS() {
         <div className="underline"></div>
         <div className="content-container">
 
-          <Project2
+          <Project1
             role="웹 기획 및 디자인, 프론트엔드 개발"
             title="Portfolio Web"
             period="2024.02 - 2024.02"
@@ -24,15 +24,15 @@ function PROJECTS() {
             github="https://github.com/YenaLey/portfolio"
           />
 
-          {/* <Project1
-            role="웹 기획, 웹 디자인, 프론트엔드 개발"
+          <Project2
+            role="웹 기획 및 디자인, 프론트엔드 개발"
             title="QUIPU Main Web"
             period="2023.10 - 2024.02"
-            description="서울시립대 중앙동아리 퀴푸의 동아리 홍보와 신입 회원 모집을 목적으로 한 웹사이트 프로젝트의 리더로서, 웹 기획부터 디자인, 프론트엔드 개발까지 전반적인 작업을 주도했습니다. Figma를 사용해 'home'과 'about' 페이지를 구현하고, React.js 기반의 웹사이트의 레이아웃, 라우팅, 네비게이션 바를 개발했습니다. React.js와 React Three Fiber를 사용하여 'home', 'about', 'activity', 'activity detail' 섹션에 동적인 3D 요소와 인터랙션을 추가함으로써, 시각적으로 매력적인 경험을 제공하였고, 반응형 디자인을 적용해 다양한 디바이스에서의 접근성을 보장하도록 개발하였습니다. 팀원들과의 긴밀한 협업으로 성공적으로 런칭할 수 있었습니다."
+            description="동아리 소개와 동아리 부원 모집 시스템 구축을 목적으로 한 웹사이트 프로젝트의 리더로서, 웹 기획과 프론트엔드 개발 등 전반적인 작업을 팀원들과 긴밀히 협력하여 진행하였습니다. 'home'과 'about' 섹션을 디자인하고, React.js 기반의 웹사이트의 레이아웃, 라우팅, 네비게이션 바를 개발했습니다. React.js와 React Three Fiber를 사용하여 'home', 'about', 'activity', 'activity detail' 섹션에 동적인 3D 요소와 인터랙션을 추가함으로써, 시각적으로 매력적인 경험을 제공하였고, 반응형 디자인을 적용해 다양한 디바이스에서의 접근성을 보장하도록 개발하였습니다."
             img="./img/project/퀴푸메인웹.png"
-            link="https://front-end-zeta-five.vercel.app/"
+            link="https://uos-quipu.vercel.app/"
             github="https://github.com/YenaLey"
-            notion="https://quipu-dev.notion.site/quipu-dev/main-website-c8661a4633804bfdaadb105c86d2df1e" /> */}
+            notion="https://quipu-dev.notion.site/quipu-dev/main-website-c8661a4633804bfdaadb105c86d2df1e" />
 
           <Project1
             role="3D 그래픽스 프로그래밍"

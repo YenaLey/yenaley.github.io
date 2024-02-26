@@ -50,9 +50,9 @@ function ABOUT() {
       {/* count */}
       <div className="content-container" style={{ backgroundColor: "black" }}>
         <div className="blank-container"></div>
-        <Count countNum={174} title="coding days" />
-        <Count countNum={4} title="projects completed" />
-        <Count countNum={314} title="github contributions" />
+        <Count countNum={180} title="coding days" />
+        <Count countNum={5} title="projects completed" />
+        <Count countNum={326} title="github contributions" />
         <div className="blank-container"></div>
       </div>
       {/* RESUME */}

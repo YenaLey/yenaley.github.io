@@ -39,7 +39,7 @@ function PROJECTS() {
             title="Three.js 기반 Luxo 램프 인터랙티브 시뮬레이션"
             period="2023.09 - 2023.10"
             description="Three.js을 활용하여 Luxo 램프의 인터랙티브 3D 시뮬레이션을 개발했습니다. 램프의 조절 가능한 부품들을 모델링하고, 스포트라이트 조명 효과를 추가하여 벽에 그림자를 생성하는 3D 모델을 장면에 배치했습니다. 사용자가 램프의 길이, 조인트 각도, 램프 각도를 쉽게 조절할 수 있는 GUI 제어 패널을 구현함으로써, 실시간으로 램프의 모양 변경이 가능하게 했습니다. 이를 통해, three.js 기반 웹 애플리케이션에서 사용자는 다양한 조명 및 그림자 효과를 경험할 수 있도록 개발하였습니다."
-            img="./img/project/컴퓨터그래픽스프젝1.png"
+            img="./img/project/컴퓨터그래픽스프젝2.png"
             link="https://yenaley.github.io/computer-graphics/"
           />
 

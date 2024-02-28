@@ -28,7 +28,7 @@ function PROJECTS() {
             role="웹 기획 및 디자인, 프론트엔드 개발"
             title="QUIPU Main Web"
             period="2023.10 - 2024.02"
-            description="동아리 소개와 동아리 부원 모집 시스템 구축을 목적으로 한 웹사이트 프로젝트의 리더로서, 웹 기획과 프론트엔드 개발 등 전반적인 작업을 팀원들과 긴밀히 협력하여 진행하였습니다. 'home'과 'about' 섹션을 디자인하고, React.js 기반의 웹사이트의 레이아웃, 라우팅, 네비게이션 바를 개발했습니다. React.js와 React Three Fiber를 사용하여 'home', 'about', 'activity', 'activity detail' 섹션에 동적인 3D 요소와 인터랙션을 추가함으로써, 시각적으로 매력적인 경험을 제공하였고, 반응형 디자인을 적용해 다양한 디바이스에서의 접근성을 보장하도록 개발하였습니다."
+            description="동아리 소개 및 부원 모집 시스템 구축을 목적으로 한 웹 개발을 총괄하고 특히 프론트엔드 개발을 주도했습니다. 'home', 'about' 섹션 디자인 및 React.js를 기반으로 한 전체 웹에 대한 컴포넌트 구조와 페이지 라우팅을 구현하였습니다. React Three Fiber 기반의 'home', 'about', 'activity', 'activity detail' 섹션의 UI 및 클라이언트 사이드 개발과 더불어 'join Quipu' 지원 폼의 서버 데이터 처리와 에러 코드별 페이지 렌더링 개발을 통해 프론트엔드 개발의 전 영역에 걸친 책임을 경험하였습니다."
             img="./img/project/퀴푸메인웹.png"
             link="https://uos-quipu.vercel.app/"
             github="https://github.com/YenaLey"

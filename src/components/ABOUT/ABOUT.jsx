@@ -84,7 +84,7 @@ function ABOUT() {
             title="QUIPU-DEV"
             description1="서울시립대학교 중앙 컴퓨터 학술 동아리, 퀴푸의 웹 개발팀의 총괄 포지션"
             description2="주요 활동"
-            activitys={["React.js와 Three.js 기반의 QUIPU 메인 웹사이트 개발"]} />
+            activitys={["React.js와 Three.js 기반의 QUIPU 메인 웹 사이트 기획 및 프론트엔드 개발", "React.js 기반의 QUIPU 포럼 웹 사이트 기획 및 개발", "웹 개발 입문 프로젝트의 리더로서, 프로젝트 전반의 기획, 실행, 지도를 총괄"]} />
 
         </div>
         <div className="blank-container"></div>

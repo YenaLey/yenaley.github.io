@@ -36,7 +36,7 @@ function PROJECTS() {
 
           <Project1
             role="3D 그래픽스 프로그래밍"
-            title="Three.js 기반 Luxo 램프 인터랙티브 시뮬레이션"
+            title="Luxo 램프 인터랙티브 시뮬레이션"
             period="2023.09 - 2023.10"
             description="Three.js을 활용하여 Luxo 램프의 인터랙티브 3D 시뮬레이션을 개발했습니다. 램프의 조절 가능한 부품들을 모델링하고, 스포트라이트 조명 효과를 추가하여 벽에 그림자를 생성하는 3D 모델을 장면에 배치했습니다. 사용자가 램프의 길이, 조인트 각도, 램프 각도를 쉽게 조절할 수 있는 GUI 제어 패널을 구현함으로써, 실시간으로 램프의 모양 변경이 가능하게 했습니다. 이를 통해, three.js 기반 웹 애플리케이션에서 사용자는 다양한 조명 및 그림자 효과를 경험할 수 있도록 개발하였습니다."
             img="./img/project/컴퓨터그래픽스프젝2.png"
@@ -44,16 +44,16 @@ function PROJECTS() {
           />
 
           <Project2
-            role="아두이노 기반 회로 설계 및 프로그래밍"
-            title="아두이노와 LTspice를 이용한 디지털 멀티미터"
+            role="아두이노 회로 설계 및 프로그래밍"
+            title="아두이노 디지털 멀티미터"
             period="2023.03 - 2023.06"
             description="LTspice로 모델링된 회로와 아두이노를 사용하여 디지털 멀티미터를 개발하였습니다. 아두이노의 아날로그 입력을 통해 전압을 측정하고, Opamp 기반 차동 증폭기를 통해 측정값을 정확하게 변환합니다. 측정 가능한 범위 설정하여 구현하였고 단위 자동 변환 기능을 포함해, 저항, 전압, 전류, 축전기 용량을 측정하고 이를 I2C LCD에 표시하도록 설계하였습니다."
             img="./img/project/전전설1프젝1.png"
           />
 
           <Project1
-            role="FPGA 및 Verilog HDL을 사용한 설계 및 구현"
-            title="XILINX FPGA를 활용한 수학 연산 계산기"
+            role="디지털 논리 설계 및 베릴로그 프로그래밍"
+            title="XILINX FPGA 수학 연산 계산기"
             period="2022.09 - 2022.12"
             description="XILINX 기반 FPGA를 활용하여 Verilog HDL 기반의 계산기 설계하였습니다. 덧셈, 뺄셈, 곱셈, 나눗셈, 거듭제곱, 팩토리얼의 기능을 포함하며, 사용자는 Push Button Switch로 숫자를 입력하고 Dip Switch로 연산자, 피연산자의 순서, 음수 표현을 설정할 수 있습니다. 계산 결과는 Clock 기반의 TEXT LCD, 음수 표현은 LED를 통해 표시되도록 하였습니다. 7-Segment Array와 PIEZO를 사용하여 사용자 인터페이스와 피드백 메커니즘을 구현했으며, Vivado 프로그램을 통한 설계와 시뮬레이션을 거쳐 최종적으로 FPGA 디지털 회로에서의 시연으로 프로젝트를 완성했습니다."
             img="./img/project/전전설2프젝1.jpg"
@@ -103,23 +103,9 @@ export default PROJECTS;
 
 function Project1(props) {
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const variants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, y: 50 },
-  };
-
   return (
     <div className="project-block">
-      <motion.div className="laptop"
-        ref={ref}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}>
+      <div className="laptop">
         <div className="laptop-img">
           <img src={props.img}></img>
         </div>
@@ -127,12 +113,8 @@ function Project1(props) {
           <div className="keyboard-top"></div>
           <div className="keyboard-bottom"></div>
         </div>
-      </motion.div>
-      <motion.div className="project-content"
-        ref={ref}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}>
+      </div>
+      <div className="project-content">
         <p>{props.period}</p>
         <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
@@ -160,30 +142,16 @@ function Project1(props) {
             </a>
           )}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
 
 function Project2(props) {
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const variants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, y: 50 },
-  };
-
   return (
     <div id="reverse" className="project-block">
-      <motion.div className="project-content"
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}>
+      <div className="project-content">
         <p>{props.period}</p>
         <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
@@ -211,12 +179,8 @@ function Project2(props) {
             </a>
           )}
         </div>
-      </motion.div>
-      <motion.div className="laptop"
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}>
+      </div>
+      <div className="laptop">
         <div className="laptop-img">
           <img src={props.img}></img>
         </div>
@@ -224,7 +188,7 @@ function Project2(props) {
           <div className="keyboard-top"></div>
           <div className="keyboard-bottom"></div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

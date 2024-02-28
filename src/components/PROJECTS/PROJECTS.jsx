@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -61,7 +61,35 @@ function PROJECTS() {
 
         </div>
         <div className="blank-container"></div>
+        <div className="blank-container"></div>
       </div>
+
+      <div className="container">
+        <div className="blank-container"></div>
+        <h1>SIDE PROJECTS</h1>
+        <div className="underline"></div>
+        <div className="content-container">
+          <SideProject 
+          img="./img/project/예대발표.jpg"
+          title="세미나"
+          description="개발 지식을 넓히기 위해 다양한 세미나를 준비하고 참여하고 있습니다."
+          />
+          <SideProject 
+          img="./img/project/기획.jpg"
+          title="기획"
+          description="개발뿐만 아니라 기획 과정에도 참여하며 전체 개발 프로세스를 경험하고 있습니다."
+           />
+          <SideProject 
+          img="./img/project/코딩테스트스터디.jpg" 
+          title="스터디"
+          description="여러 스터디를 주최하고 지도하면서 프로그래밍 관련 다양한 기회를 제공하고 있습니다."
+          />
+        </div>
+        <div className="blank-container"></div>
+        <div className="blank-container"></div>
+        <div className="blank-container"></div>
+      </div>
+
       <div className="container">
         <div className="blank-container"></div>
         <h1>WHY CHOOSE ME</h1>
@@ -191,6 +219,45 @@ function Project2(props) {
       </div>
     </div>
   )
+}
+
+function SideProject(props) {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const variants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 50 },
+  };
+
+  const textSlideVariants = {
+    hover: { y: 0, opacity: 1 },
+    initial: { y: 50, opacity: 0 },
+  };
+
+  return (
+    <motion.div className="sideProject-block"
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}>
+      <img src={props.img}></img>
+      <motion.div className="sideProject-description"
+        variants={textSlideVariants}
+        initial="initial"
+        animate={isHovered ? "hover" : "initial"}>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
+      </motion.div>
+    </motion.div>
+  );
 }
 
 function Choose1(props) {

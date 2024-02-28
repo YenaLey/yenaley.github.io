@@ -198,6 +198,51 @@
     transition: all 0.2s ease;
 }
 
+.sideProject-block {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 5px;
+    position: relative;
+
+    @media (max-width: 500px) {
+        width: 80%;
+        height: auto;
+    }
+}
+
+.sideProject-block img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.sideProject-block:hover img {
+    transform: scale(1.05);
+}
+
+.sideProject-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.1s linear, opacity 0.1s linear;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.sideProject-description p {
+    margin: 10px;
+    font-size: 13px;
+    word-break: keep-all;
+}
 
 .choose-block {
     width: 550px;

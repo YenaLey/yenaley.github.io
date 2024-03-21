@@ -208,6 +208,7 @@
     overflow: hidden;
     margin: 5px;
     position: relative;
+    box-shadow: 0 0 5px lightgray;
 
     @media (max-width: 500px) {
         width: 80%;

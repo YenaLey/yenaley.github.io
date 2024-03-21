@@ -75,9 +75,9 @@ function PROJECTS() {
           description="개발 지식을 넓히기 위해 다양한 세미나를 준비하고 참여하고 있습니다."
           />
           <SideProject 
-          img="./img/project/기획.jpg"
-          title="기획"
-          description="개발뿐만 아니라 기획 과정에도 참여하며 전체 개발 프로세스를 경험하고 있습니다."
+          img="./img/project/외주.png"
+          title="외주"
+          description="프리랜서로서의 경험을 쌓고, 문제 해결 능력을 키우기 위해 프론트엔드 개발 분야에서 외주 작업을 진행하고 있습니다."
            />
           <SideProject 
           img="./img/project/코딩테스트스터디.jpg" 

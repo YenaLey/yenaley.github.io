@@ -56,7 +56,6 @@ function HomeMobile() {
       <p>Hi, there!</p>
       <h1>I'm <span style={{color: "#ffc900"}}>YENA</span>.</h1>
       <TypingEffect />
-      <p></p>
     </div>
   );
 }

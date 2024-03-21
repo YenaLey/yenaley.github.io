@@ -38,8 +38,8 @@ function ABOUT() {
         <h1>MY SKILLS</h1>
         <div className="underline"></div>
         <div className="content-container">
-          <SkillBar title="CSS3" percent={80} />
           <SkillBar title="HTML5" percent={80} />
+          <SkillBar title="CSS3" percent={80} />
           <SkillBar title="React.js" percent={60} />
           <SkillBar title="Three.js" percent={50} />
           <SkillBar title="Python" percent={70} />
@@ -70,21 +70,21 @@ function ABOUT() {
             description2="서울시립대 전자전기컴퓨터공학부 전공"
             activitys={[]} />
 
-          <Resume
+          {/* <Resume
             header="Career"
             period="2022.12 - 2023.06"
             title="BDAA 5기"
             description1="빅데이터 분석 학회"
             description2="Jupyter Notebook을 활용한 Pandas와 Numpy 기반의 타이타닉호 데이터 분석"
-            activitys={[]} />
+            activitys={[]} /> */}
 
           <Resume
             header="Career"
             period="2023.10 - 진행 중"
             title="QUIPU-DEV"
-            description1="서울시립대학교 중앙 컴퓨터 학술 동아리, 퀴푸의 웹 개발팀의 총괄 포지션"
+            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 퀴푸 내의 웹개발팀"
             description2="주요 활동"
-            activitys={["QUIPU 메인 웹 사이트 기획 및 프론트엔드 개발", "QUIPU 포럼 웹 사이트 기획 및 개발", "웹 개발 입문 프로젝트 지도"]} />
+            activitys={["퀴푸 메인 웹 사이트 기획 및 프론트엔드 개발", "퀴푸 포럼 웹 사이트 기획 및 프론트엔드 개발", "퀴푸 백오피스 웹 사이트 기획 및 프론트엔드 개발","웹 개발 입문 프로젝트 지도"]} />
 
         </div>
         <div className="blank-container"></div>
@@ -206,7 +206,7 @@ function Resume(props) {
       {
         props.activitys.map(function (activity, index) {
           return (
-            <p>- {activity}</p>
+            <p>✔︎ {activity}</p>
           )
         })
       }

@@ -6,7 +6,7 @@
     align-items: center;
     margin: 40px 0;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         flex-direction: column;
     }
 }
@@ -17,7 +17,7 @@
     padding: 20px;
     padding-left: 60px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         padding-top: 60px;
         padding-left: 20px;
     }
@@ -31,7 +31,7 @@
     padding-left: 0px;
     padding-right: 90px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -252,7 +252,7 @@
     align-items: center;
     margin: 5px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         flex-direction: column;
         justify-content: start;
         width: 80%;
@@ -262,7 +262,7 @@
 }
 
 #reverse {
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         flex-direction: column-reverse;
         justify-content: start;
     }
@@ -277,7 +277,7 @@
     align-items: start;
     padding: 10px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         width: 100%;
         align-items: center;
     }
@@ -286,7 +286,7 @@
 #reverse .description {
     align-items: end;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         align-items: center;
     }
 }
@@ -301,7 +301,7 @@
     line-height: 1.4;
     color: black;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
         text-align: center;
     }
 }

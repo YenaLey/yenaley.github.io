@@ -72,21 +72,21 @@ function ABOUT() {
             description2="서울시립대 전자전기컴퓨터공학부 전공"
             activitys={[]} />
 
-          {/* <Resume
+          <Resume
             header="Career"
             period="2022.12 - 2023.06"
             title="BDAA 5기"
             description1="빅데이터 분석 학회"
-            description2="Jupyter Notebook을 활용한 Pandas와 Numpy 기반의 타이타닉호 데이터 분석"
-            activitys={[]} /> */}
+            description2="주요 활동"
+            activitys={["Jupyter Notebook을 활용한 Pandas와 Numpy 기반의 타이타닉호 데이터 분석"]} />
 
           <Resume
             header="Career"
             period="2023.10 - 진행 중"
             title="QUIPU-DEV"
-            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 퀴푸 내의 웹개발팀"
+            description1="서울시립대학교 중앙 컴퓨터 학술 동아리 퀴푸의 웹 개발팀"
             description2="주요 활동"
-            activitys={["퀴푸 메인 웹 사이트 기획 및 프론트엔드 개발", "퀴푸 포럼 웹 사이트 기획 및 프론트엔드 개발", "퀴푸 백오피스 웹 사이트 기획 및 프론트엔드 개발","웹 개발 입문 프로젝트 지도"]} />
+            activitys={["React.js 기반의 퍼블리싱 및 프론트엔드 개발", "웹 기획 및 웹 디자인 참여"]} />
 
         </div>
         <div className="blank-container"></div>

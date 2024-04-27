@@ -68,7 +68,7 @@ function PROJECTS() {
         <div className="blank-container"></div>
         <h1>SIDE PROJECTS</h1>
         <div className="underline"></div>
-        <div className="content-container">
+        <div className="content-container sideProject">
           <SideProject 
           img="./img/project/예대발표.jpg"
           title="세미나"

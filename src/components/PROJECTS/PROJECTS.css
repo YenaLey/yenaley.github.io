@@ -169,6 +169,21 @@
     object-fit: cover;
 }
 
+.project-skill-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 0 10px;
+}
+
+.project-skill {
+    width: auto;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
 .icon-container {
     display: flex;
     justify-content: end;

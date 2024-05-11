@@ -273,8 +273,9 @@
 }
 
 .resume-content p {
-    font-size: 14px;
-    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
     line-height: 1.3;
 }
 

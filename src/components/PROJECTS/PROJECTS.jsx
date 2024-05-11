@@ -19,6 +19,7 @@ function PROJECTS() {
             title="Portfolio Web"
             period="2024.02 - 2024.02"
             description="전체적인 기획과 디자인, 프론트엔드 개발까지 포괄하는 웹 개발 프로젝트입니다. 정보 구조(IA) 및 각 섹션별 상세 정보가 포함된 기획서를 작성하였으며, 다양한 포트폴리오 레퍼런스를 참고하여 디자인하였습니다. 이 웹사이트는 React.js를 기반으로 구축되었으며, 홈페이지의 PC 버전에서는 React Three Fiber를 사용하여 소개 멘트가 동적으로 변화하도록 구현하여 사용자 경험에 생동감을 더했습니다. 사용자 인터랙션에 부드러운 모션이 포함되어 있으며, 진부하지 않은 디자인을 목표로 하면서도 메시지의 전달력을 유지하는 데 중점을 두었습니다."
+            skillList={["React.js", "Three.js"]}
             img="./img/project/포트폴리오1.png"
             link="https://yena.info/"
             github="https://github.com/YenaLey/portfolio"
@@ -29,6 +30,7 @@ function PROJECTS() {
             title="QUIPU Main Web"
             period="2023.10 - 2024.02"
             description="동아리 소개 및 부원 모집 시스템 구축을 목적으로 한 웹 개발을 총괄하고 특히 프론트엔드 개발을 주도했습니다. 'home', 'about' 섹션 디자인 및 React.js를 기반으로 한 전체 웹에 대한 컴포넌트 구조와 페이지 라우팅을 구현하였습니다. React Three Fiber 기반의 'home', 'about', 'activity', 'activity detail' 섹션의 UI 및 클라이언트 사이드 개발과 더불어 'join Quipu' 지원 폼의 서버 데이터 처리와 에러 코드별 페이지 렌더링 개발을 통해 프론트엔드 개발의 전 영역에 걸친 책임을 경험하였습니다."
+            skillList={["React.js", "Three.js"]}
             img="./img/project/퀴푸메인웹.png"
             link="https://uos-quipu.vercel.app/"
             github="https://github.com/YenaLey"
@@ -39,6 +41,7 @@ function PROJECTS() {
             title="Luxo 램프 인터랙티브 시뮬레이션"
             period="2023.09 - 2023.10"
             description="Three.js을 활용하여 Luxo 램프의 인터랙티브 3D 시뮬레이션을 개발했습니다. 램프의 조절 가능한 부품들을 모델링하고, 스포트라이트 조명 효과를 추가하여 벽에 그림자를 생성하는 3D 모델을 장면에 배치했습니다. 사용자가 램프의 길이, 조인트 각도, 램프 각도를 쉽게 조절할 수 있는 GUI 제어 패널을 구현함으로써, 실시간으로 램프의 모양 변경이 가능하게 했습니다. 이를 통해, three.js 기반 웹 애플리케이션에서 사용자는 다양한 조명 및 그림자 효과를 경험할 수 있도록 개발하였습니다."
+            skillList={["Three.js"]}
             img="./img/project/컴퓨터그래픽스프젝2.png"
             link="https://yenaley.github.io/computer-graphics/"
           />
@@ -69,20 +72,20 @@ function PROJECTS() {
         <h1>SIDE PROJECTS</h1>
         <div className="underline"></div>
         <div className="content-container sideProject">
-          <SideProject 
-          img="./img/project/예대발표.jpg"
-          title="세미나"
-          description="개발 지식을 넓히기 위해 다양한 세미나를 준비하고 참여하고 있습니다."
+          <SideProject
+            img="./img/project/예대발표.jpg"
+            title="세미나"
+            description="개발 지식을 넓히기 위해 다양한 세미나를 준비하고 참여하고 있습니다."
           />
-          <SideProject 
-          img="./img/project/외주.png"
-          title="외주"
-          description="프리랜서로서의 경험을 쌓고, 문제 해결 능력을 키우기 위해 프론트엔드 개발 분야에서 외주 작업을 진행하고 있습니다."
-           />
-          <SideProject 
-          img="./img/project/코딩테스트스터디.jpg" 
-          title="스터디"
-          description="여러 스터디를 주최하고 지도하면서 프로그래밍 관련 다양한 기회를 제공하고 있습니다."
+          <SideProject
+            img="./img/project/외주.png"
+            title="외주"
+            description="프리랜서로서의 경험을 쌓고, 문제 해결 능력을 키우기 위해 프론트엔드 개발 분야에서 외주 작업을 진행하고 있습니다."
+          />
+          <SideProject
+            img="./img/project/코딩테스트스터디.jpg"
+            title="스터디"
+            description="여러 스터디를 주최하고 지도하면서 프로그래밍 관련 다양한 기회를 제공하고 있습니다."
           />
         </div>
         <div className="blank-container"></div>
@@ -147,6 +150,16 @@ function Project1(props) {
         <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
         <p>{props.description}</p>
+        <div className="project-skill-container">
+          {
+            props.skillList &&
+            props.skillList.map(function (skill) {
+              return (
+                <div className="project-skill">✔︎ {skill}</div>
+              )
+            })
+          }
+        </div>
         <div className="icon-container">
           {props.link && (
             <a href={props.link} target="_blank">
@@ -184,6 +197,16 @@ function Project2(props) {
         <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
         <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
         <p>{props.description}</p>
+        <div className="project-skill-container">
+          {
+            props.skillList &&
+            props.skillList.map(function (skill) {
+              return (
+                <div className="project-skill">✔︎ {skill}</div>
+              )
+            })
+          }
+        </div>
         <div className="icon-container">
           {props.link && (
             <a href={props.link} target="_blank">

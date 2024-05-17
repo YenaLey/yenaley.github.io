@@ -14,52 +14,51 @@ function PROJECTS() {
         <div className="underline"></div>
         <div className="content-container">
 
-          <Project1
-            role="웹 기획 및 디자인, 프론트엔드 개발"
+          {/* QUIPU-DEV */}
+          <div className="project-category">
+            <h1>QUIPU-DEV</h1>
+            <div></div>
+            <p>서울시립대학교 컴퓨터 학술 중앙동아리에서 웹개발 팀을 구성하였습니다.</p>
+            <p>동아리 <span style={{ fontWeight: '900' }}>니즈</span>를 찾아 만든 작업물입니다.</p>
+          </div>
+
+          <Project
+            title="QUIPU Main Web"
+            period="2023.10 - 2024.02"
+            goal="동아리 소개 및 부원 모집 시스템 구축을 목적으로 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 표현합니다."
+            part="부분적인 디자인과 전반적인 기획 및 프론트엔드 개발과 유지보수를 하였습니다."
+            skillList={["React.js", "Three.js", "Figma"]}
+            img="./img/project/퀴푸메인웹.png"
+            link="https://quipu-developers.github.io/quipu-main-frontend/"
+            github="https://github.com/Quipu-Developers/quipu-main-frontend"
+          />
+
+          {/* personal */}
+          <div className="project-category">
+            <h1>PERSONAL</h1>
+            <div></div>
+            <p><span style={{ fontWeight: '900' }}>개성</span>을 표현하는 개인적인 작업물입니다.</p>
+          </div>
+
+          <Project
             title="Portfolio Web"
             period="2024.02 - 2024.02"
-            description="전체적인 기획과 디자인, 프론트엔드 개발까지 포괄하는 웹 개발 프로젝트입니다. 정보 구조(IA) 및 각 섹션별 상세 정보가 포함된 기획서를 작성하였으며, 다양한 포트폴리오 레퍼런스를 참고하여 디자인하였습니다. 이 웹사이트는 React.js를 기반으로 구축되었으며, 홈페이지의 PC 버전에서는 React Three Fiber를 사용하여 소개 멘트가 동적으로 변화하도록 구현하여 사용자 경험에 생동감을 더했습니다. 사용자 인터랙션에 부드러운 모션이 포함되어 있으며, 진부하지 않은 디자인을 목표로 하면서도 메시지의 전달력을 유지하는 데 중점을 두었습니다."
+            goal="저를 소개하기 위한 웹 페이지입니다. 피드백을 반영하며 퍼블리싱 실력 변화를 비교하는 것을 목적으로 하였습니다."
+            part="전반적인 기획과 디자인 그리고 프론트엔드를 개발하였습니다."
             skillList={["React.js", "Three.js"]}
             img="./img/project/포트폴리오1.png"
             link="https://yena.info/"
             github="https://github.com/YenaLey/portfolio"
           />
 
-          <Project2
-            role="웹 기획 및 디자인, 프론트엔드 개발"
-            title="QUIPU Main Web"
-            period="2023.10 - 2024.02"
-            description="동아리 소개 및 부원 모집 시스템 구축을 목적으로 한 웹 개발을 총괄하고 특히 프론트엔드 개발을 주도했습니다. 'home', 'about' 섹션 디자인 및 React.js를 기반으로 한 전체 웹에 대한 컴포넌트 구조와 페이지 라우팅을 구현하였습니다. React Three Fiber 기반의 'home', 'about', 'activity', 'activity detail' 섹션의 UI 및 클라이언트 사이드 개발과 더불어 'join Quipu' 지원 폼의 서버 데이터 처리와 에러 코드별 페이지 렌더링 개발을 통해 프론트엔드 개발의 전 영역에 걸친 책임을 경험하였습니다."
-            skillList={["React.js", "Three.js"]}
-            img="./img/project/퀴푸메인웹.png"
-            link="https://uos-quipu.vercel.app/"
-            github="https://github.com/YenaLey"
-            notion="https://quipu-dev.notion.site/quipu-dev/main-website-c8661a4633804bfdaadb105c86d2df1e" />
-
-          <Project1
-            role="3D 그래픽스 프로그래밍"
+          <Project
             title="Luxo 램프 인터랙티브 시뮬레이션"
             period="2023.09 - 2023.10"
-            description="Three.js을 활용하여 Luxo 램프의 인터랙티브 3D 시뮬레이션을 개발했습니다. 램프의 조절 가능한 부품들을 모델링하고, 스포트라이트 조명 효과를 추가하여 벽에 그림자를 생성하는 3D 모델을 장면에 배치했습니다. 사용자가 램프의 길이, 조인트 각도, 램프 각도를 쉽게 조절할 수 있는 GUI 제어 패널을 구현함으로써, 실시간으로 램프의 모양 변경이 가능하게 했습니다. 이를 통해, three.js 기반 웹 애플리케이션에서 사용자는 다양한 조명 및 그림자 효과를 경험할 수 있도록 개발하였습니다."
+            goal="Three.js를 활용하여 인터랙티브한 시뮬레이션 기능을 적용시켜 보는 것을 목적으로 하였습니다."
+            part="시뮬레이션 기능에 대한 기획과 구현을 하였습니다"
             skillList={["Three.js"]}
             img="./img/project/컴퓨터그래픽스프젝2.png"
             link="https://yenaley.github.io/computer-graphics/"
-          />
-
-          <Project2
-            role="아두이노 회로 설계 및 프로그래밍"
-            title="아두이노 디지털 멀티미터"
-            period="2023.03 - 2023.06"
-            description="LTspice로 모델링된 회로와 아두이노를 사용하여 디지털 멀티미터를 개발하였습니다. 아두이노의 아날로그 입력을 통해 전압을 측정하고, Opamp 기반 차동 증폭기를 통해 측정값을 정확하게 변환합니다. 측정 가능한 범위 설정하여 구현하였고 단위 자동 변환 기능을 포함해, 저항, 전압, 전류, 축전기 용량을 측정하고 이를 I2C LCD에 표시하도록 설계하였습니다."
-            img="./img/project/전전설1프젝1.png"
-          />
-
-          <Project1
-            role="디지털 논리 설계 및 베릴로그 프로그래밍"
-            title="XILINX FPGA 수학 연산 계산기"
-            period="2022.09 - 2022.12"
-            description="XILINX 기반 FPGA를 활용하여 Verilog HDL 기반의 계산기 설계하였습니다. 덧셈, 뺄셈, 곱셈, 나눗셈, 거듭제곱, 팩토리얼의 기능을 포함하며, 사용자는 Push Button Switch로 숫자를 입력하고 Dip Switch로 연산자, 피연산자의 순서, 음수 표현을 설정할 수 있습니다. 계산 결과는 Clock 기반의 TEXT LCD, 음수 표현은 LED를 통해 표시되도록 하였습니다. 7-Segment Array와 PIEZO를 사용하여 사용자 인터페이스와 피드백 메커니즘을 구현했으며, Vivado 프로그램을 통한 설계와 시뮬레이션을 거쳐 최종적으로 FPGA 디지털 회로에서의 시연으로 프로젝트를 완성했습니다."
-            img="./img/project/전전설2프젝1.jpg"
           />
 
         </div>
@@ -132,7 +131,7 @@ function PROJECTS() {
 
 export default PROJECTS;
 
-function Project1(props) {
+function Project(props) {
 
   return (
     <div className="project-block">
@@ -147,15 +146,15 @@ function Project1(props) {
       </div>
       <div className="project-content">
         <p>{props.period}</p>
-        <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
-        <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
-        <p>{props.description}</p>
+        <h2>{props.title}</h2>
+        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Goal. </span>{props.goal}</p>
+        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Part. </span>{props.part}</p>
         <div className="project-skill-container">
           {
             props.skillList &&
             props.skillList.map(function (skill) {
               return (
-                <div className="project-skill">✔︎ {skill}</div>
+                <div className="project-skill">{skill}</div>
               )
             })
           }
@@ -186,62 +185,6 @@ function Project1(props) {
       </div>
     </div>
   );
-}
-
-function Project2(props) {
-
-  return (
-    <div id="reverse" className="project-block">
-      <div className="project-content">
-        <p>{props.period}</p>
-        <h3 style={{ fontWeight: '500' }}>{props.role}</h3>
-        <h2 style={{ color: "#ffc900" }}>{props.title}</h2>
-        <p>{props.description}</p>
-        <div className="project-skill-container">
-          {
-            props.skillList &&
-            props.skillList.map(function (skill) {
-              return (
-                <div className="project-skill">✔︎ {skill}</div>
-              )
-            })
-          }
-        </div>
-        <div className="icon-container">
-          {props.link && (
-            <a href={props.link} target="_blank">
-              <div className="icon">
-                <img src="./img/icon/링크아이콘.png" alt="Link Icon"></img>
-              </div>
-            </a>
-          )}
-          {props.github && (
-            <a href={props.github} target="_blank">
-              <div className="icon">
-                <img src="./img/icon/깃허브아이콘.png" alt="GitHub Icon"></img>
-              </div>
-            </a>
-          )}
-          {props.notion && (
-            <a href={props.notion} target="_blank">
-              <div className="icon">
-                <img src="./img/icon/기록아이콘.png" alt="Notion Icon"></img>
-              </div>
-            </a>
-          )}
-        </div>
-      </div>
-      <div className="laptop">
-        <div className="laptop-img">
-          <img src={props.img}></img>
-        </div>
-        <div className="keyboard">
-          <div className="keyboard-top"></div>
-          <div className="keyboard-bottom"></div>
-        </div>
-      </div>
-    </div>
-  )
 }
 
 function SideProject(props) {

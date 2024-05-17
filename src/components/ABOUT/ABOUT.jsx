@@ -57,44 +57,6 @@ function ABOUT() {
           <div className="blank-container"></div>
         </div>
       </div>
-      {/* RESUME */}
-      <div id="whitesmoke" className="container">
-        <div className="blank-container"></div>
-        <h1>RESUME</h1>
-        <div className="underline"></div>
-        <div className="content-container">
-
-          <Resume
-            header="Education"
-            period="2020.03 - 재학 중"
-            title="UOS ECE"
-            description="서울시립대 전자전기컴퓨터공학부 전공"
-            activitys={["하드웨어 제어 및 설계 기술을 배우는 전자전기공학", "소프트웨어에 대해 배우는 컴퓨터공학"]}
-            projects={[]}
-            />
-
-          <Resume
-            header="Career"
-            period="2023.10 - 진행 중"
-            title="QUIPU-DEV"
-            description="서울시립대학교 중앙 컴퓨터 학술 동아리 퀴푸의 웹 개발팀"
-            activitys={["React.js 기반의 프론트엔드 웹 개발 총괄", "전반적인 웹 페이지 관리 및 기획과 디자인"]} 
-            projects={["메인 웹 사이트"]}
-            />
-
-          <Resume
-            header="Career"
-            period="2023.05 - 진행 중"
-            title="Cluster23"
-            description="서울시립대학교 웹 개발 소모임"
-            activitys={["Next.js 기반의 프론트엔드 웹 개발", "웹 기획과 웹 디자인"]} 
-            projects={[]}
-            />
-
-        </div>
-        <div className="blank-container"></div>
-        <div className="blank-container"></div>
-      </div>
     </Element>
   );
 }
@@ -174,53 +136,6 @@ function Count({ countNum, title }) {
       <h1>{count} +</h1>
       <div className="underline" style={{ width: "100px", height: "1px", margin: "5px 0", backgroundColor: "white" }}></div>
       <p>{title}</p>
-    </motion.div>
-  )
-}
-
-function Resume(props) {
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const variants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, y: 50 },
-  };
-
-  return (
-    <motion.div className="resume-content"
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      whileHover={{ x: -5 }}
-      variants={variants}>
-      <div class="resume-header">
-        <div className="resume-header-text">
-          <p>{props.header}</p>
-        </div>
-      </div>
-      <div class="resume-header-tip-left"></div>
-      <div class="resume-header-tip-right"></div>
-      <h4>{props.period}</h4>
-      <h2>{props.title}</h2>
-      <p style={{ color: 'grey' }}>{props.description}</p>
-      {
-        props.activitys.map(function (activity, index) {
-          return (
-            <p><span>🎤</span> {activity}</p>
-          )
-        })
-      }
-      {
-        props.projects.map(function (project, index) {
-          return (
-            <p><span style={{ fontWeight: '900', fontSize: '17px' }}>🫧</span> {project}</p>
-          )
-        })
-      }
     </motion.div>
   )
 }

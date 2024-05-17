@@ -1,3 +1,27 @@
+.project-category {
+    width: 100%;
+    padding: 30px 20px;
+}
+
+.project-category div {
+    width: 80%;
+    height: 0;
+    border: 1px solid black;
+}
+
+.project-category h1 {
+    font-weight: 800;
+}
+
+.project-category p {
+    font-size: 16px;
+    word-break: keep-all;
+
+    @media (max-width: 800px) {
+        font-size: 13px;
+    }
+}
+
 .project-block {
     width: 100%;
     height: auto;
@@ -178,10 +202,13 @@
 
 .project-skill {
     width: auto;
-    padding: 5px;
-    margin: 0 5px;
+    background-color: #DCF2F1;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 3px 6px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .icon-container {
@@ -232,6 +259,7 @@
     margin: 10px;
     position: relative;
     box-shadow: 0 0 5px lightgray;
+    border-radius: 40px 80px / 80px 40px;
 
     @media (max-width: 500px) {
         width: 80%;

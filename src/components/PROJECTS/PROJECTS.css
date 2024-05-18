@@ -67,8 +67,8 @@
 }
 
 .project-content h3 {
-    word-break: keep-all;
     font-size: 15px;
+    word-break: keep-all;
 }
 
 .project-content h2 {
@@ -82,6 +82,10 @@
     line-height: 1.5;
     font-size: 15px;
     color: grey;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
 }
 
 .laptop {

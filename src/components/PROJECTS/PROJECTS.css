@@ -349,6 +349,10 @@
 .choose-block .description h2{
     color: #FF6F61;
     margin: 5px;
+
+    @media (max-width: 600px) {
+        font-size: 21px;
+    }
 }
 
 .choose-block .description p{
@@ -358,6 +362,7 @@
 
     @media (max-width: 1200px) {
         text-align: center;
+        font-size: 13px;
     }
 }
 

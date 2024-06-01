@@ -49,6 +49,7 @@ function PROJECTS() {
             img="./img/project/포트폴리오1.png"
             link="https://yena.info/"
             github="https://github.com/YenaLey/portfolio"
+            reverse
           />
 
           <Project
@@ -98,29 +99,31 @@ function PROJECTS() {
         <div className="underline"></div>
         <div className="content-container">
 
-          <Choose1
+          <Choose
             title="강한 추진력"
             description="재빠른 실행력으로 아이디어를 신속히 현실에 반영합니다. 우선순위 설정을 통해, 목표를 정확하고 빠르게 달성합니다."
             img1="./img/icon/추진력.png"
-            img2="./img/icon/추진력2.png"></Choose1>
+            img2="./img/icon/추진력2.png" />
 
-          <Choose2
+          <Choose
             title="적극적인 커뮤니케이션"
             description="투명하고 적극적인 소통으로 팀워크를 강화하고, 프로젝트의 비전을 모두와 공유합니다."
             img1="./img/icon/커뮤니케이션.png"
-            img2="./img/icon/커뮤니케이션2.png"></Choose2>
+            img2="./img/icon/커뮤니케이션2.png"
+            reverse />
 
-          <Choose1
+          <Choose
             title="빠른 작업"
             description="새로운 기술 습득이 빠르며, 배운 내용을 실제 작업에 즉각적으로 적용함으로써 프로젝트를 신속하게 전진시킵니다."
             img1="./img/icon/작업.png"
-            img2="./img/icon/작업2.png"></Choose1>
+            img2="./img/icon/작업2.png" />
 
-          <Choose2
+          <Choose
             title="높은 신뢰성"
             description="맡겨진 일에 대한 높은 책임감을 바탕으로, 약속된 기한과 품질을 엄격히 지키며 일합니다."
             img1="./img/icon/신뢰성.png"
-            img2="./img/icon/신뢰성2.png"></Choose2>
+            img2="./img/icon/신뢰성2.png"
+            reverse />
 
         </div>
         <div className="blank-container"></div>
@@ -131,13 +134,13 @@ function PROJECTS() {
 
 export default PROJECTS;
 
-function Project(props) {
+function Project({img, period, title, goal, part, skillList, link, github, notion, reverse}) {
 
   return (
-    <div className="project-block">
+    <div className={reverse ? "project-block" : "project-block-reverse"}>
       <div className="laptop">
         <div className="laptop-img">
-          <img src={props.img}></img>
+          <img src={img}></img>
         </div>
         <div className="keyboard">
           <div className="keyboard-top"></div>
@@ -145,14 +148,14 @@ function Project(props) {
         </div>
       </div>
       <div className="project-content">
-        <p>{props.period}</p>
-        <h2>{props.title}</h2>
-        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Goal. </span>{props.goal}</p>
-        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Part. </span>{props.part}</p>
+        <p>{period}</p>
+        <h2>{title}</h2>
+        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Goal. </span>{goal}</p>
+        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Part. </span>{part}</p>
         <div className="project-skill-container">
           {
-            props.skillList &&
-            props.skillList.map(function (skill) {
+            skillList &&
+            skillList.map(function (skill) {
               return (
                 <div className="project-skill">{skill}</div>
               )
@@ -160,22 +163,22 @@ function Project(props) {
           }
         </div>
         <div className="icon-container">
-          {props.link && (
-            <a href={props.link} target="_blank">
+          {link && (
+            <a href={link} target="_blank">
               <div className="icon">
                 <img src="./img/icon/링크아이콘.png" alt="Link Icon"></img>
               </div>
             </a>
           )}
-          {props.github && (
-            <a href={props.github} target="_blank">
+          {github && (
+            <a href={github} target="_blank">
               <div className="icon">
                 <img src="./img/icon/깃허브아이콘.png" alt="GitHub Icon"></img>
               </div>
             </a>
           )}
-          {props.notion && (
-            <a href={props.notion} target="_blank">
+          {notion && (
+            <a href={notion} target="_blank">
               <div className="icon">
                 <img src="./img/icon/기록아이콘.png" alt="Notion Icon"></img>
               </div>
@@ -226,7 +229,7 @@ function SideProject(props) {
   );
 }
 
-function Choose1(props) {
+function Choose({title, description, img1, img2, reverse}) {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -239,48 +242,18 @@ function Choose1(props) {
   };
 
   return (
-    <motion.div className="choose-block" id="reverse"
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}>
-      <div className="description">
-        <h2>{props.title}</h2>
-        <p>{props.description}</p>
-      </div>
-      <div className="img">
-        <img className="before" src={props.img1}></img>
-        <img className="after" src={props.img2}></img>
-      </div>
-    </motion.div>
-  )
-}
-
-function Choose2(props) {
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const variants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, y: 50 },
-  };
-
-  return (
-    <motion.div className="choose-block"
+    <motion.div className={reverse ? "choose-block" : "choose-block reverse"}
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={variants}>
       <div className="img">
-        <img className="before" src={props.img1}></img>
-        <img className="after" src={props.img2}></img>
+        <img className="before" src={img1}></img>
+        <img className="after" src={img2}></img>
       </div>
-      <div className="description">
-        <h2>{props.title}</h2>
-        <p>{props.description}</p>
+      <div className={reverse ? "description" : "description reverse"}>
+        <h2>{title}</h2>
+        <p>{description}</p>
       </div>
     </motion.div>
   )

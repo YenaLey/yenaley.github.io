@@ -252,16 +252,16 @@
 }
 
 .sideProject-block {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
+    width: 330px;
+    height: 230px;
+    object-fit: contain;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin: 10px;
+    margin: 5px;
     position: relative;
-    box-shadow: 0 0 5px lightgray;
+    box-shadow: 0 0 3px lightgray;
     border-radius: 40px 80px / 80px 40px;
 
     @media (max-width: 500px) {

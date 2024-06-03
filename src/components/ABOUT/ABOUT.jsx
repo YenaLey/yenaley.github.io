@@ -51,9 +51,9 @@ function ABOUT() {
       <div className="container" style={{ backgroundColor: "black" }}>
         <div className="content-container">
           <div className="blank-container"></div>
-          <Count countNum={207} title="coding days" />
-          <Count countNum={5} title="projects completed" />
-          <Count countNum={386} title="github contributions" />
+          <Count countNum={277} title="coding days" />
+          <Count countNum={3} title="projects completed" />
+          <Count countNum={486} title="github contributions" />
           <div className="blank-container"></div>
         </div>
       </div>

@@ -73,19 +73,34 @@ function PROJECTS() {
         <div className="underline"></div>
         <div className="content-container sideProject">
           <SideProject
-            img="./img/project/예대발표.jpg"
-            title="세미나"
-            description="개발 지식을 넓히기 위해 다양한 세미나를 준비하고 참여하고 있습니다."
+            img="./img/project/기획.jpg"
+            title="기획 및 디자인"
+            description="전체적인 프로세스를 이해하고 적극적으로 아이디어를 내기 위해 기획과 디자인을 공부하고 있습니다."
           />
           <SideProject
             img="./img/project/외주.png"
             title="외주"
-            description="프리랜서로서의 경험을 쌓고, 문제 해결 능력을 키우기 위해 프론트엔드 개발 분야에서 외주 작업을 진행하고 있습니다."
+            description="다양한 문제 상황을 경험하고 기술 역량을 넓히기 위해 FE 개발 분야에서 외주 작업을 진행하고 있습니다."
+          />
+          <SideProject
+            img="./img/project/스터디2.jpg"
+            title="세미나"
+            description="FE 개발 지식을 공유하고 피드백을 받기 위해 FE 개발 관련 세미나를 열고 있습니다."
           />
           <SideProject
             img="./img/project/코딩테스트스터디.jpg"
             title="스터디"
-            description="여러 스터디를 주최하고 지도하면서 프로그래밍 관련 다양한 기회를 제공하고 있습니다."
+            description="코딩을 지치지 않고 꾸준히 하는 습관을 들이기 위해 여러 사람들과 스터디를 하고 있습니다."
+          />
+          <SideProject
+            img="./img/project/스터디3.jpg"
+            title="코드 리뷰"
+            description="여러 사람과 코드 리뷰를 통해 같은 기능에 대한 여러 코드를 경험하고 있습니다."
+          />
+          <SideProject
+            img="./img/project/예대발표.jpg"
+            title="리더"
+            description="컴퓨터 동아리를 이끌며 다양한 프로젝트를 기획하고 진행하며 겪을 수 있는 문제 상황과 책임을 경험하고 있습니다."
           />
         </div>
         <div className="blank-container"></div>

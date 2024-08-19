@@ -58,7 +58,7 @@ function HomeMobile() {
       <div className="light blue-light"></div>
       <p>Hi, there!</p>
       <h1>
-        I'm <span style={{ color: "#ffc900" }}>YENA</span>.
+        I&apos;m <span style={{ color: "#ffc900" }}>YENA</span>.
       </h1>
       <TypingEffect />
     </div>

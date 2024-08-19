@@ -201,8 +201,12 @@ function Project({
         </p>
         <div className="project-skill-container">
           {skillList &&
-            skillList.map(function (skill) {
-              return <div className="project-skill">{skill}</div>;
+            skillList.map(function (skill, index) {
+              return (
+                <div key={index} className="project-skill">
+                  {skill}
+                </div>
+              );
             })}
         </div>
         <div className="icon-container">

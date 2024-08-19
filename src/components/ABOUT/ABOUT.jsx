@@ -139,7 +139,7 @@ function Count({ countNum, title }) {
 
   useEffect(() => {
     if (inView) {
-      controls.start((i) => ({
+      controls.start(() => ({
         opacity: 1,
         y: 0,
         transition: { duration: 0.5 },

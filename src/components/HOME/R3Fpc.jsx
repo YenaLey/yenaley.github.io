@@ -80,7 +80,7 @@ function R3Fpc() {
         rotation={[0, 0, 0]}
         position={[0, 0.3, 0]}
       >
-        Hi, there! I'm
+        Hi, there! I&apos;m
       </Text>
       <Text
         color="#E63946"

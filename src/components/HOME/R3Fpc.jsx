@@ -1,10 +1,13 @@
-import React, { useState, useEffect, memo } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Text, Plane } from '@react-three/drei'; 
+import React, { useState, useEffect, memo, useMemo } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Text, Plane } from "@react-three/drei";
 
 function R3Fpc() {
   const [dynamicText, setDynamicText] = useState("");
-  const phrases = ["Yena", "Front-End", "Developer", "Hard Coder"];
+  const phrases = useMemo(
+    () => ["Yena", "Front-End", "Developer", "Hard Coder"],
+    []
+  );
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -23,7 +26,7 @@ function R3Fpc() {
       timeoutId = setTimeout(() => {
         setIsDeleting(true);
       }, 1000);
-    } else if (isDeleting && dynamicText === '') {
+    } else if (isDeleting && dynamicText === "") {
       setIsDeleting(false);
       setPhraseIndex((phraseIndex + 1) % phrases.length);
     } else {
@@ -31,11 +34,20 @@ function R3Fpc() {
     }
 
     return () => clearTimeout(timeoutId);
-  }, [dynamicText, isDeleting, phraseIndex]);
+  }, [dynamicText, isDeleting, phraseIndex, phrases]);
 
   return (
-    <Canvas shadows shadowMap
-      camera={{ fov: 50, aspect: window.innerWidth / window.innerHeight, near: 0.1, far: 1000, position: [0, 0, 1.5] }}>
+    <Canvas
+      shadows
+      shadowMap
+      camera={{
+        fov: 50,
+        aspect: window.innerWidth / window.innerHeight,
+        near: 0.1,
+        far: 1000,
+        position: [0, 0, 1.5],
+      }}
+    >
       <ambientLight intensity={0} />
       <spotLight
         color="#ffc900"
@@ -62,7 +74,7 @@ function R3Fpc() {
       <Text
         color="black"
         fontSize={0.2}
-        textAlign={'center'}
+        textAlign={"center"}
         anchorX="center"
         anchorY="middle"
         rotation={[0, 0, 0]}
@@ -73,14 +85,14 @@ function R3Fpc() {
       <Text
         color="#E63946"
         fontSize={0.3}
-        textAlign={'center'}
+        textAlign={"center"}
         anchorX="center"
         anchorY="middle"
         rotation={[0, 0, 0]}
         position={[0, -0.1, 0]}
         castShadow
       >
-          {dynamicText}
+        {dynamicText}
       </Text>
       <Plane
         receiveShadow

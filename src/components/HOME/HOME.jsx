@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Element } from 'react-scroll';
-import R3Fpc from './R3Fpc';
+import React, { useState, useEffect, useMemo } from "react";
+import { Element } from "react-scroll";
+import R3Fpc from "./R3Fpc";
 import "./HOME.css";
 
 function TypingEffect() {
-  const sentences = [
-    "Thanks for visiting.",
-    "It's a bit shy,",
-    "But let me introduce myself."
-  ];
+  const sentences = useMemo(
+    () => [
+      "Thanks for visiting.",
+      "It's a bit shy,",
+      "But let me introduce myself.",
+    ],
+    []
+  );
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -36,7 +39,7 @@ function TypingEffect() {
     }
 
     return () => clearTimeout(timeout);
-  }, [subIndex, index, reverse]);
+  }, [subIndex, index, reverse, sentences]);
 
   const cursorClasses = blink ? "cursor blink" : "cursor";
 
@@ -54,7 +57,9 @@ function HomeMobile() {
       <div className="light yellow-light"></div>
       <div className="light blue-light"></div>
       <p>Hi, there!</p>
-      <h1>I'm <span style={{color: "#ffc900"}}>YENA</span>.</h1>
+      <h1>
+        I'm <span style={{ color: "#ffc900" }}>YENA</span>.
+      </h1>
       <TypingEffect />
     </div>
   );
@@ -67,14 +72,16 @@ function HOME() {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 700);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
     <Element name="home">
-      {isSmallScreen ? (<HomeMobile />) : (
+      {isSmallScreen ? (
+        <HomeMobile />
+      ) : (
         <div className="container" style={{ height: "calc(100vh - 60px)" }}>
           <R3Fpc />
         </div>
@@ -84,4 +91,3 @@ function HOME() {
 }
 
 export default HOME;
-

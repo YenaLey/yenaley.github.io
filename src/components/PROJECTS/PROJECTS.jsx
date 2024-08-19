@@ -173,7 +173,7 @@ function Project({
     <div className={reverse ? "project-block" : "project-block-reverse"}>
       <div className="laptop">
         <div className="laptop-img">
-          <img src={img}></img>
+          <img src={img} alt="프로젝트 사진"></img>
         </div>
         <div className="keyboard">
           <div className="keyboard-top"></div>
@@ -261,7 +261,7 @@ function SideProject(props) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img src={props.img}></img>
+      <img src={props.img} alt="사이드프로젝트 사진"></img>
       <motion.div
         className="sideProject-description"
         variants={textSlideVariants}
@@ -295,8 +295,8 @@ function Choose({ title, description, img1, img2, reverse }) {
       variants={variants}
     >
       <div className="img">
-        <img className="before" src={img1}></img>
-        <img className="after" src={img2}></img>
+        <img className="before" src={img1} alt="키워드 이미지1"></img>
+        <img className="after" src={img2} alt="키워드 이미지1"></img>
       </div>
       <div className={reverse ? "description" : "description reverse"}>
         <h2>{title}</h2>

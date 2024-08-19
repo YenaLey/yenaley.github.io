@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { Element } from 'react-scroll';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import "./PROJECTS.css"
+import React, { useState } from "react";
+import { Element } from "react-scroll";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import "./PROJECTS.css";
 
 function PROJECTS() {
-
   return (
     <Element name="projects">
       <div className="container">
@@ -13,31 +12,39 @@ function PROJECTS() {
         <h1>PROJECTS</h1>
         <div className="underline"></div>
         <div className="content-container">
-
           {/* QUIPU-DEV */}
           <div className="project-category">
             <h1>QUIPU-DEV</h1>
             <div></div>
-            <p>서울시립대학교 컴퓨터 학술 중앙동아리에서 웹개발 팀을 구성하였습니다.</p>
-            <p>동아리 <span style={{ fontWeight: '900' }}>니즈</span>를 찾아 만든 작업물입니다.</p>
+            <p>
+              서울시립대학교 컴퓨터 학술 중앙동아리에서 웹개발 팀을
+              구성하였습니다.
+            </p>
+            <p>
+              동아리 <span style={{ fontWeight: "900" }}>니즈</span>를 찾아 만든
+              작업물입니다.
+            </p>
           </div>
 
           <Project
             title="QUIPU Main Web"
-            period="2023.10 - 2024.02"
-            goal="동아리 소개 및 부원 모집 시스템 구축을 목적으로 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 표현합니다."
-            part="부분적인 디자인과 전반적인 기획 및 프론트엔드 개발과 유지보수를 하였습니다."
-            skillList={["React.js", "Three.js", "Figma"]}
+            period="2024.01 - 2024.08"
+            goal="동아리 소개 및 부원 모집 시스템 구축 그리고 다양한 이벤트를 진행하며 동아리를 홍보하고자 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 포함합니다."
+            part="전체적인 기획과 디자인, 그리고 프론트엔드 개발을 담당하였습니다. GitHub Actions를 활용하여 CI/CD 파이프라인을 구축 및 관리하여 배포 프로세스를 자동화하고 있습니다."
+            skillList={["Figma", "React.js", "Three.js", "GitHub"]}
             img="./img/project/퀴푸메인웹.png"
-            link="https://quipu-developers.github.io/quipu-main-frontend/"
-            github="https://github.com/Quipu-Developers/quipu-main-frontend"
+            link="https://quipu.uos.ac.kr/"
+            github="https://github.com/Quipu-Developers/main-frontend"
           />
 
           {/* personal */}
           <div className="project-category">
             <h1>PERSONAL</h1>
             <div></div>
-            <p><span style={{ fontWeight: '900' }}>개성</span>을 표현하는 개인적인 작업물입니다.</p>
+            <p>
+              <span style={{ fontWeight: "900" }}>개성</span>을 표현하는
+              개인적인 작업물입니다.
+            </p>
           </div>
 
           <Project
@@ -61,7 +68,6 @@ function PROJECTS() {
             img="./img/project/컴퓨터그래픽스프젝2.png"
             link="https://yenaley.github.io/computer-graphics/"
           />
-
         </div>
         <div className="blank-container"></div>
         <div className="blank-container"></div>
@@ -113,33 +119,35 @@ function PROJECTS() {
         <h1>WHY CHOOSE ME</h1>
         <div className="underline"></div>
         <div className="content-container">
-
           <Choose
             title="강한 추진력"
             description="재빠른 실행력으로 아이디어를 신속히 현실에 반영합니다. 우선순위 설정을 통해, 목표를 정확하고 빠르게 달성합니다."
             img1="./img/icon/추진력.png"
-            img2="./img/icon/추진력2.png" />
+            img2="./img/icon/추진력2.png"
+          />
 
           <Choose
             title="적극적인 커뮤니케이션"
             description="투명하고 적극적인 소통으로 팀워크를 강화하고, 프로젝트의 비전을 모두와 공유합니다."
             img1="./img/icon/커뮤니케이션.png"
             img2="./img/icon/커뮤니케이션2.png"
-            reverse />
+            reverse
+          />
 
           <Choose
             title="빠른 작업"
             description="새로운 기술 습득이 빠르며, 배운 내용을 실제 작업에 즉각적으로 적용함으로써 프로젝트를 신속하게 전진시킵니다."
             img1="./img/icon/작업.png"
-            img2="./img/icon/작업2.png" />
+            img2="./img/icon/작업2.png"
+          />
 
           <Choose
             title="높은 신뢰성"
             description="맡겨진 일에 대한 높은 책임감을 바탕으로, 약속된 기한과 품질을 엄격히 지키며 일합니다."
             img1="./img/icon/신뢰성.png"
             img2="./img/icon/신뢰성2.png"
-            reverse />
-
+            reverse
+          />
         </div>
         <div className="blank-container"></div>
       </div>
@@ -149,8 +157,18 @@ function PROJECTS() {
 
 export default PROJECTS;
 
-function Project({img, period, title, goal, part, skillList, link, github, notion, reverse}) {
-
+function Project({
+  img,
+  period,
+  title,
+  goal,
+  part,
+  skillList,
+  link,
+  github,
+  notion,
+  reverse,
+}) {
   return (
     <div className={reverse ? "project-block" : "project-block-reverse"}>
       <div className="laptop">
@@ -165,35 +183,45 @@ function Project({img, period, title, goal, part, skillList, link, github, notio
       <div className="project-content">
         <p>{period}</p>
         <h2>{title}</h2>
-        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Goal. </span>{goal}</p>
-        <p><span style={{fontWeight: '700', color: '#ffc900', fontSize: '20px'}}>Part. </span>{part}</p>
+        <p>
+          <span
+            style={{ fontWeight: "700", color: "#ffc900", fontSize: "20px" }}
+          >
+            Goal.{" "}
+          </span>
+          {goal}
+        </p>
+        <p>
+          <span
+            style={{ fontWeight: "700", color: "#ffc900", fontSize: "20px" }}
+          >
+            Part.{" "}
+          </span>
+          {part}
+        </p>
         <div className="project-skill-container">
-          {
-            skillList &&
+          {skillList &&
             skillList.map(function (skill) {
-              return (
-                <div className="project-skill">{skill}</div>
-              )
-            })
-          }
+              return <div className="project-skill">{skill}</div>;
+            })}
         </div>
         <div className="icon-container">
           {link && (
-            <a href={link} target="_blank">
+            <a href={link} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <img src="./img/icon/링크아이콘.png" alt="Link Icon"></img>
               </div>
             </a>
           )}
           {github && (
-            <a href={github} target="_blank">
+            <a href={github} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <img src="./img/icon/깃허브아이콘.png" alt="GitHub Icon"></img>
               </div>
             </a>
           )}
           {notion && (
-            <a href={notion} target="_blank">
+            <a href={notion} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <img src="./img/icon/기록아이콘.png" alt="Notion Icon"></img>
               </div>
@@ -206,7 +234,6 @@ function Project({img, period, title, goal, part, skillList, link, github, notio
 }
 
 function SideProject(props) {
-
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -225,18 +252,22 @@ function SideProject(props) {
   };
 
   return (
-    <motion.div className="sideProject-block"
+    <motion.div
+      className="sideProject-block"
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={variants}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}>
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <img src={props.img}></img>
-      <motion.div className="sideProject-description"
+      <motion.div
+        className="sideProject-description"
         variants={textSlideVariants}
         initial="initial"
-        animate={isHovered ? "hover" : "initial"}>
+        animate={isHovered ? "hover" : "initial"}
+      >
         <h3>{props.title}</h3>
         <p>{props.description}</p>
       </motion.div>
@@ -244,8 +275,7 @@ function SideProject(props) {
   );
 }
 
-function Choose({title, description, img1, img2, reverse}) {
-
+function Choose({ title, description, img1, img2, reverse }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -257,11 +287,13 @@ function Choose({title, description, img1, img2, reverse}) {
   };
 
   return (
-    <motion.div className={reverse ? "choose-block" : "choose-block reverse"}
+    <motion.div
+      className={reverse ? "choose-block" : "choose-block reverse"}
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      variants={variants}>
+      variants={variants}
+    >
       <div className="img">
         <img className="before" src={img1}></img>
         <img className="after" src={img2}></img>
@@ -271,5 +303,5 @@ function Choose({title, description, img1, img2, reverse}) {
         <p>{description}</p>
       </div>
     </motion.div>
-  )
+  );
 }

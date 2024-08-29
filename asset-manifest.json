@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e70853b0.css",
-    "main.js": "/static/js/main.c4234408.js",
+    "main.css": "/static/css/main.264c2544.css",
+    "main.js": "/static/js/main.b45ca0ee.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/Rubik-Bold.ttf": "/static/media/Rubik-Bold.c934eb22c2c69992b34c.ttf",
     "static/media/Rubik-ExtraBold.ttf": "/static/media/Rubik-ExtraBold.1ab45dd33fc066882b45.ttf",
@@ -10,12 +10,12 @@
     "static/media/Rubik-Regular.ttf": "/static/media/Rubik-Regular.55fa11cdc8b9a3ee842f.ttf",
     "static/media/Rubik-Light.ttf": "/static/media/Rubik-Light.9d2ccd264dc61b954019.ttf",
     "index.html": "/index.html",
-    "main.e70853b0.css.map": "/static/css/main.e70853b0.css.map",
-    "main.c4234408.js.map": "/static/js/main.c4234408.js.map",
+    "main.264c2544.css.map": "/static/css/main.264c2544.css.map",
+    "main.b45ca0ee.js.map": "/static/js/main.b45ca0ee.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e70853b0.css",
-    "static/js/main.c4234408.js"
+    "static/css/main.264c2544.css",
+    "static/js/main.b45ca0ee.js"
   ]
 }

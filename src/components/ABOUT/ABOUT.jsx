@@ -79,7 +79,7 @@ function ABOUT() {
         <div className="content-container">
           <div className="blank-container"></div>
           <Count countNum={360} title="coding days" />
-          <Count countNum={3} title="projects completed" />
+          <Count countNum={5} title="projects completed" />
           <Count countNum={1003} title="github contributions" />
           <div className="blank-container"></div>
         </div>

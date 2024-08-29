@@ -17,12 +17,9 @@ function PROJECTS() {
             <h1>QUIPU-DEV</h1>
             <div></div>
             <p>
-              서울시립대학교 컴퓨터 학술 중앙동아리에서 웹개발 팀을
-              구성하였습니다.
-            </p>
-            <p>
-              동아리 <span style={{ fontWeight: "900" }}>니즈</span>를 찾아 만든
-              작업물입니다.
+              서울시립대학교 컴퓨터 학술 중앙동아리에서 웹개발 팀을 결성하여,
+              다양한 <span style={{ fontWeight: "900" }}>도전</span>을 하고
+              있습니다.
             </p>
           </div>
 
@@ -32,9 +29,52 @@ function PROJECTS() {
             goal="동아리 소개 및 부원 모집 시스템 구축 그리고 다양한 이벤트를 진행하며 동아리를 홍보하고자 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 포함합니다."
             part="전체적인 기획과 디자인, 그리고 프론트엔드 개발을 담당하였습니다. GitHub Actions를 활용하여 CI/CD 파이프라인을 구축 및 관리하여 배포 프로세스를 자동화하고 있습니다."
             skillList={["Figma", "React.js", "Three.js", "GitHub"]}
-            img="./img/project/퀴푸메인웹.png"
+            img={[
+              "./img/project/퀴푸메인웹.png",
+              "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            ]}
             link="https://quipu.uos.ac.kr/"
+            figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DEV?node-id=584-2&node-type=CANVAS&t=wCakjTO9wYDqt2Wf-0"
             github="https://github.com/Quipu-Developers/main-frontend"
+          />
+
+          <Project
+            title="QUIPU Event"
+            period="2024.08"
+            goal="동아리 소개 및 부원 모집 시스템 구축 그리고 다양한 이벤트를 진행하며 동아리를 홍보하고자 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 포함합니다."
+            part="전체적인 기획과 디자인, 그리고 프론트엔드 개발을 담당하였습니다. GitHub Actions를 활용하여 CI/CD 파이프라인을 구축 및 관리하여 배포 프로세스를 자동화하고 있습니다."
+            skillList={["Figma", "React.js", "Three.js", "GitHub"]}
+            img={["./img/project/퀴푸메인웹.png"]}
+            figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DEV?node-id=668-1947&node-type=CANVAS&t=mxF0DUvbQts55V13-0"
+            github="https://github.com/Quipu-Developers/main-frontend"
+            reverse
+          />
+
+          <Project
+            title="QUIPU BackOffice Web"
+            period="2024.07 - 2024.08"
+            goal="동아리 소개 및 부원 모집 시스템 구축 그리고 다양한 이벤트를 진행하며 동아리를 홍보하고자 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 포함합니다."
+            part="전체적인 기획과 디자인, 그리고 프론트엔드 개발을 담당하였습니다. GitHub Actions를 활용하여 CI/CD 파이프라인을 구축 및 관리하여 배포 프로세스를 자동화하고 있습니다."
+            skillList={["React.js", "GitHub"]}
+            img={["./img/project/퀴푸메인웹.png"]}
+            link="https://quipu-developers.github.io/backoffice-frontend"
+            github="https://github.com/Quipu-Developers/backoffice-frontend"
+          />
+
+          <Project
+            title="LingoConnect"
+            period="2024.07 - 2024.08"
+            goal="동아리 소개 및 부원 모집 시스템 구축 그리고 다양한 이벤트를 진행하며 동아리를 홍보하고자 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 포함합니다."
+            part="전체적인 기획과 디자인, 그리고 프론트엔드 개발을 담당하였습니다. GitHub Actions를 활용하여 CI/CD 파이프라인을 구축 및 관리하여 배포 프로세스를 자동화하고 있습니다."
+            skillList={["Figma", "React.js", "GitHub"]}
+            img={[
+              "./img/project/링고커넥트1.mp4",
+              "./img/project/링고커넥트2.mp4",
+              "./img/project/링고커넥트3.mp4",
+            ]}
+            figma="https://www.figma.com/design/gqZCozFYBEP1Yu1ThoLvMm/%EC%83%88%EC%8B%B9%ED%95%B4%EC%BB%A4%ED%86%A4?node-id=0-1&node-type=CANVAS&t=tEpvjrnibh7V53rN-0"
+            github="https://github.com/LingoConnect/LingoConnect"
+            reverse
           />
 
           {/* personal */}
@@ -53,7 +93,7 @@ function PROJECTS() {
             goal="저를 소개하기 위한 웹 페이지입니다. 피드백을 반영하며 퍼블리싱 실력 변화를 비교하는 것을 목적으로 하였습니다."
             part="전반적인 기획과 디자인 그리고 프론트엔드를 개발하였습니다."
             skillList={["React.js", "Three.js"]}
-            img="./img/project/포트폴리오1.png"
+            img={["./img/project/포트폴리오1.png"]}
             link="https://yena.info/"
             github="https://github.com/YenaLey/portfolio"
             reverse
@@ -65,7 +105,7 @@ function PROJECTS() {
             goal="Three.js를 활용하여 인터랙티브한 시뮬레이션 기능을 적용시켜 보는 것을 목적으로 하였습니다."
             part="시뮬레이션 기능에 대한 기획과 구현을 하였습니다"
             skillList={["Three.js"]}
-            img="./img/project/컴퓨터그래픽스프젝2.png"
+            img={["./img/project/컴퓨터그래픽스프젝2.png"]}
             link="https://yenaley.github.io/computer-graphics/"
           />
         </div>
@@ -165,16 +205,58 @@ function Project({
   part,
   skillList,
   link,
+  figma,
   github,
   notion,
   reverse,
 }) {
+  const [imgIndex, setImgIndex] = useState(0);
+
+  const renderMedia = (src, index) => {
+    const fileExtension = src.split(".").pop().toLowerCase();
+    if (
+      fileExtension === "mp4" ||
+      fileExtension === "webm" ||
+      fileExtension === "ogg"
+    ) {
+      return (
+        <video key={index} controls>
+          <source src={src} type={`video/${fileExtension}`} />
+          <track
+            src="path/to/captions.vtt"
+            kind="captions"
+            srclang="en"
+            label="English"
+            default
+          />
+          Your browser does not support the video tag.
+        </video>
+      );
+    } else {
+      return <img key={index} src={src} alt="프로젝트 사진" />;
+    }
+  };
+
   return (
     <div className={reverse ? "project-block" : "project-block-reverse"}>
       <div className="laptop">
-        <div className="laptop-img">
-          <img src={img} alt="프로젝트 사진"></img>
-        </div>
+        {imgIndex > 0 && (
+          <div
+            className="project-img-button"
+            onClick={() => setImgIndex(imgIndex - 1)}
+          >
+            &#60;
+          </div>
+        )}
+        {imgIndex < img.length - 1 && (
+          <div
+            className="project-img-button right"
+            onClick={() => setImgIndex(imgIndex + 1)}
+          >
+            &#62;
+          </div>
+        )}
+        <div className="laptop-img">{renderMedia(img[imgIndex], imgIndex)}</div>
         <div className="keyboard">
           <div className="keyboard-top"></div>
           <div className="keyboard-bottom"></div>
@@ -214,6 +296,13 @@ function Project({
             <a href={link} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <img src="./img/icon/링크아이콘.png" alt="Link Icon"></img>
+              </div>
+            </a>
+          )}
+          {figma && (
+            <a href={figma} target="_blank" rel="noopener noreferrer">
+              <div className="icon">
+                <img src="./img/icon/피그마아이콘.png" alt="Figma Icon"></img>
               </div>
             </a>
           )}

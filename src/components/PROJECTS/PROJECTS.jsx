@@ -49,7 +49,10 @@ function PROJECTS() {
             goal="서울시립대학교 학부생들을 대상으로 동아리를 홍보하기 위해 랜덤 선물 뽑기 이벤트를 진행했습니다."
             part="이벤트의 전체 기획과 디자인, 프론트엔드 개발을 담당했습니다. 중복 참여와 의도적인 결과 화면 접속으로 인한 문제를 방지하고, 튕김 발생 시 같은 결과 화면에 재접속할 수 있도록 하는 등 많은 사람들이 참여하며 발생할 수 있는 에러들을 방지하고자 하였습니다."
             skillList={["Figma", "React.js", "GitHub"]}
-            img={["./img/project/룰렛이벤트.mp4"]}
+            img={[
+              "./img/project/룰렛이벤트.jpeg",
+              "./img/project/룰렛이벤트.mp4",
+            ]}
             figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DEV?node-id=668-1947&node-type=CANVAS&t=mxF0DUvbQts55V13-0"
             github="https://github.com/Quipu-Developers/main-frontend"
             reverse
@@ -76,6 +79,7 @@ function PROJECTS() {
             part="기획과 프론트엔드 개발을 담당하였습니다. REST API를 활용한 백엔드 연동을 주로 담당하였고, STT(음성 인식)와 TTS(텍스트 음성 변환) 기능을 구현했습니다. 클라이언트에서 녹음된 음성을 WAV 파일로 변환해 백엔드로 전송하고, 백엔드에서 받은 데이터를 실시간으로 처리하여 사용자 인터페이스에 반영했습니다."
             skillList={["React.js", "GitHub"]}
             img={[
+              "./img/project/링고커넥트.png",
               "./img/project/링고커넥트1.mp4",
               "./img/project/링고커넥트2.mp4",
               "./img/project/링고커넥트3.mp4",

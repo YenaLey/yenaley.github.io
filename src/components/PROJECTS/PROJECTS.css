@@ -207,28 +207,10 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transition: transform 0.5s ease-in-out;
 
   @media (max-width: 600px) {
     width: 78vw;
   }
-}
-
-.laptop-img img,
-.laptop-img video {
-  width: 100%;
-  height: auto;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.laptop-img img.active,
-.laptop-img video.active {
-  opacity: 1;
-  position: relative;
 }
 
 .project-skill-container {

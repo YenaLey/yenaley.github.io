@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Element } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./PROJECTS.css";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -232,14 +232,35 @@ function Project({
 
   const renderMedia = (src, index) => {
     const fileExtension = src.split(".").pop().toLowerCase();
-    const activeClass = index === imgIndex ? "active" : "";
+    const uniqueKey = `media-${index}`;
+
     if (
       fileExtension === "mp4" ||
       fileExtension === "webm" ||
       fileExtension === "ogg"
     ) {
       return (
-        <video key={index} className={activeClass} controls>
+        <motion.video
+          key={uniqueKey}
+          controls
+          preload="auto"
+          crossorigin="anonymous"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
+        >
           <source src={src} type={`video/${fileExtension}`} />
           <track
             src="path/to/captions.vtt"
@@ -249,15 +270,29 @@ function Project({
             default
           />
           Your browser does not support the video tag.
-        </video>
+        </motion.video>
       );
     } else {
       return (
-        <img
-          key={index}
+        <motion.img
+          key={uniqueKey}
           src={src}
           alt="프로젝트 사진"
-          className={activeClass}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
         />
       );
     }
@@ -286,7 +321,9 @@ function Project({
           </div>
         )}
         <div className="laptop-img">
-          {img.map((src, index) => renderMedia(src, index))}
+          <AnimatePresence initial={false}>
+            {renderMedia(img[imgIndex], imgIndex)}
+          </AnimatePresence>
         </div>
         <div className="keyboard">
           <div className="keyboard-top"></div>
@@ -347,6 +384,7 @@ function Project({
     </div>
   );
 }
+
 function SideProject(props) {
   const { ref, inView } = useInView({
     triggerOnce: true,

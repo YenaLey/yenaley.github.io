@@ -39,7 +39,7 @@ function PROJECTS() {
               "./img/project/퀴푸메인웹3.png",
             ]}
             link="https://quipu.uos.ac.kr/"
-            figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DEV?node-id=584-2&node-type=CANVAS&t=wCakjTO9wYDqt2Wf-0"
+            figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DESIGN?node-id=584-2&t=guuCcvCqichRqJLe-1"
             github="https://github.com/Quipu-Developers/main-frontend"
           />
 
@@ -53,7 +53,7 @@ function PROJECTS() {
               "./img/project/룰렛이벤트.jpeg",
               "./img/project/룰렛이벤트.mp4",
             ]}
-            figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DEV?node-id=668-1947&node-type=CANVAS&t=mxF0DUvbQts55V13-0"
+            figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DESIGN?node-id=584-2&t=guuCcvCqichRqJLe-1"
             github="https://github.com/Quipu-Developers/main-frontend"
             reverse
           />

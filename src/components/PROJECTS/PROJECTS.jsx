@@ -40,7 +40,7 @@ function PROJECTS() {
             ]}
             link="https://quipu.uos.ac.kr/"
             figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DESIGN?node-id=584-2&t=guuCcvCqichRqJLe-1"
-            github="https://github.com/Quipu-Developers/main-frontend"
+            github={["https://github.com/Quipu-Developers/main-frontend"]}
           />
 
           <Project
@@ -54,7 +54,7 @@ function PROJECTS() {
               "./img/project/룰렛이벤트.mp4",
             ]}
             figma="https://www.figma.com/design/Is4NkQmdc6bAGJrkVLzomp/QUIPU-DESIGN?node-id=584-2&t=guuCcvCqichRqJLe-1"
-            github="https://github.com/Quipu-Developers/main-frontend"
+            github={["https://github.com/Quipu-Developers/main-frontend"]}
             reverse
           />
 
@@ -69,7 +69,7 @@ function PROJECTS() {
               "./img/project/퀴푸백오피스2.png",
             ]}
             link="https://quipu-developers.github.io/backoffice-frontend"
-            github="https://github.com/Quipu-Developers/backoffice-frontend"
+            github={["https://github.com/Quipu-Developers/backoffice-frontend"]}
           />
 
           <Project
@@ -85,8 +85,24 @@ function PROJECTS() {
               "./img/project/링고커넥트3.mp4",
             ]}
             figma="https://www.figma.com/design/gqZCozFYBEP1Yu1ThoLvMm/%EC%83%88%EC%8B%B9%ED%95%B4%EC%BB%A4%ED%86%A4?node-id=0-1&node-type=CANVAS&t=tEpvjrnibh7V53rN-0"
-            github="https://github.com/LingoConnect/LingoConnect"
+            github={["https://github.com/LingoConnect/LingoConnect"]}
             reverse
+          />
+
+          <Project
+            title="배틀글라운드"
+            period="2024.07 - 2024.09"
+            goal="Socket.io를 이용한 멀티플레이어 타자 웹개임으로 대학교 축제 부스에서 사용하는 것을 목표로 하였습니다."
+            part="기획, 디자인과 프론트엔드, 백엔드 개발을 담당하였습니다. WebSocket을 사용한 멀티플레이어 게임으로 멀티룸 구조를 만들고 각 방에서 실시간 채팅 및 타자 게임을 진행합니다. 같은 단어장을 공유하며 다른 플레이어가 제출한 단어는 모든 플레이어의 화면에서 사라지고, 실시간으로 플레이어들의 점수와 등수가 표시됩니다. 대학교 동아리 축제 부스에서 약 70명의 사용자가 참여를 하며 발생한 버그들과 사용자 경험에 대한 조언을 들을 수 있었습니다."
+            skillList={["React.js", "Node.js", "GitHub"]}
+            img={[
+              "./img/project/배틀글라운드1.jpeg",
+              "./img/project/배틀글라운드2.mp4",
+            ]}
+            github={[
+              "https://github.com/Quipu-Developers/game-frontend",
+              "https://github.com/Quipu-Developers/game-backend",
+            ]}
           />
 
           {/* personal */}
@@ -107,7 +123,7 @@ function PROJECTS() {
             skillList={["React.js", "Three.js"]}
             img={["./img/project/포트폴리오1.png"]}
             link="https://yena.info/"
-            github="https://github.com/YenaLey/portfolio"
+            github={["https://github.com/YenaLey/portfolio"]}
             reverse
           />
 
@@ -119,7 +135,7 @@ function PROJECTS() {
             skillList={["Three.js", "Vanilla JS"]}
             img={["./img/project/컴퓨터그래픽스프젝2.png"]}
             link="https://yenaley.github.io/Luxo-Interactive-Simulation/"
-            github="https://github.com/YenaLey/Luxo-Interactive-Simulation"
+            github={["https://github.com/YenaLey/Luxo-Interactive-Simulation"]}
           />
         </div>
         <div className="blank-container"></div>
@@ -376,13 +392,19 @@ function Project({
               </div>
             </a>
           )}
-          {github && (
-            <a href={github} target="_blank" rel="noopener noreferrer">
-              <div className="icon">
-                <img src="./img/icon/깃허브아이콘.png" alt="GitHub Icon"></img>
-              </div>
-            </a>
-          )}
+          {github &&
+            github.map((element, index) => (
+              <a
+                key={index}
+                href={element}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="icon">
+                  <img src="./img/icon/깃허브아이콘.png" alt="GitHub Icon" />
+                </div>
+              </a>
+            ))}
         </div>
       </div>
     </div>

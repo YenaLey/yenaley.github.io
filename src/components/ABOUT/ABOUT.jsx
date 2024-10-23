@@ -34,14 +34,14 @@ function ABOUT() {
               <span>서울시립대학교 학생회관 342호</span>
               <p>Email: </p>
               <span>yena.e121@gmail.com</span>
-              <p>Instagram: </p>
+              <p>Velog: </p>
               <span>
                 <a
-                  href="https://www.instagram.com/2ye._na/"
+                  href="https://velog.io/@yena121/posts"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  2ye._na
+                  yena.log
                 </a>
               </span>
               <p>Github: </p>

@@ -20,6 +20,13 @@ function CONTACT() {
           ></Contact>
 
           <Contact
+            link="https://velog.io/@yena121/posts"
+            img="./img/icon/블로그.png"
+            title="Velog"
+            description="yena.log"
+          ></Contact>
+
+          <Contact
             link="https://www.instagram.com/2ye._na/"
             img="./img/icon/인스타그램.png"
             title="Instagram"

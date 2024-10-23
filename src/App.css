@@ -46,7 +46,6 @@
   color: white;
   cursor: pointer;
   z-index: 6000;
-
 }
 
 .pc-menu li:hover {
@@ -94,15 +93,15 @@
   transition: transform 0.3s ease-in-out;
 }
 
-#menu-toggle:checked+.menu-button .line1 {
+#menu-toggle:checked + .menu-button .line1 {
   transform: rotate(45deg);
 }
 
-#menu-toggle:checked+.menu-button .line2 {
+#menu-toggle:checked + .menu-button .line2 {
   transform: scaleY(0);
 }
 
-#menu-toggle:checked+.menu-button .line3 {
+#menu-toggle:checked + .menu-button .line3 {
   transform: rotate(-45deg);
 }
 
@@ -131,7 +130,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    z-index: 4900;  
+    z-index: 4900;
   }
 
   .navbar__menu--mobile.open {

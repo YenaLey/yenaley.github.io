@@ -30,9 +30,15 @@ function PROJECTS() {
           <Project
             title="QUIPU Main Web"
             period="2024.01 - 2024.08"
-            goal="동아리 소개 및 부원 모집 시스템 구축 그리고 다양한 이벤트를 진행하며 동아리를 홍보하고자 하였습니다. 웹 개발 작업물들에 대한 피드백에 따른 History를 담는 프로젝트 쇼케이스를 포함합니다."
-            part="전체적인 기획과 디자인, 그리고 프론트엔드 개발을 담당하였습니다. GitHub Actions를 활용하여 CI/CD 파이프라인을 구축 및 관리하여 배포 프로세스를 자동화하고 있습니다."
+            about="동아리 소개 및 지원 폼을 통한 새로운 회원 모집을 위한 웹 사이트"
+            detail="동아리에서 진행하는 활동들을 연도별로 기록하고, 웹 개발 작업물에 대한 히스토리를 담는 쇼케이스를 포함합니다. 또 PDF 파일 업로드를 포함한 지원 폼을 통해 약 150명의 새로운 회원을 모집하였습니다."
             skillList={["Figma", "React.js", "Three.js", "GitHub"]}
+            pointList={{
+              "CI/CD 구현":
+                "지원 폼의 ON/OFF 등 빈번한 수정마다 수동 배포의 번거로움을 해결하기 위해, Main 브랜치에 코드를 올리면 GitHub Actions에 의해 코드 검토 후 자동으로 배포되도록 CI/CD 파이프라인을 구축했습니다.",
+              "성능 최적화":
+                "React Developer Tools를 활용해 컴포넌트별 렌더링 시간을 분석하고, 성능 최적화가 되지 않았던 Three.js 기반의 3D 모델을 React Three Fiber로 전환하여 웹사이트의 전반적인 버퍼링 문제를 해결했습니다.",
+            }}
             img={[
               "./img/project/퀴푸메인웹1.png",
               "./img/project/퀴푸메인웹2.png",
@@ -46,8 +52,8 @@ function PROJECTS() {
           <Project
             title="QUIPU Roulette Event"
             period="2024.08"
-            goal="서울시립대학교 학부생들을 대상으로 동아리를 홍보하기 위해 랜덤 선물 뽑기 이벤트를 진행했습니다."
-            part="이벤트의 전체 기획과 디자인, 프론트엔드 개발을 담당했습니다. 중복 참여와 의도적인 결과 화면 접속으로 인한 문제를 방지하고, 튕김 발생 시 같은 결과 화면에 재접속할 수 있도록 하는 등 많은 사람들이 참여하며 발생할 수 있는 에러들을 방지하고자 하였습니다."
+            about="동아리를 홍보하기 위한 랜덤 선물 뽑기 이벤트"
+            detail="퀴즈를 맞히면 남은 상품에 대해 룰렛을 돌려 랜덤으로 상품을 제공합니다. 중복 참여와 의도적인 결과 화면 접속으로 인한 문제를 방지하고, 튕김 발생 시 같은 결과 화면에 재접속할 수 있도록 하는 등 많은 사람들이 참여하며 발생할 수 있는 에러들을 방지하고자 하였습니다."
             skillList={["Figma", "React.js", "GitHub"]}
             img={[
               "./img/project/룰렛이벤트.jpeg",
@@ -61,8 +67,8 @@ function PROJECTS() {
           <Project
             title="QUIPU BackOffice Web"
             period="2024.07 - 2024.08"
-            goal="동아리 지원 정보를 실시간으로 편리하게 모니터링하기 위해 동아리 어드민 웹페이지를 개발했습니다."
-            part="전체적인 기획과 프론트엔드 개발을 담당했습니다. 퀴푸 메인 웹의 지원 폼을 통해 제출된 내용을 실시간으로 불러오며, 단축키를 통해 특정 내용 복사 및 모달 컨트롤을 효율적으로 할 수 있습니다. 지원자의 이름, 학번, 모집 동기, 포트폴리오 PDF 등의 정보를 포함하며, PDF 제목을 클릭하면 해당 파일을 요청 후 로컬로 다운로드할 수 있습니다. 또한, 실시간으로 불러온 데이터를 Excel 파일로 다운로드할 수 있습니다."
+            about="동아리 지원 정보가 실시간 동기화되는 백오피스 웹 페이지"
+            detail="퀴푸 메인 웹의 지원 폼을 통해 제출된 내용을 실시간으로 불러오며, 단축키를 통해 특정 내용 복사 및 모달 컨트롤을 효율적으로 할 수 있습니다. 지원자의 이름, 학번, 모집 동기, 포트폴리오 PDF 등의 정보를 포함하며, PDF 제목을 클릭하면 해당 파일을 요청 후 로컬로 다운로드할 수 있습니다. 또한, 실시간으로 불러온 데이터를 Excel 파일로 다운로드할 수 있습니다."
             skillList={["React.js", "GitHub"]}
             img={[
               "./img/project/퀴푸백오피스1.png",
@@ -75,9 +81,13 @@ function PROJECTS() {
           <Project
             title="LingoConnect"
             period="2024.07 - 2024.08"
-            goal="지적장애인을 위한 생성형 AI를 통해 현실감 있는 음성 대화 및 발음 분석과 피드백을 통한 언어학습을 지원하는 서비스입니다."
-            part="기획과 프론트엔드 개발을 담당하였습니다. REST API를 활용한 백엔드 연동을 주로 담당하였고, STT(음성 인식)와 TTS(텍스트 음성 변환) 기능을 구현했습니다. 클라이언트에서 녹음된 음성을 WAV 파일로 변환해 백엔드로 전송하고, 백엔드에서 받은 데이터를 실시간으로 처리하여 사용자 인터페이스에 반영했습니다."
+            about="지적장애인을 위한 생성형 AI 기반의 언어 학습 서비스"
+            detail="생성형 AI를 활용하여 현실감 있는 음성 대화를 제공하고, 대화 흐름과 발음에 대한 분석과 피드백을 제공합니다."
             skillList={["React.js", "GitHub"]}
+            pointList={{
+              "음성 녹음 및 노이즈 필터링":
+                "디바이스 내장 마이크를 사용해 사용자의 음성을 녹음하고 WAV 파일로 변환하는 과정에서 발생하는 노이즈가 섞여들어가 STT 기능이 원활히 작동하지 않는 문제가 있었습니다. 이에 오디오 필터링 기술을 적용해고역 및 저역 필터링을 사용하여 노이즈를 제거하고, 사용자의 음성만을 정확히 추출하여 사용자 음성만 들어간 정확한 텍스트로 변환할 수 있었습니다.",
+            }}
             img={[
               "./img/project/링고커넥트.png",
               "./img/project/링고커넥트1.mp4",
@@ -91,18 +101,22 @@ function PROJECTS() {
 
           <Project
             title="배틀글라운드"
+            subtitle="멀티플레이어 타자 웹게임"
             period="2024.07 - 2024.09"
-            goal="웹소켓를 이용한 멀티플레이어 타자 웹게임으로 대학교 축제 부스에서 사용하는 것을 목표로 하였습니다."
-            part="기획, 디자인과 프론트엔드, 백엔드 개발을 담당하였습니다. WebSocket을 사용한 멀티플레이어 게임으로 멀티룸 구조를 만들고 각 방에서 실시간 채팅 및 타자 게임을 진행합니다. 같은 단어장을 공유하며 플레이어가 제출한 단어는 모든 플레이어의 화면에서 사라지고, 실시간으로 플레이어들의 점수와 등수가 표시됩니다. 대학교 동아리 축제 부스에서 약 70명의 사용자가 참여를 하며 발생한 버그들과 사용자 경험에 대한 조언을 들을 수 있었습니다."
+            about="웹소켓 기반의 멀티플레이어 타자 웹게임"
+            detail="플레이어들은 생성된 방에 입장하거나 새로운 방을 만들 수 있으며, 최대 3명의 플레이어가 한 단어장을 두고 서로 단어를 차지하며 타자 대결을 펼칩니다. 수차례의 유저 테스트를 진행하며 발생할 수 있는 버그들에 대해 해결하였고, 70명의 사용자들을 대상으로 대학교 축제 부스를 운영하였습니다."
             skillList={["React.js", "Node.js", "GitHub"]}
+            pointList={{
+              "소켓 재연결 문제 해결":
+                "새로고침 시 소켓이 끊기면서 기존 유저와의 연결이 끊기는 문제를 해결했습니다. 새 소켓이 연결되었을 때 기존 사용자임을 인식하여, 이전에 있던 방에 다시 참가시키는 방식으로 처리했습니다.",
+              "입력 이벤트 최적화":
+                "일부 노트북에서 엔터 키 입력 시 단어가 중복 전송되어 점수가 2배씩 올라가는 문제가 발생하여, debounce를 사용해 이를 해결했습니다. 50밀리초의 지연 시간을 두어 같은 이벤트가 반복 실행되지 않도록 하고, 불필요한 서버 요청을 방지하여 한 번의 입력만 처리되도록 개선했습니다.",
+            }}
             img={[
               "./img/project/배틀글라운드1.jpeg",
               "./img/project/배틀글라운드2.mp4",
             ]}
-            github={[
-              "https://github.com/Quipu-Developers/game-frontend",
-              "https://github.com/Quipu-Developers/game-backend",
-            ]}
+            github={["https://github.com/Quipu-Developers/game-frontend"]}
           />
 
           {/* personal */}
@@ -118,8 +132,8 @@ function PROJECTS() {
           <Project
             title="Portfolio Web"
             period="2024.02 -"
-            goal="개발 공부를 하며 나아가고자 하는 방향성을 표현하고, 참여한 프로젝트들에 대한 기록을 남기기 위한 개인 웹사이트를 제작하였습니다."
-            part="웹사이트의 전체 기획, 디자인, 그리고 프론트엔드 개발을 담당하였습니다. 사용자가 쉽게 탐색할 수 있도록 직관적인 UI/UX를 설계하고, 반응형 디자인을 적용하여 다양한 디바이스에서 최적의 경험을 제공하였습니다. 또한, 참여한 프로젝트를 효과적으로 보여줄 수 있는 기능들을 구현하여, 개발자로서의 성장과 성과를 기록할 수 있는 플랫폼을 구현하고자 하였습니다."
+            about="개발에 대한 방향성과 참여한 프로젝트들을 표현하기 위한 포트폴리오 웹 사이트"
+            detail="사용자가 쉽게 탐색할 수 있도록 직관적인 UI/UX를 설계하고, 반응형 디자인을 적용하여 다양한 디바이스에서 최적의 경험을 제공하였습니다. 또한, 참여한 프로젝트를 효과적으로 보여줄 수 있는 기능들을 구현하여, 개발자로서의 성장과 성과를 기록할 수 있는 플랫폼을 구현하고자 하였습니다."
             skillList={["React.js", "Three.js"]}
             img={["./img/project/포트폴리오1.png"]}
             link="https://yena.info/"
@@ -130,8 +144,8 @@ function PROJECTS() {
           <Project
             title="Luxo 램프 인터랙티브 시뮬레이션"
             period="2023.09 - 2023.10"
-            goal="Three.js에 입문하기 위한 프로젝트로, Luxo 램프의 인터랙티브한 시뮬레이션 기능을 구현하였습니다."
-            part="시뮬레이션 기능의 기획과 전체 구현을 담당하였습니다. Luxo 램프의 각 부분을 모듈화하여 3D 모델링하고, GUI를 통해 램프의 관절과 조명을 제어할 수 있는 기능을 구현했습니다. 또한, 사용자 입력에 따라 실시간으로 변화를 반영하는 렌더링과 조명 효과를 포함한 물리 기반의 시뮬레이션을 구현하였습니다."
+            about="Three.js 기반의 Luxo 램프 인터랙티브 시뮬레이션 웹 사이트"
+            detail="Luxo 램프의 각 부분을 모듈화하여 3D 모델링하고, GUI를 통해 램프의 관절과 조명을 제어할 수 있는 기능을 구현했습니다. 또한, 사용자 입력에 따라 실시간으로 변화를 반영하는 렌더링과 조명 효과를 포함한 물리 기반의 시뮬레이션을 구현하였습니다."
             skillList={["Three.js", "Vanilla JS"]}
             img={["./img/project/컴퓨터그래픽스프젝2.png"]}
             link="https://yenaley.github.io/Luxo-Interactive-Simulation/"
@@ -230,9 +244,10 @@ function Project({
   img,
   period,
   title,
-  goal,
-  part,
+  about,
+  detail,
   skillList,
+  pointList,
   link,
   figma,
   github,
@@ -357,17 +372,17 @@ function Project({
           <span
             style={{ fontWeight: "700", color: "#ffc900", fontSize: "20px" }}
           >
-            Goal.{" "}
+            About.{" "}
           </span>
-          {goal}
+          <span style={{ color: "black" }}>{about}</span>
         </p>
         <p>
           <span
             style={{ fontWeight: "700", color: "#ffc900", fontSize: "20px" }}
           >
-            Part.{" "}
+            Detail.{" "}
           </span>
-          {part}
+          {detail}
         </p>
         <div className="project-skill-container">
           {skillList &&
@@ -377,6 +392,28 @@ function Project({
               </div>
             ))}
         </div>
+        {pointList &&
+          Object.keys(pointList).map((key, index) => (
+            <p key={index}>
+              <span
+                style={{
+                  color: "#ff6f61",
+                  marginRight: "6px",
+                }}
+              >
+                ✅
+              </span>
+              <span
+                style={{
+                  color: "black",
+                }}
+              >
+                {key}
+              </span>
+              {" - "}
+              {pointList[key]}
+            </p>
+          ))}
         <div className="icon-container">
           {link && (
             <a href={link} target="_blank" rel="noopener noreferrer">

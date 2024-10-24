@@ -50,7 +50,7 @@
 }
 
 .project-content {
-  width: 600px;
+  width: 100%;
   height: auto;
   padding: 20px;
 
@@ -71,6 +71,7 @@
 
 .project-content h2 {
   word-break: keep-all;
+  font-family: "Rubik";
   @media (max-width: 600px) {
     font-size: 20px;
   }
@@ -84,6 +85,10 @@
   @media (max-width: 600px) {
     font-size: 14px;
   }
+}
+
+.project-icon {
+  color: #ffc900;
 }
 
 .laptop {

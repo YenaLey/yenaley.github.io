@@ -1,18 +1,36 @@
-### 프로젝트 개요
-- React.js와 React Three Fiber를 사용하여 개발된 포트폴리오 웹사이트입니다. 동적인 소개 멘트와 부드러운 모션을 통해 사용자의 관심을 끌고 메시지의 전달력을 강화합니다. 전체적인 기획, 디자인, 프론트엔드 개발을 포괄하는 이 프로젝트는, 진부하지 않은 디자인과 생동감 있는 사용자 경험을 목표로 합니다.
-- <a href="https://yenaley.github.io/">Link</a>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-### 기술 스택
-- Frontend: React.js, React Three Fiber
-- Styling: CSS3
-- Deployment: GitHub Pages
+## Getting Started
 
-### 설치 및 실행 방법
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-git clone https://github.com/YenaLey/portfolio.git
-cd portfolio
-npm install
-npm start
-```
 
-<img width="960" alt="포트폴리오1" src="https://github.com/YenaLey/portfolio/assets/147997324/d30ca751-de0e-460c-830c-3b6624a9ce6d">
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

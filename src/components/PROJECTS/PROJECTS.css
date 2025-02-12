@@ -219,13 +219,6 @@
   }
 }
 
-.project-skill-container {
-  width: 100%;
-  display: flex;
-  justify-content: start;
-  padding: 0 10px;
-}
-
 .project-skill {
   width: auto;
   background-color: #dcf2f1;
@@ -417,4 +410,31 @@
 
 .choose-block:hover .before {
   display: none;
+}
+
+.dots-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  @media (max-width: 600px) {
+    bottom: -10px;
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: black;
 }

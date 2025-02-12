@@ -84,7 +84,7 @@ function CONTACT() {
               </div>
             </a>
           </div>
-          <p>Copyright 2024. 이예나. All rights reserved.</p>
+          <p>Copyright 2025. 이예나. All rights reserved.</p>
           <p>icon designed by Flaticon(Freepik)</p>
         </div>
       </div>

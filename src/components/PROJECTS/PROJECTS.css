@@ -16,6 +16,7 @@
 .project-category p {
   font-size: 16px;
   word-break: keep-all;
+  line-height: 1.5;
 
   @media (max-width: 800px) {
     font-size: 13px;
@@ -426,8 +427,8 @@
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background-color: gray;
   border-radius: 50%;
   margin: 0 5px;

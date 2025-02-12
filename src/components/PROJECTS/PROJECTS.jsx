@@ -62,9 +62,9 @@ function PROJECTS() {
                 "React Developer Tools를 활용해 컴포넌트별 렌더링 시간을 분석하고, 성능 최적화가 되지 않았던 Three.js 기반의 3D 모델을 React Three Fiber로 전환하여 웹사이트의 전반적인 버퍼링 문제를 해결했습니다.",
             }}
             img={[
-              "https://lh3.google.com/u/0/d/1wQSaRVkdLhAreBFfn7a-9qymU1Vie2Kb=w2880-h1576-iv2",
-              "https://lh3.google.com/u/0/d/1e2Ck4Bf1EnWEJFefSA8Suq-HIoB0wnmj=w2082-h1576-iv2",
-              "https://lh3.google.com/u/0/d/1mNKcMGnDX2jUJI0q9GoyD_GArMe1sUuj=w2082-h1576-iv2",
+              "https://zippy.b-cdn.net/main24_img1.png",
+              "https://zippy.b-cdn.net/main24_img2.png",
+              "https://zippy.b-cdn.net/main24_img3.png",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/Quipu-Developers/24_2_main"]}
@@ -78,8 +78,8 @@ function PROJECTS() {
             detail="퀴즈를 맞히면 남은 상품에 대해 룰렛을 돌려 랜덤으로 상품을 제공합니다. 중복 참여와 의도적인 결과 화면 접속으로 인한 문제를 방지하고, 튕김 발생 시 같은 결과 화면에 재접속할 수 있도록 하는 등 많은 사람들이 참여하며 발생할 수 있는 에러들을 방지하고자 하였습니다."
             skillList={["react"]}
             img={[
-              "https://lh3.google.com/u/0/d/1NSWfT8HHMUM0Jb1_eBInqvGjO9NUES8i=w2082-h1576-iv2",
-              "https://drive.google.com/file/d/1DZscoD0b-kPcFIAvVveHcuMIrrkIT8Wv/preview",
+              "https://zippy.b-cdn.net/룰렛24_img1.jpeg",
+              "https://zippy.b-cdn.net/룰렛24_video1.mp4",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/Quipu-Developers/24_2_main"]}
@@ -93,8 +93,8 @@ function PROJECTS() {
             detail="퀴푸 메인 웹의 지원 폼을 통해 제출된 내용을 실시간으로 불러오며, 단축키를 통해 특정 내용 복사 및 모달 컨트롤을 효율적으로 할 수 있습니다. 지원자의 이름, 학번, 모집 동기, 포트폴리오 PDF 등의 정보를 포함하며, PDF 제목을 클릭하면 해당 파일을 요청 후 로컬로 다운로드할 수 있습니다. 또한, 실시간으로 불러온 데이터를 Excel 파일로 다운로드할 수 있습니다."
             skillList={["react"]}
             img={[
-              "https://lh3.google.com/u/0/d/1D7tGOJVIbTo6W8YIfLnXLN7rmdlX8HOx=w2082-h1576-iv2",
-              "https://lh3.google.com/u/0/d/1FEaAVwNjFZGslqhAu1vyjw1o0r5CBYj-=w2082-h1576-iv2",
+              "https://zippy.b-cdn.net/backoffice_img1.png",
+              "https://zippy.b-cdn.net/backoffice_img2.png",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/Quipu-Developers/backoffice-frontend"]}
@@ -112,10 +112,10 @@ function PROJECTS() {
                 "디바이스 내장 마이크를 사용해 사용자의 음성을 녹음하고 WAV 파일로 변환하는 과정에서 발생하는 노이즈가 섞여들어가 STT 기능이 원활히 작동하지 않는 문제가 있었습니다. 이에 오디오 필터링 기술을 적용해고역 및 저역 필터링을 사용하여 노이즈를 제거하고, 사용자의 음성만을 정확히 추출하여 사용자 음성만 들어간 정확한 텍스트로 변환할 수 있었습니다.",
             }}
             img={[
-              "https://lh3.google.com/u/0/d/1FOktPah0ISma9F4mGRRSV_mqhZ_Knevy=w2082-h1576-iv2",
-              "https://drive.google.com/file/d/1Eb-LgTE7w0YpHA4xVZOjCBcjpKH_Ni7x/preview",
-              "https://drive.google.com/file/d/1udV8pyO2ph0ZS017ZbQnc9aOODfD5p8s/preview",
-              "https://drive.google.com/file/d/1hetoluF5wsGt-_0CD9YEgFI04FtOIIC1/preview",
+              "https://zippy.b-cdn.net/링고커넥트_img1.png",
+              "https://zippy.b-cdn.net/링고커넥트_video1.mp4",
+              "https://zippy.b-cdn.net/링고커넥트_video2.mp4",
+              "https://zippy.b-cdn.net/링고커넥트_video3.mp4",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/YenaLey/LingoConnect"]}
@@ -136,10 +136,10 @@ function PROJECTS() {
                 "일부 노트북에서 엔터 키 입력 시 단어가 중복 전송되어 점수가 2배씩 올라가는 문제가 발생하여, debounce를 사용해 이를 해결했습니다. 50밀리초의 지연 시간을 두어 같은 이벤트가 반복 실행되지 않도록 하고, 불필요한 서버 요청을 방지하여 한 번의 입력만 처리되도록 개선했습니다.",
             }}
             img={[
-              "https://lh3.google.com/u/0/d/1oLwcq0haroaDSAEksXg6Qbc8VWuodaHu=w2880-h1576-iv3",
-              "https://lh3.google.com/u/0/d/13yW7QVINrIqXmHlgqyaQ82pLDBSDsX2i=w2880-h1576-iv3",
-              "https://lh3.google.com/u/0/d/1VuvxsjwaSYdhCU3koKBqPkVp0FfR0epB=w2082-h1576-iv3",
-              "https://drive.google.com/file/d/1ONibm488c5rpUlaJmrWevXwwvfk4DOmZ/preview",
+              "https://zippy.b-cdn.net/배틀글라운드_img1.jpeg",
+              "https://zippy.b-cdn.net/배틀글라운드_img2.jpeg",
+              "https://zippy.b-cdn.net/배틀글라운드_img3.jpeg",
+              "https://zippy.b-cdn.net/배틀글라운드_video1.mp4",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/Quipu-Developers/game-frontend"]}
@@ -162,10 +162,10 @@ function PROJECTS() {
             detail="사용자가 쉽게 탐색할 수 있도록 직관적인 UI/UX를 설계하고, 반응형 디자인을 적용하여 다양한 디바이스에서 최적의 경험을 제공하였습니다. 또한, 참여한 프로젝트를 효과적으로 보여줄 수 있는 기능들을 구현하여, 개발자로서의 성장과 성과를 기록할 수 있는 플랫폼을 구현하고자 하였습니다."
             skillList={["react", "threejs"]}
             img={[
-              "https://lh3.google.com/u/0/d/1zfTgyxPCSnihaNdno8vfcpud5a_nSz46=w2082-h1576-iv2",
-              "https://lh3.google.com/u/0/d/17OaulmmEYbhn2O4kzJPLCxCIkZrh1WU8=w2082-h1576-iv2",
-              "https://lh3.google.com/u/0/d/1p-eTEYPDssPE07LU6pdicwPcchnyUrB1=w2082-h1576-iv2",
-              "https://lh3.google.com/u/0/d/1X9NheafNaIkqXECZsBsKqTEby9-mM0AM=w2082-h1576-iv2",
+              "https://zippy.b-cdn.net/포폴24_img1.png",
+              "https://zippy.b-cdn.net/포폴24_img2.png",
+              "https://zippy.b-cdn.net/포폴24_img3.png",
+              "https://zippy.b-cdn.net/포폴_img4.png",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/YenaLey/yenaley.github.io"]}
@@ -180,8 +180,8 @@ function PROJECTS() {
             detail="Luxo 램프의 각 부분을 모듈화하여 3D 모델링하고, GUI를 통해 램프의 관절과 조명을 제어할 수 있는 기능을 구현했습니다. 또한, 사용자 입력에 따라 실시간으로 변화를 반영하는 렌더링과 조명 효과를 포함한 물리 기반의 시뮬레이션을 구현하였습니다."
             skillList={["threejs", "javascript"]}
             img={[
-              "https://lh3.google.com/u/0/d/1pnkNSL1nknmfE5CvoUwL7rO0ELYZFfD2=w2082-h1576-iv2",
-              "https://lh3.google.com/u/0/d/146lOVVgY-aPqmRTK3l0ZCGh7TY1d0Lw0=w2082-h1576-iv2",
+              "https://zippy.b-cdn.net/luxo_img1.png",
+              "https://zippy.b-cdn.net/luxo_img2.png",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/YenaLey/Luxo-Interactive-Simulation"]}
@@ -278,6 +278,7 @@ export default PROJECTS;
 
 // ─────────────────────────────────────────
 // Project 컴포넌트
+
 function Project({
   img,
   period,
@@ -315,16 +316,19 @@ function Project({
     }
   };
 
+  // 확장자에 따라 이미지 또는 동영상 렌더링
   const renderMediaContent = (src, index) => {
-    const isDriveImage = src.includes("lh3.google.com");
-    const isDriveVideo = src.includes("drive.google.com/file");
+    // URL에서 확장자 추출 (쿼리스트링이나 해시 제거)
+    const extension = src.split(".").pop().split(/#|\?/)[0].toLowerCase();
+    const imageExtensions = ["png", "jpg", "jpeg", "gif", "webp"];
+    const videoExtensions = ["mov", "mp4", "webm", "ogg"];
 
-    if (isDriveImage) {
+    if (imageExtensions.includes(extension)) {
       return (
         <img
           key={`media-${index}`}
           src={src}
-          alt={`project-image-${index}`}
+          alt={`project-media-${index}`}
           style={{
             width: "100%",
             height: "100%",
@@ -333,29 +337,30 @@ function Project({
             top: 0,
             left: 0,
           }}
+          loading="lazy"
         />
       );
     }
 
-    if (isDriveVideo) {
+    if (videoExtensions.includes(extension)) {
       return (
-        <iframe
+        <video
           key={`media-${index}`}
-          id={`ucc-${index}`}
           src={src}
-          width="100%"
-          height="100%"
-          objectFit="cover"
-          allow="autoplay"
-          title="Google Drive Video Player"
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "contain",
+            objectFit: "cover",
             position: "absolute",
             top: 0,
             left: 0,
           }}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          controls
         />
       );
     }

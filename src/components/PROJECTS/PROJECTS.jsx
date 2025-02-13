@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./PROJECTS.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { PiCursorClickFill } from "react-icons/pi";
 
 const mappingSkill = {
   react:
@@ -26,6 +27,10 @@ const mappingSkill = {
     "https://img.shields.io/badge/WebGL-990000?logo=webgl&logoColor=white&style=for-the-badge",
   socketio:
     "https://img.shields.io/badge/Socket.IO-010101?logo=socket.io&logoColor=white&style=for-the-badge",
+  flask:
+    "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white",
+  stablediffusion:
+    "https://img.shields.io/badge/Stable%20Diffusion-ED8B40?style=for-the-badge&logo=Stable%20Diffusion&logoColor=white",
 };
 
 function PROJECTS() {
@@ -41,99 +46,24 @@ function PROJECTS() {
             <h1>QUIPU-DEV</h1>
             <div></div>
             <p>
-              서울시립대학교 컴퓨터 학술 중앙동아리에서 웹개발 팀을 결성하여,
-              <span style={{ fontWeight: "900" }}>
-                &nbsp;새로운 도전과 성취
-              </span>
-              를 이루고 있습니다.
+              서울시립대학교 컴퓨터 학술 중앙 동아리에서 웹 개발팀을 만들어
+              새로운 도전에 뛰어들며, 저만의 아이디어를 자유롭게 실현하고
+              있습니다.
             </p>
           </div>
 
           <Project
-            title="QUIPU Main Web"
-            period="2024.01 - 2024.08"
-            about="동아리 소개 및 지원 폼을 통한 새로운 회원 모집을 위한 웹 사이트"
-            detail="동아리에서 진행하는 활동들을 연도별로 기록하고, 웹 개발 작업물에 대한 히스토리를 담는 쇼케이스를 포함합니다. 또 PDF 파일 업로드를 포함한 지원 폼을 통해 약 150명의 새로운 회원을 모집하였습니다."
-            skillList={["react", "threejs"]}
-            pointList={{
-              "CI/CD 구현":
-                "지원 폼의 ON/OFF 등 빈번한 수정마다 수동 배포의 번거로움을 해결하기 위해, Main 브랜치에 코드를 올리면 GitHub Actions에 의해 코드 검토 후 자동으로 배포되도록 CI/CD 파이프라인을 구축했습니다.",
-              "성능 최적화":
-                "React Developer Tools를 활용해 컴포넌트별 렌더링 시간을 분석하고, 성능 최적화가 되지 않았던 Three.js 기반의 3D 모델을 React Three Fiber로 전환하여 웹사이트의 전반적인 버퍼링 문제를 해결했습니다.",
-            }}
-            img={[
-              "https://zippy.b-cdn.net/main24_img1.png",
-              "https://zippy.b-cdn.net/main24_img2.png",
-              "https://zippy.b-cdn.net/main24_img3.png",
-            ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
-            github={["https://github.com/Quipu-Developers/24_2_main"]}
-            link="https://quipu.uos.ac.kr/"
-          />
-
-          <Project
-            title="QUIPU Roulette Event"
-            period="2024.08"
-            about="동아리를 홍보하기 위한 랜덤 선물 뽑기 이벤트"
-            detail="퀴즈를 맞히면 남은 상품에 대해 룰렛을 돌려 랜덤으로 상품을 제공합니다. 중복 참여와 의도적인 결과 화면 접속으로 인한 문제를 방지하고, 튕김 발생 시 같은 결과 화면에 재접속할 수 있도록 하는 등 많은 사람들이 참여하며 발생할 수 있는 에러들을 방지하고자 하였습니다."
-            skillList={["react"]}
-            img={[
-              "https://zippy.b-cdn.net/룰렛24_img1.jpeg",
-              "https://zippy.b-cdn.net/룰렛24_video1.mp4",
-            ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
-            github={["https://github.com/Quipu-Developers/24_2_main"]}
-            reverse
-          />
-
-          <Project
-            title="QUIPU BackOffice Web"
-            period="2024.07 - 2024.08"
-            about="동아리 지원 정보가 실시간 동기화되는 백오피스 웹 페이지"
-            detail="퀴푸 메인 웹의 지원 폼을 통해 제출된 내용을 실시간으로 불러오며, 단축키를 통해 특정 내용 복사 및 모달 컨트롤을 효율적으로 할 수 있습니다. 지원자의 이름, 학번, 모집 동기, 포트폴리오 PDF 등의 정보를 포함하며, PDF 제목을 클릭하면 해당 파일을 요청 후 로컬로 다운로드할 수 있습니다. 또한, 실시간으로 불러온 데이터를 Excel 파일로 다운로드할 수 있습니다."
-            skillList={["react"]}
-            img={[
-              "https://zippy.b-cdn.net/backoffice_img1.png",
-              "https://zippy.b-cdn.net/backoffice_img2.png",
-            ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
-            github={["https://github.com/Quipu-Developers/backoffice-frontend"]}
-            link="https://quipu-developers.github.io/backoffice-frontend"
-          />
-
-          <Project
-            title="LingoConnect"
-            period="2024.07 - 2024.08"
-            about="지적장애인을 위한 생성형 AI 기반의 언어 학습 서비스"
-            detail="생성형 AI를 활용하여 현실감 있는 음성 대화를 제공하고, 대화 흐름과 발음에 대한 분석과 피드백을 제공합니다."
-            skillList={["react"]}
-            pointList={{
-              "음성 녹음 및 노이즈 필터링":
-                "디바이스 내장 마이크를 사용해 사용자의 음성을 녹음하고 WAV 파일로 변환하는 과정에서 발생하는 노이즈가 섞여들어가 STT 기능이 원활히 작동하지 않는 문제가 있었습니다. 이에 오디오 필터링 기술을 적용해고역 및 저역 필터링을 사용하여 노이즈를 제거하고, 사용자의 음성만을 정확히 추출하여 사용자 음성만 들어간 정확한 텍스트로 변환할 수 있었습니다.",
-            }}
-            img={[
-              "https://zippy.b-cdn.net/링고커넥트_img1.png",
-              "https://zippy.b-cdn.net/링고커넥트_video1.mp4",
-              "https://zippy.b-cdn.net/링고커넥트_video2.mp4",
-              "https://zippy.b-cdn.net/링고커넥트_video3.mp4",
-            ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
-            github={["https://github.com/YenaLey/LingoConnect"]}
-            reverse
-          />
-
-          <Project
             title="배틀글라운드"
-            subtitle="멀티플레이어 타자 웹게임"
+            subtitle="실시간 멀티플레이어 타자 배틀 웹게임"
             period="2024.07 - 2024.09"
-            about="웹소켓 기반의 멀티플레이어 타자 웹게임"
-            detail="플레이어들은 생성된 방에 입장하거나 새로운 방을 만들 수 있으며, 최대 3명의 플레이어가 한 단어장을 두고 서로 단어를 차지하며 타자 대결을 펼칩니다. 수차례의 유저 테스트를 진행하며 발생할 수 있는 버그들에 대해 해결하였고, 70명의 사용자들을 대상으로 대학교 축제 부스를 운영하였습니다."
+            about="React와 Socket.io 기반의 최대 3명의 플레이어가 함께 겨루는 멀티플레이어 타자 게임입니다."
+            detail="방을 생성하거나 참가하여 주어진 하나의 단어장을 보며 단어를 먼저 타이핑해 점수를 얻는 형식으로 진행됩니다. 대학 축제 부스에서 약 70명의 플레이어가 실제로 참여하며 발생한 버그를 단계적으로 해결했습니다."
             skillList={["react", "socketio"]}
             pointList={{
-              "소켓 재연결 문제 해결":
-                "새로고침 시 소켓이 끊기면서 기존 유저와의 연결이 끊기는 문제를 해결했습니다. 새 소켓이 연결되었을 때 기존 사용자임을 인식하여, 이전에 있던 방에 다시 참가시키는 방식으로 처리했습니다.",
+              "소켓 안정성 강화":
+                "새로고침 시 소켓 연결이 끊기던 문제를 해결해 기존 참여 방 정보를 복원함으로써 끊김 없는 플레이 환경을 제공했습니다.",
               "입력 이벤트 최적화":
-                "일부 노트북에서 엔터 키 입력 시 단어가 중복 전송되어 점수가 2배씩 올라가는 문제가 발생하여, debounce를 사용해 이를 해결했습니다. 50밀리초의 지연 시간을 두어 같은 이벤트가 반복 실행되지 않도록 하고, 불필요한 서버 요청을 방지하여 한 번의 입력만 처리되도록 개선했습니다.",
+                "엔터 키 중복 입력으로 점수가 여러 번 올라가는 버그를 debounce 기법으로 개선해 정확한 점수 처리와 불필요한 서버 요청을 방지했습니다.",
             }}
             img={[
               "https://zippy.b-cdn.net/배틀글라운드_img1.jpeg",
@@ -141,51 +71,82 @@ function PROJECTS() {
               "https://zippy.b-cdn.net/배틀글라운드_img3.jpeg",
               "https://zippy.b-cdn.net/배틀글라운드_video1.mp4",
             ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
-            github={["https://github.com/Quipu-Developers/game-frontend"]}
+            memo="https://yenaley.notion.site/1514cc4362cb81859c67ebd61e6cae79"
+            github={["https://github.com/Quipu-Developers/24_2_battleground"]}
+            reverse={true}
           />
 
-          {/* PERSONAL 카테고리 */}
-          <div className="project-category">
-            <h1>PERSONAL</h1>
-            <div></div>
-            <p>
-              <span style={{ fontWeight: "900" }}>개성</span>을 표현하는
-              개인적인 작업물입니다.
-            </p>
-          </div>
+          <Project
+            title="Articket"
+            subtitle="AI 기반 명화 변환 서비스"
+            period="2024.09 - 2024.11"
+            about="Stable Diffusion으로 사진을 네 가지 화가의 스타일로 변환하고, PDF 티켓을 자동 발급하는 서비스입니다."
+            detail="피카소, 르누아르, 고흐, 리히텐슈타인의 화풍을 제공하며 간단한 성격 테스트를 통해 어울리는 화가를 추천해주고, 사용자의 사진을 해당 화가의 스타일로 변환해줍니다. 대구 EXCO 경진대회 부스에서 약 200명을 대상으로 체험 서비스를 운영했습니다."
+            skillList={["flask", "stablediffusion", "socketio"]}
+            pointList={{
+              "고속 이미지 생성":
+                "GPU 환경에서 Stable Diffusion 모델을 실행하고, 스레드 풀을 사용해 네 이미지를 병렬 생성하여 처리 시간을 단축했습니다.",
+              "자동화 티켓 발급":
+                "ReportLab과 PyPDF2를 통해 변환된 이미지를 PDF 템플릿에 자동 삽입하고, 완료된 티켓 PDF를 구글 클라우드에 업로드해 바로 출력할 수 있도록 구성했습니다.",
+            }}
+            img={[
+              "https://zippy.b-cdn.net/articket_img1.jpeg",
+              "https://zippy.b-cdn.net/articket_img2.jpeg",
+              "https://zippy.b-cdn.net/articket_img3.jpeg",
+              "https://zippy.b-cdn.net/articket_img4.jpeg",
+              "https://zippy.b-cdn.net/articket_img5.jpeg",
+              "https://zippy.b-cdn.net/articket_img6.jpeg",
+              "https://zippy.b-cdn.net/articket_img7.png",
+            ]}
+            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
+            github={["https://github.com/YenaLey/Articket"]}
+          />
 
           <Project
-            title="Portfolio Web"
-            period="2024.02 -"
-            about="개발에 대한 방향성과 참여한 프로젝트들을 표현하기 위한 포트폴리오 웹 사이트"
-            detail="사용자가 쉽게 탐색할 수 있도록 직관적인 UI/UX를 설계하고, 반응형 디자인을 적용하여 다양한 디바이스에서 최적의 경험을 제공하였습니다. 또한, 참여한 프로젝트를 효과적으로 보여줄 수 있는 기능들을 구현하여, 개발자로서의 성장과 성과를 기록할 수 있는 플랫폼을 구현하고자 하였습니다."
+            title="QUIPU Main Web"
+            subtitle="동아리 소개 및 신규 회원 모집 웹사이트"
+            period="2024.01 - 2024.08"
+            about="React와 Three.js 기반의 동아리 활동과 프로젝트를 공유하며 회원을 모집하는 메인 페이지입니다."
+            detail="연도별 활동 기록과 프로젝트 쇼케이스를 담고 있고 모집 폼을 통해 약 150명의 신규 회원을 모집했습니다. 이벤트용 퀴즈와 룰렛 기능을 구현해 다수가 동시에 접속해도 안정적으로 작동하도록 최적화했습니다."
             skillList={["react", "threejs"]}
+            pointList={{
+              "자동 배포 파이프라인":
+                "GitHub Actions를 도입해 메인 브랜치 푸시 시 자동으로 빌드와 배포가 진행되도록 설정했습니다.",
+              "3D 컴포넌트 성능 개선":
+                "React Three Fiber로 전환해 Three.js 기반 3D 모델의 렌더링 성능을 높이고, 사용자 경험을 향상시켰습니다.",
+            }}
             img={[
-              "https://zippy.b-cdn.net/포폴24_img1.png",
-              "https://zippy.b-cdn.net/포폴24_img2.png",
-              "https://zippy.b-cdn.net/포폴24_img3.png",
-              "https://zippy.b-cdn.net/포폴_img4.png",
+              "https://zippy.b-cdn.net/main24_img1.png",
+              "https://zippy.b-cdn.net/main24_img2.png",
+              "https://zippy.b-cdn.net/main24_img3.png",
+              "https://zippy.b-cdn.net/룰렛24_img1.jpeg",
+              "https://zippy.b-cdn.net/룰렛24_video1.mp4",
             ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
-            github={["https://github.com/YenaLey/yenaley.github.io"]}
-            link="https://yenaley.github.io/"
-            reverse
+            memo="https://yenaley.notion.site/QUIPU-1514cc4362cb8185ba4cf89362f0b647"
+            github={["https://github.com/Quipu-Developers/24_2_main"]}
+            link="https://quipu.uos.ac.kr/"
+            reverse={true}
           />
 
           <Project
-            title="Luxo 램프 인터랙티브 시뮬레이션"
-            period="2023.09 - 2023.10"
-            about="Three.js 기반의 Luxo 램프 인터랙티브 시뮬레이션 웹 사이트"
-            detail="Luxo 램프의 각 부분을 모듈화하여 3D 모델링하고, GUI를 통해 램프의 관절과 조명을 제어할 수 있는 기능을 구현했습니다. 또한, 사용자 입력에 따라 실시간으로 변화를 반영하는 렌더링과 조명 효과를 포함한 물리 기반의 시뮬레이션을 구현하였습니다."
-            skillList={["threejs", "javascript"]}
+            title="QUIPU BackOffice Web"
+            subtitle="지원자 정보를 실시간 관리하는 백오피스 페이지"
+            period="2024.07 - 2024.08"
+            about="메인 웹 지원 폼과 연동해 서류 검토와 관리에 용이한 정보를 제공하는 서비스입니다."
+            detail="지원자의 기본 정보, 포트폴리오 PDF 등을 모달창에서 빠르게 확인하고, 단축키 복사 및 Excel 다운로드 기능으로 편하게 사용할 수 있는 기능을 담았습니다."
+            skillList={["react"]}
+            pointList={{
+              "실시간 동기화":
+                "서버에서 전달되는 지원 정보를 즉시 반영해 변경 사항을 놓치지 않고 확인할 수 있도록 했습니다.",
+              "간편한 검토 프로세스":
+                "단축키로 특정 내용을 빠르게 복사하거나 모달을 열고 닫아 한눈에 정보를 비교하고, Excel로 일괄 관리할 수 있도록 구현했습니다.",
+            }}
             img={[
-              "https://zippy.b-cdn.net/luxo_img1.png",
-              "https://zippy.b-cdn.net/luxo_img2.png",
+              "https://zippy.b-cdn.net/backoffice_img1.png",
+              "https://zippy.b-cdn.net/backoffice_img2.png",
             ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
-            github={["https://github.com/YenaLey/Luxo-Interactive-Simulation"]}
-            link="https://yenaley.github.io/Luxo-Interactive-Simulation/"
+            memo="https://yenaley.notion.site/QUIPU-1514cc4362cb81f58c4ecc3a05133e7f"
+            github={["https://github.com/Quipu-Developers/backoffice"]}
           />
         </div>
         <div className="blank-container"></div>
@@ -193,7 +154,32 @@ function PROJECTS() {
       </div>
 
       <div className="container">
-        <div className="blank-container"></div>
+        <a
+          href="https://yenaley.notion.site/Yena-Info-1514cc4362cb80da94e4f68e2ff3a0f6?pvs=73"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
+          <button
+            style={{
+              backgroundColor: "#000",
+              color: "#fff",
+              padding: "0.75rem 1.25rem",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              fontSize: "1rem",
+              transition: "background-color 0.2s ease",
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            See More Projects{" "}
+            <PiCursorClickFill style={{ width: "20px", height: "20px" }} />
+          </button>
+        </a>
+        {/* <div className="blank-container"></div>
         <h1>SIDE PROJECTS</h1>
         <div className="underline"></div>
         <div className="content-container sideProject">
@@ -230,39 +216,41 @@ function PROJECTS() {
         </div>
         <div className="blank-container"></div>
         <div className="blank-container"></div>
-        <div className="blank-container"></div>
+        <div className="blank-container"></div> */}
       </div>
 
       <div className="container">
+        <div className="blank-container"></div>
+        <div className="blank-container"></div>
         <div className="blank-container"></div>
         <h1>WHY CHOOSE ME</h1>
         <div className="underline"></div>
         <div className="content-container">
           <Choose
-            title="강한 추진력"
-            description="재빠른 실행력으로 아이디어를 신속히 현실에 반영합니다. 우선순위 설정을 통해, 목표를 정확하고 빠르게 달성합니다."
+            title="주저 없는 실행력"
+            description="새로운 아이디어가 떠오르면 즉시 실행에 옮기며, 도전하는 것을 두려워하지 않습니다."
             img1="./img/icon/추진력.png"
             img2="./img/icon/추진력2.png"
           />
 
           <Choose
-            title="적극적인 커뮤니케이션"
-            description="투명하고 적극적인 소통으로 팀워크를 강화하고, 프로젝트의 비전을 모두와 공유합니다."
-            img1="./img/icon/커뮤니케이션.png"
-            img2="./img/icon/커뮤니케이션2.png"
+            title="감각적인 사용자 경험"
+            description="사용자의 작은 불편도 놓치지 않고 세심하게 개선하며, 트렌디하면서도 직관적인 인터페이스를 통해 감각적인 사용자 경험을 만듭니다."
+            img1="./img/icon/작업.png"
+            img2="./img/icon/작업2.png"
             reverse
           />
 
           <Choose
-            title="빠른 작업"
-            description="새로운 기술 습득이 빠르며, 배운 내용을 실제 작업에 즉각적으로 적용함으로써 프로젝트를 신속하게 전진시킵니다."
-            img1="./img/icon/작업.png"
-            img2="./img/icon/작업2.png"
+            title="적극적인 협업과 팀워크"
+            description="아이디어를 공유하고, 다양한 관점을 받아들이는 것을 좋아하며, 팀워크 속에서 더 큰 시너지를 만드는 개발자가 되고자 합니다."
+            img1="./img/icon/커뮤니케이션.png"
+            img2="./img/icon/커뮤니케이션2.png"
           />
 
           <Choose
-            title="높은 신뢰성"
-            description="맡겨진 일에 대한 높은 책임감을 바탕으로, 약속된 기한과 품질을 엄격히 지키며 일합니다."
+            title="끊임없는 개선과 성장"
+            description="더 나은 코드, 더 빠른 성능, 더 효율적인 프로세스를 찾아가는 과정이 즐겁습니다."
             img1="./img/icon/신뢰성.png"
             img2="./img/icon/신뢰성2.png"
             reverse
@@ -453,7 +441,7 @@ function Project({
           {memo && (
             <a href={memo} target="_blank" rel="noopener noreferrer">
               <div className="icon">
-                <img src="./img/icon/연필.png" alt="Pencil Icon" />
+                <img src="./img/icon/question.png" alt="Pencil Icon" />
               </div>
             </a>
           )}
@@ -473,7 +461,7 @@ function Project({
           {link && (
             <a href={link} target="_blank" rel="noopener noreferrer">
               <div className="icon">
-                <img src="./img/icon/링크아이콘.png" alt="Link Icon" />
+                <img src="./img/icon/url.png" alt="Link Icon" />
               </div>
             </a>
           )}
@@ -485,47 +473,47 @@ function Project({
 
 // ─────────────────────────────────────────
 // SideProject 컴포넌트 (hover 시 설명 슬라이드)
-function SideProject(props) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+// function SideProject(props) {
+//   const { ref, inView } = useInView({
+//     triggerOnce: true,
+//     threshold: 0.1,
+//   });
 
-  const [isHovered, setIsHovered] = useState(false);
+//   const [isHovered, setIsHovered] = useState(false);
 
-  const variants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, y: 50 },
-  };
+//   const variants = {
+//     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+//     hidden: { opacity: 0, y: 50 },
+//   };
 
-  const textSlideVariants = {
-    hover: { y: 0, opacity: 1 },
-    initial: { y: 50, opacity: 0 },
-  };
+//   const textSlideVariants = {
+//     hover: { y: 0, opacity: 1 },
+//     initial: { y: 50, opacity: 0 },
+//   };
 
-  return (
-    <motion.div
-      className="sideProject-block"
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <img src={props.img} alt="사이드프로젝트 사진" />
-      <motion.div
-        className="sideProject-description"
-        variants={textSlideVariants}
-        initial="initial"
-        animate={isHovered ? "hover" : "initial"}
-      >
-        <h3>{props.title}</h3>
-        <p>{props.description}</p>
-      </motion.div>
-    </motion.div>
-  );
-}
+//   return (
+//     <motion.div
+//       className="sideProject-block"
+//       ref={ref}
+//       initial="hidden"
+//       animate={inView ? "visible" : "hidden"}
+//       variants={variants}
+//       onMouseEnter={() => setIsHovered(true)}
+//       onMouseLeave={() => setIsHovered(false)}
+//     >
+//       <img src={props.img} alt="사이드프로젝트 사진" />
+//       <motion.div
+//         className="sideProject-description"
+//         variants={textSlideVariants}
+//         initial="initial"
+//         animate={isHovered ? "hover" : "initial"}
+//       >
+//         <h3>{props.title}</h3>
+//         <p>{props.description}</p>
+//       </motion.div>
+//     </motion.div>
+//   );
+// }
 
 // ─────────────────────────────────────────
 // Choose 컴포넌트 (키워드 아이콘 및 설명)

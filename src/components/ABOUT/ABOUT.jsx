@@ -23,11 +23,13 @@ function ABOUT() {
             </h1>
             <h2>Front-End 개발자</h2>
             <p>
-              말보다 행동으로 먼저 나아가며, 꿈을 현실로 만들어내는 추진력이
-              강한 개발자입니다. 인터랙티브 디자인에 큰 관심을 가지고 있으며,
-              매력적이면서 부드러운 사용자 경험을 우선시하여 개발합니다.
-              프론트엔드 개발에 주력하고 있으며, 기획, 디자인, 백엔드와 배포까지
-              전반적인 개발 프로세스에 관심을 가지고 재밌게 공부하고 있습니다.
+              말보다 행동이 앞서며, 결심하면 주저하지 않고 도전하는
+              개발자입니다. &quot;안될 거다&quot;보다는 &quot;될 수 있다&quot;는
+              열린 사고로 다양한 콘텐츠를 만드는 것을 좋아합니다. 이러한
+              과정에서 네트워크 최적화와 빠른 렌더링, 원활한 배포까지 고려한
+              프론트엔드 개발을 지향합니다. 더 나은 경험을 만들기 위해 개발
+              과정의 작은 불편함도 그냥 지나치지 않고, 끊임없이 개선하며 더 나은
+              방식으로 해결하기 위해 노력합니다.
             </p>
             <div className="about-content--bottom">
               <p>Address: </p>
@@ -64,13 +66,16 @@ function ABOUT() {
         <div className="blank-container"></div>
         <h1>MY SKILLS</h1>
         <div className="underline"></div>
-        <div className="content-container">
+        <div
+          className="content-container"
+          style={{ alignItems: "flex-end", gap: "10px" }}
+        >
           <SkillBar title="React.js" percent={80} />
           <SkillBar title="Next.js" percent={60} />
           <SkillBar title="TypeScript" percent={60} />
-          <SkillBar title="CSS3" percent={80} />
+          <SkillBar title="Tailwind CSS" percent={80} />
+          <SkillBar title="Styled Components" percent={80} />
           <SkillBar title="Python" percent={70} />
-          <SkillBar title="GitHub" percent={80} />
         </div>
       </div>
       <div id="whitesmoke" className="blank-container"></div>
@@ -79,7 +84,7 @@ function ABOUT() {
         <div className="content-container">
           <div className="blank-container"></div>
           <Count countNum={531} title="coding days" />
-          <Count countNum={5} title="projects completed" />
+          <Count countNum={13} title="projects completed" />
           <Count countNum={1650} title="github contributions" />
           <div className="blank-container"></div>
         </div>

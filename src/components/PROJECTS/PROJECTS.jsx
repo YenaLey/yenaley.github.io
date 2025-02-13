@@ -96,7 +96,6 @@ function PROJECTS() {
               "https://zippy.b-cdn.net/articket_img4.jpeg",
               "https://zippy.b-cdn.net/articket_img5.jpeg",
               "https://zippy.b-cdn.net/articket_img6.jpeg",
-              "https://zippy.b-cdn.net/articket_img7.png",
             ]}
             memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
             github={["https://github.com/YenaLey/Articket"]}
@@ -338,7 +337,7 @@ function Project({
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
             position: "absolute",
             top: 0,
             left: 0,

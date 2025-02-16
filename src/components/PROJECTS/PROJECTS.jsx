@@ -71,7 +71,7 @@ function PROJECTS() {
               "https://zippy.b-cdn.net/배틀글라운드_img3.jpeg",
               "https://zippy.b-cdn.net/배틀글라운드_video1.mp4",
             ]}
-            memo="https://yenaley.notion.site/1514cc4362cb81859c67ebd61e6cae79"
+            memo="https://yenaley.notion.site/19a4cc4362cb8033b8edd0e9a913af32"
             github={["https://github.com/Quipu-Developers/24_2_battleground"]}
             reverse={true}
           />
@@ -97,7 +97,7 @@ function PROJECTS() {
               "https://zippy.b-cdn.net/articket_img5.jpeg",
               "https://zippy.b-cdn.net/articket_img6.jpeg",
             ]}
-            memo="https://yenaley.notion.site/Articket-1534cc4362cb80419a23c06516392cce"
+            memo="https://yenaley.notion.site/Articket-19a4cc4362cb80838a8ac44f901a6f0c"
             github={["https://github.com/YenaLey/Articket"]}
           />
 
@@ -121,7 +121,6 @@ function PROJECTS() {
               "https://zippy.b-cdn.net/룰렛24_img1.jpeg",
               "https://zippy.b-cdn.net/룰렛24_video1.mp4",
             ]}
-            memo="https://yenaley.notion.site/QUIPU-1514cc4362cb8185ba4cf89362f0b647"
             github={["https://github.com/Quipu-Developers/24_2_main"]}
             link="https://quipu.uos.ac.kr/"
             reverse={true}
@@ -144,7 +143,6 @@ function PROJECTS() {
               "https://zippy.b-cdn.net/backoffice_img1.png",
               "https://zippy.b-cdn.net/backoffice_img2.png",
             ]}
-            memo="https://yenaley.notion.site/QUIPU-1514cc4362cb81f58c4ecc3a05133e7f"
             github={["https://github.com/Quipu-Developers/backoffice"]}
           />
         </div>

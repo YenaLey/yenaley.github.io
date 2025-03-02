@@ -51,7 +51,6 @@ function PROJECTS() {
               있습니다.
             </p>
           </div>
-
           <Project
             title="배틀글라운드"
             subtitle="실시간 멀티플레이어 타자 배틀 웹게임"
@@ -66,10 +65,10 @@ function PROJECTS() {
                 "엔터 키 중복 입력으로 점수가 여러 번 올라가는 버그를 debounce 기법으로 개선해 정확한 점수 처리와 불필요한 서버 요청을 방지했습니다.",
             }}
             img={[
-              "https://zippy.b-cdn.net/배틀글라운드_img1.jpeg",
-              "https://zippy.b-cdn.net/배틀글라운드_img2.jpeg",
-              "https://zippy.b-cdn.net/배틀글라운드_img3.jpeg",
-              "https://zippy.b-cdn.net/배틀글라운드_video1.mp4",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/배틀글라운드_img1.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/배틀글라운드_img2.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/배틀글라운드_img3.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/배틀글라운드_video1.mp4",
             ]}
             memo="https://yenaley.notion.site/19a4cc4362cb8033b8edd0e9a913af32"
             github={["https://github.com/Quipu-Developers/24_2_battleground"]}
@@ -90,12 +89,12 @@ function PROJECTS() {
                 "ReportLab과 PyPDF2를 통해 변환된 이미지를 PDF 템플릿에 자동 삽입하고, 완료된 티켓 PDF를 구글 클라우드에 업로드해 바로 출력할 수 있도록 구성했습니다.",
             }}
             img={[
-              "https://zippy.b-cdn.net/articket_img1.jpeg",
-              "https://zippy.b-cdn.net/articket_img2.jpeg",
-              "https://zippy.b-cdn.net/articket_img3.jpeg",
-              "https://zippy.b-cdn.net/articket_img4.jpeg",
-              "https://zippy.b-cdn.net/articket_img5.jpeg",
-              "https://zippy.b-cdn.net/articket_img6.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/articket_img1.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/articket_img2.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/articket_img3.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/articket_img4.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/articket_img5.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/articket_img6.jpeg",
             ]}
             memo="https://yenaley.notion.site/Articket-19a4cc4362cb80838a8ac44f901a6f0c"
             github={["https://github.com/YenaLey/Articket"]}
@@ -115,11 +114,11 @@ function PROJECTS() {
                 "React Three Fiber로 전환해 Three.js 기반 3D 모델의 렌더링 성능을 높이고, 사용자 경험을 향상시켰습니다.",
             }}
             img={[
-              "https://zippy.b-cdn.net/main24_img1.png",
-              "https://zippy.b-cdn.net/main24_img2.png",
-              "https://zippy.b-cdn.net/main24_img3.png",
-              "https://zippy.b-cdn.net/룰렛24_img1.jpeg",
-              "https://zippy.b-cdn.net/룰렛24_video1.mp4",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/main24_img1.png",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/main24_img2.png",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/main24_img3.png",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/룰렛24_img1.jpeg",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/룰렛24_video1.mp4",
             ]}
             github={["https://github.com/Quipu-Developers/24_2_main"]}
             link="https://quipu.uos.ac.kr/"
@@ -140,8 +139,8 @@ function PROJECTS() {
                 "단축키로 특정 내용을 빠르게 복사하거나 모달을 열고 닫아 한눈에 정보를 비교하고, Excel로 일괄 관리할 수 있도록 구현했습니다.",
             }}
             img={[
-              "https://zippy.b-cdn.net/backoffice_img1.png",
-              "https://zippy.b-cdn.net/backoffice_img2.png",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/backoffice_img1.png",
+              "https://pub-80a42cc7d41749078071917a4265d3ca.r2.dev/backoffice_img2.png",
             ]}
             github={["https://github.com/Quipu-Developers/backoffice"]}
           />
